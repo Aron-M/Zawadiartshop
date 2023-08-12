@@ -1,0 +1,20 @@
+<!-- homepage.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1>Welcome to our African Art Store</h1>
+    <p>Discover amazing African art pieces.</p>
+</div>
+
+<!-- Hero Image -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="hero-image">
+                <img src="{% static 'images/savannah.jpg' %}" alt="African Savannah" class="img-fluid" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
