@@ -25,3 +25,13 @@ Our focus is to provide users with a seamless and enjoyable experience. We aim t
 - Ensure a secure and smooth payment process through Stripe integration.
 - Create a responsive design that works seamlessly across different devices.
 - Utilize Bootstrap for structured and visually appealing templates.
+
+5. Requirements:
+
+- Django web framework for backend development.
+- Flask for handling certain functionalities.
+- HTML, CSS, and Bootstrap for frontend templates.
+- Stripe API for payment processing.
+- JSON file for storing product data.
+- Responsive design to support mobile, tablet, and desktop views.
+- User authentication system for account creation and management.
