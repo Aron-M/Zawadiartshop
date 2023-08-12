@@ -1,29 +1,39 @@
-<!-- base.html -->
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Include meta tags, CSS, etc. -->
-</head>
-<body>
-    <!-- Navbar section -->
-    {% block navbar %}
-    <nav>
-        <!-- Navbar content goes here -->
-    </nav>
+    {% include 'layout/head.html' %}
+
+    <!-- My own css-->
+    {% block corecss %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
     {% endblock %}
 
-    <!-- Body section -->
-    <div class="container">
-        {% block content %}
-        <!-- Body content goes here -->
-        {% endblock %}
-    </div>
+    <!-- My Own extra css-->
+    {% block extra_css %}
+    {% endblock %}
 
-    <!-- Footer section -->
-    {% block footer %}
-    <footer>
-        <!-- Footer content goes here -->
-    </footer>
+    <title>{{ title }}</title>
+</head>
+
+<body class="d-flex flex-column">
+    <!-- Navbar -->
+    {% include 'layouts/navbar.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    {% include 'layouts/footer.html' %}
+
+    <!-- Bootstrap JS-->
+    {% include 'components/script/bootstrapjs.html' %}
+
+
+    {% block extra_js %}
     {% endblock %}
 </body>
+
 </html>
