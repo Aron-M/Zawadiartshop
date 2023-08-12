@@ -26,7 +26,7 @@ Our focus is to provide users with a seamless and enjoyable experience. We aim t
 - Create a responsive design that works seamlessly across different devices.
 - Utilize Bootstrap for structured and visually appealing templates.
 
-5. Requirements:
+# 5. Requirements:
 
 - Django web framework for backend development.
 - Flask for handling certain functionalities.
@@ -35,3 +35,11 @@ Our focus is to provide users with a seamless and enjoyable experience. We aim t
 - JSON file for storing product data.
 - Responsive design to support mobile, tablet, and desktop views.
 - User authentication system for account creation and management.
+
+# 6. Expectations:
+
+I expect that the project will result in a fully functional e-commerce store for African art pieces. Users will be able to browse, select, and purchase products with ease. The integration of Stripe will enable secure and efficient payments. The website will be responsive, ensuring a consistent experience across devices. Our goal is to create a visually appealing and intuitive platform that encourages users to explore and embrace African art.
+
+# 7. Design:
+
+The website's design will be structured using Bootstrap, a popular frontend framework that offers responsive and aesthetically pleasing templates. I'll focus on a clean, modern design that highlights the beauty of African art. The use of images, fonts, and colors will be carefully chosen to create an engaging visual experience. I will prioritize user-friendly navigation and clear product presentation, ensuring that users can easily find what they're looking for and enjoy the art pieces showcased on the platform.
