@@ -1,0 +1,29 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include meta tags, CSS, etc. -->
+</head>
+<body>
+    <!-- Navbar section -->
+    {% block navbar %}
+    <nav>
+        <!-- Navbar content goes here -->
+    </nav>
+    {% endblock %}
+
+    <!-- Body section -->
+    <div class="container">
+        {% block content %}
+        <!-- Body content goes here -->
+        {% endblock %}
+    </div>
+
+    <!-- Footer section -->
+    {% block footer %}
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+    {% endblock %}
+</body>
+</html>
