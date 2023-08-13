@@ -1,0 +1,19 @@
+body {
+    background-image: url('/static/images/savannah.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    min-height: 100vh;
+}
+
+
+.container {
+    flex: 1;
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
