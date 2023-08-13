@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Include the URLs from the 'home' app
     path('', include('home.urls')),
+    path('', include('products.urls', namespace='products')),
 ]
