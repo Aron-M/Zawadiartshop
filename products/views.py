@@ -1,27 +1,17 @@
-# products/views.py
-
-from django.shortcuts import render
-from .models import Product
+from django.shortcuts import render, redirect
 
 
-def products(request):
-    # Retrieve all products from the database
-    products = Product.objects.all()
-    context = {'products': products}
-    return render(request, 'products/templates/products.html', context)
+def products_view(request):
+    # This view will render the main products template
+    return render(request, '/workspace/Zawadiartshop/products/templates/products.html')
 
 
-def paintings(request):
-    # Retrieve products with the 'paintings' category from the database
-    paintings = Product.objects.filter(category='paintings')
-    context = {'products': paintings, 'category': 'Paintings'}
-    return render(request, 'products/templates/category.html', context)
+def paintings_view(request):
+    # This view will render the template for the 'paintings' category
+    return render(request, 'products/category.html', {'category': 'Paintings'})
 
 
-def sculptures(request):
-    # Retrieve products with the 'sculptures' category from the database
-    sculptures = Product.objects.filter(category='sculptures')
-    context = {'products': sculptures, 'category': 'Sculptures'}
-    return render(request, 'products/templates/category.html', context)
+def sculptures_view(request):
+    # This view will render the template for the 'sculptures' category
+    return render(request, 'products/category.html', {'category': 'Sculptures'})
 
-# Add views for other categories (frames, miscellaneous) as needed
