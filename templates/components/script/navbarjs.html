@@ -1,0 +1,15 @@
+<script>
+    // JavaScript to toggle the slide-down effect for the dropdown menu
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdownToggle = document.querySelector(".dropdown-toggle");
+        const dropdownMenu = document.querySelector(".dropdown-menu-slide");
+
+        dropdownToggle.addEventListener("click", function() {
+            if (dropdownMenu.style.maxHeight) {
+                dropdownMenu.style.maxHeight = null;
+            } else {
+                dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + "px";
+            }
+        });
+    });
+</script>

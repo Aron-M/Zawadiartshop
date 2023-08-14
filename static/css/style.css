@@ -17,3 +17,14 @@ body {
     bottom: 0;
     width: 100%;
 }
+
+.dropdown-menu-slide {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-out;
+}
+
+.dropdown-menu-show {
+    max-height: 32vh; /* Adjust the max-height as needed */
+}
