@@ -18,6 +18,8 @@ body {
     width: 100%;
 }
 
+/* Styling for the 'products' dropdown menu */
+
 .dropdown-menu-slide {
     display: none;
     max-height: 0;
@@ -27,4 +29,37 @@ body {
 
 .dropdown-menu-show {
     max-height: 32vh; /* Adjust the max-height as needed */
+}
+
+/* Styling for the search bar and search button container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically align items */
+    margin-top: 15vh;
+}
+
+/* Styling for the search bar */
+.search-bar {
+    background-color: #333;
+    color: white;
+    width: 30%; /* Adjust the width to make the search bar shorter */
+    padding: 10px; /* Add padding to the search bar */
+    border-radius: 5px; /* Add border radius for a rounded look */
+    margin-right: 0; /* Add margin between the search bar and the button */
+}
+
+/* Styling for the search button */
+.search-button {
+    background-color: #4b941e; /* Primary color for the button */
+    color: white;
+    border: none;
+    padding: 10px; /* Match the padding with the search bar */
+    border-radius: 5px; /* Add border radius for a rounded look */
+}
+
+/* Styling for the placeholder text */
+.search-bar::placeholder {
+    color: white;
+    opacity: 1;
 }
