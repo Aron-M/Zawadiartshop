@@ -1,61 +1,72 @@
-[
-    {
-        "category": "paintings",
-        "name": "Savannah Sunset",
-        "description": "A beautiful painting capturing the breathtaking sunset over the African savannah",
-        "image": "path/to/savannah_sunset.jpg",
-        "artist": "Adebayo Akintola",
-        "origin": {
-            "country": "Nigeria",
-            "flag_icon": "path/to/nigeria_flag.png"
-        },
-        "stock": 5,
-        "price": 350
+[{
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "category": "paintings",
+            "name": "African Sunset",
+            "description": "A breathtaking painting depicting a vibrant African sunset over the savannah, with rich colors and beautiful wildlife.",
+            "image": "african_sunset.jpg",
+            "artist": "Amina Ibrahim",
+            "origin": "Kenya",
+            "stock": 8,
+            "price": 350
+        }
     },
     {
-        "category": "paintings",
-        "name": "African Rhythms",
-        "description": "Vibrant and rhythmic artwork inspired by African culture and music",
-        "image": "path/to/african_rhythms.jpg",
-        "artist": "Leyla Folorunsho",
-        "origin": {
-            "country": "Ghana",
-            "flag_icon": "path/to/ghana_flag.png"
-        },
-        "stock": 3,
-        "price": 280
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "category": "paintings",
+            "name": "Safari Adventure",
+            "description": "An adventurous painting capturing the essence of a thrilling safari experience in the heart of Africa, showcasing the diverse wildlife.",
+            "image": "safari_adventure.jpg",
+            "artist": "Malik Diop",
+            "origin": "Senegal",
+            "stock": 5,
+            "price": 280
+        }
     },
     {
-        "category": "paintings",
-        "name": "Desert Mirage",
-        "description": "A surreal painting of an African desert mirage, evoking a sense of mystery",
-        "image": "path/to/desert_mirage.jpg",
-        "artist": "Mohammed Alami",
-        "origin": {
-            "country": "Morocco",
-            "flag_icon": "path/to/morocco_flag.png"
-        },
-        "stock": 7,
-        "price": 420
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "category": "paintings",
+            "name": "Serengeti Dreams",
+            "description": "An enchanting painting capturing the beauty of the Serengeti plains, showcasing the majestic wildlife and stunning landscapes.",
+            "image": "serengeti_dreams.jpg",
+            "artist": "Nala Zulu",
+            "origin": "Tanzania",
+            "stock": 10,
+            "price": 420
+        }
     },
     {
-        "category": "paintings",
-        "name": "African Sunset",
-        "description": "A breathtaking painting depicting a vibrant African sunset over the savannah, with rich colors and beautiful wildlife.",
-        "image": "african_sunset.jpg",
-        "artist": "Amina Ibrahim",
-        "origin": "Kenya",
-        "stock": 8,
-        "price": 350
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "category": "paintings",
+            "name": "African Rhythms",
+            "description": "A vibrant painting inspired by the rich rhythms and music of Africa, celebrating the cultural diversity and energy of the continent.",
+            "image": "african_rhythms.jpg",
+            "artist": "Kwame Amoako",
+            "origin": "Ghana",
+            "stock": 7,
+            "price": 320
+        }
     },
     {
-        "category": "paintings",
-        "name": "Safari Adventure",
-        "description": "An adventurous painting capturing the essence of a thrilling safari experience in the heart of Africa, showcasing the diverse wildlife.",
-        "image": "safari_adventure.jpg",
-        "artist": "Malik Diop",
-        "origin": "Senegal",
-        "stock": 5,
-        "price": 280
-    }
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "category": "paintings",
+            "name": "Savannah Harmony",
+            "description": "A harmonious painting depicting the coexistence of African wildlife on the savannah, showcasing the balance of nature.",
+            "image": "savannah_harmony.jpg",
+            "artist": "Aisha Ndlovu",
+            "origin": "South Africa",
+            "stock": 12,
+            "price": 380
+        }
+    },
+
 ]
