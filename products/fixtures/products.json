@@ -19,7 +19,7 @@
             "category": "paintings",
             "name": "Safari Adventure",
             "description": "An adventurous painting capturing the essence of a thrilling safari experience in the heart of Africa, showcasing the diverse wildlife.",
-            "image": "safari_adventure.jpg",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692019751/roaming-elephant_nbmfrx.jpg",
             "artist": "Malik Diop",
             "origin": "Senegal",
             "stock": 5,
