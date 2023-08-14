@@ -36,14 +36,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; /* Vertically align items */
-    margin-top: 15vh;
+    margin-top: 8vh;
 }
 
 /* Styling for the search bar */
 .search-bar {
     background-color: #333;
     color: white;
-    width: 30%; /* Adjust the width to make the search bar shorter */
+    width: 40%; /* Adjust the width to make the search bar shorter */
     padding: 10px; /* Add padding to the search bar */
     border-radius: 5px; /* Add border radius for a rounded look */
     margin-right: 0; /* Add margin between the search bar and the button */
@@ -64,22 +64,25 @@ body {
     opacity: 1;
 }
 
-/* Additional styling for the dropdown content */
-.dropdown-item {
-    display: block;
-    padding: 10px;
-    width: 100%;
-    background-color: #f8f9fa; /* Light gray background */
+
+.custom-modal {
+    margin-top: 8%; /* You can adjust this value to position the modal lower or higher */
 }
 
-/* Style for artist name input */
-.dropdown-item input[type="text"] {
-    width: 100%;
+/* Add this to your existing style.css or create a new CSS file and link it in your HTML */
+.custom-modal .form-check-label {
+    display: inline-block;
+    width: 100px; /* Adjust the width as needed */
+    vertical-align: top;
+    margin-bottom: 30px; /* Add spacing between each category */
 }
 
-/* Style for country flag labels */
-.dropdown-item label img {
-    width: 20px;
-    height: 15px;
-    margin-right: 10px;
+.custom-modal .form-control {
+    display: inline-block;
+    width: calc(100% - 120px); /* Adjust the width based on the label's width */
+    margin-left: 10px; /* Add spacing between label and input */
+}
+
+.form-group {
+    margin-bottom: 2vh;
 }

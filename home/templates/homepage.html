@@ -21,17 +21,47 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg custom-modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="searchModalLabel">Advanced Search</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Search Criteria</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Your search criteria inputs here -->
+                <!-- Category -->
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="category1">
+                        <label class="form-check-label" for="category1">Category 1</label>
+                    </div>
+                    <!-- Repeat for other categories -->
+                </div>
+                
+                <!-- Artist -->
+                <div class="form-group">
+                    <label for="artist">Artist</label>
+                    <input type="text" class="form-control" id="artist">
+                </div>
+                
+                <!-- Origin -->
+                <div class="form-group">
+                    <label for="origin">Origin</label>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="origin1">
+                        <label class="form-check-label" for="origin1"><img src="{% static 'path-to-flag-image' %}" alt="Country 1"> Country 1</label>
+                        <!-- Repeat for other origin flags -->
+                    </div>
+                </div>
+                
+                <!-- Price -->
+                <div class="form-group">
+                    <label for="price">Maximum Price</label>
+                    <input type="number" class="form-control" id="price" step="0.01">
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -40,5 +70,6 @@
         </div>
     </div>
 </div>
+
 
 {% endblock %}
