@@ -63,3 +63,23 @@ body {
     color: white;
     opacity: 1;
 }
+
+/* Additional styling for the dropdown content */
+.dropdown-item {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+/* Style for artist name input */
+.dropdown-item input[type="text"] {
+    width: 100%;
+}
+
+/* Style for country flag labels */
+.dropdown-item label img {
+    width: 20px;
+    height: 15px;
+    margin-right: 10px;
+}

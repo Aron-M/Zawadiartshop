@@ -12,4 +12,13 @@
             }
         });
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchBar = document.getElementById("searchBar");
+        const searchModal = new bootstrap.Modal(document.getElementById("searchModal"));
+
+        searchBar.addEventListener("click", function () {
+            searchModal.show();
+        });
+    });
 </script>
