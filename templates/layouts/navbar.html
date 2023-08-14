@@ -1,30 +1,67 @@
-{% load static %}
 <!-- navbar.html -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <!-- Flex container with justify-content-between to push nav-links to the right -->
-        <div class="d-flex justify-content-between align-items-center w-100">
-            <!-- Brand (left-aligned) -->
+        <!-- First navbar (top) with sign-up, login, and basket links -->
+        <div class="d-flex justify-content-between align-items-center">
             <a class="navbar-brand" href="#">Zawadi African Art</a>
-
-            <!-- Navbar items (right-aligned) -->
             <ul class="navbar-nav">
+                <!-- Basket icon link -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-shopping-basket"></i> Basket
+                    </a>
                 </li>
+                <!-- Login icon link -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </a>
                 </li>
+                <!-- Sign Up icon link -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cart</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sign Up</a>
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
+<!-- Separate container for the second navbar -->
+<div class="container-fluid bg-light">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Search bar -->
+            <form class="form-inline my-2 my-lg-0 w-100">
+                <input class="form-control mr-sm-2 flex-grow-1" type="search" placeholder="Search" aria-label="Search">
+                <!-- Search button -->
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            
+            <!-- Additional nav links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Home link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <!-- Products link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <!-- SALE link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SALE</a>
+                </li>
+                <!-- FAQ's link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">FAQ's</a>
+                </li>
+                <!-- Track my delivery link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Track my delivery</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
