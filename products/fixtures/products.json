@@ -1,11 +1,11 @@
 [{
         "model": "products.product",
-        "pk": 3,
+        "pk": 1,
         "fields": {
             "category": "paintings",
             "name": "African Sunset",
             "description": "A breathtaking painting depicting a vibrant African sunset over the savannah, with rich colors and beautiful wildlife.",
-            "image": "african_sunset.jpg",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692009201/african-sunset-painting_fkvpzs.jpg",
             "artist": "Amina Ibrahim",
             "origin": "Kenya",
             "stock": 8,
@@ -14,7 +14,7 @@
     },
     {
         "model": "products.product",
-        "pk": 4,
+        "pk": 2,
         "fields": {
             "category": "paintings",
             "name": "Safari Adventure",
@@ -28,7 +28,7 @@
     },
     {
         "model": "products.product",
-        "pk": 5,
+        "pk": 3,
         "fields": {
             "category": "paintings",
             "name": "Serengeti Dreams",
@@ -42,7 +42,7 @@
     },
     {
         "model": "products.product",
-        "pk": 6,
+        "pk": 4,
         "fields": {
             "category": "paintings",
             "name": "African Rhythms",
@@ -56,7 +56,7 @@
     },
     {
         "model": "products.product",
-        "pk": 7,
+        "pk": 5,
         "fields": {
             "category": "paintings",
             "name": "Savannah Harmony",
