@@ -20,46 +20,77 @@
     </div>
 </div>
 
+<div class="container mt-5">
+    <h2>Bootstrap JavaScript Test</h2>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Open Modal
+    </button>
+</div>
+
 <!-- Modal -->
 <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg custom-modal">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Search Criteria</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
             <div class="modal-body">
                 <!-- Category -->
                 <div class="form-group">
-                    <label for="category">Category</label>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="category1">
-                        <label class="form-check-label" for="category1">Category 1</label>
+                    <label for="category">Category:</label>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label mt-3 d-flex justify-content-center" for="category1">Paintings</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label mt-3 d-flex justify-content-center" for="category2">Sculptures</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label mt-3 d-flex justify-content-center" for="category2">Frames</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label mt-3 d-flex justify-content-center" for="category2">Crafts</label>
                     </div>
                     <!-- Repeat for other categories -->
                 </div>
                 
                 <!-- Artist -->
                 <div class="form-group">
-                    <label for="artist">Artist</label>
-                    <input type="text" class="form-control" id="artist">
+                    <label for="artist">Artist:</label>
+                    <div class="dropdown">
+                        <input type="text" class="form-control" id="artist-input" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="dropdown-menu" aria-labelledby="artist-input">
+                            <!-- Replace the values below with your actual artist names -->
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="artist1">
+                                <label class="form-check-label" for="artist1">Artist 1</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="artist2">
+                                <label class="form-check-label" for="artist2">Artist 2</label>
+                            </div>
+                            <!-- Repeat for other artists -->
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Origin -->
                 <div class="form-group">
-                    <label for="origin">Origin</label>
-                    <div class="form-check">
+                    <label for="origin">Origin:</label>
+                    <div class="form-check form-check-inline">
                         <input type="checkbox" class="form-check-input" id="origin1">
-                        <label class="form-check-label" for="origin1"><img src="{% static 'path-to-flag-image' %}" alt="Country 1"> Country 1</label>
-                        <!-- Repeat for other origin flags -->
+                        <label class="form-check-label mt-3 d-flex justify-content-center"><img src="{% static 'path-to-flag-image' %}"> Country 1</label>
+                    </div> 
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="origin2">
+                        <label class="form-check-label mt-3 d-flex justify-content-center"><img src="{% static 'path-to-flag-image' %}"> Country 2</label>
                     </div>
+                    <!-- Repeat for other origin flags -->
                 </div>
                 
                 <!-- Price -->
                 <div class="form-group">
-                    <label for="price">Maximum Price</label>
+                    <label for="price">Price:</label>
                     <input type="number" class="form-control" id="price" step="0.01">
                 </div>
             </div>
@@ -70,6 +101,5 @@
         </div>
     </div>
 </div>
-
 
 {% endblock %}

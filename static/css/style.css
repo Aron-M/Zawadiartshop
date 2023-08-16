@@ -66,7 +66,7 @@ body {
 
 
 .custom-modal {
-    margin-top: 8%; /* You can adjust this value to position the modal lower or higher */
+    margin-top: 12.5%; /* You can adjust this value to position the modal lower or higher */
 }
 
 /* Add this to your existing style.css or create a new CSS file and link it in your HTML */
@@ -74,7 +74,7 @@ body {
     display: inline-block;
     width: 100px; /* Adjust the width as needed */
     vertical-align: top;
-    margin-bottom: 30px; /* Add spacing between each category */
+    margin-bottom: 15px; /* Add spacing between each category */
 }
 
 .custom-modal .form-control {
@@ -86,3 +86,75 @@ body {
 .form-group {
     margin-bottom: 2vh;
 }
+
+/* CSS */
+/* Apply custom styles to the modal content */
+.modal-content {
+    max-width: 800px;
+    margin: auto;
+    /* Add other styling as needed */
+}
+
+/* Style other elements when modal is open */
+body.modal-open .content-to-fade {
+    opacity: 0.5; /* Example: reduce opacity */
+    pointer-events: none; /* Example: disable interaction */
+}
+
+/* Custom styles for the modal content */
+.modal-content {
+    font-size: 14px; /* Adjust the font size as needed */
+}
+
+/* Style for category, artist, origin, and price labels */
+.modal-content .modal-label {
+    font-size: 14px; /* Adjust the font size as needed */
+}
+
+/* Style for input fields */
+.modal-content input {
+    font-size: 14px; /* Adjust the font size as needed */
+}
+
+/* Style for the search button */
+.modal-content .search-button {
+    font-size: 14px; /* Adjust the font size as needed */
+    padding: 5px 10px; /* Adjust padding as needed */
+}
+
+/* Style for the close button in the modal header */
+.modal-header .close {
+    font-size: 20px; /* Adjust the font size as needed */
+    padding: 5px; /* Adjust padding as needed */
+}
+
+.form-check {
+    display:flex;
+    align-items:start;
+}
+
+/* Custom class for horizontal checkboxes */
+.form-check-inline {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust the spacing between checkboxes if needed */
+}
+
+/* Adjust the dropdown menu position */
+.dropdown-menu {
+    min-width: 100%;
+}
+
+/* Ensure the dropdown menu doesn't overlap the input */
+/* .dropdown-toggle::after {
+    display: none;
+} */
+
+/* Style the checkboxes in the dropdown menu */
+.dropdown-menu .form-check {
+    display: flex;
+    align-items: center;
+    margin: 0.25rem 0;
+}
+
+
