@@ -1,5 +1,4 @@
 <script>
-    // JavaScript to toggle the slide-down effect for the dropdown menu
     document.addEventListener("DOMContentLoaded", function() {
         const dropdownToggle = document.querySelector(".dropdown-toggle");
         const dropdownMenu = document.querySelector(".dropdown-menu-slide");
@@ -11,22 +10,38 @@
                 dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + "px";
             }
         });
-    });
 
-    document.addEventListener("DOMContentLoaded", function () {
         const searchBar = document.getElementById("searchBar");
         const searchModal = new bootstrap.Modal(document.getElementById("searchModal"));
 
-        searchBar.addEventListener("click", function () {
+        searchBar.addEventListener("click", function() {
             searchModal.show();
         });
+
+        // Function to close the dropdown when clicking outside
+        function closeDropdown(event) {
+            if (!dropdownMenu.contains(event.target) && !dropdownToggle.contains(event.target)) {
+                dropdownMenu.style.maxHeight = null;
+            }
+        }
+
+        // Attach click event listener to document to close the dropdown
+        document.addEventListener("click", closeDropdown);
+
+        // Attach click event listeners to dropdown items to handle checkboxes
+        const dropdownItems = dropdownMenu.querySelectorAll(".custom-dropdown-item");
+        dropdownItems.forEach(function(item) {
+            item.addEventListener("click", function(event) {
+                if (event.target.classList.contains("form-check-input")) {
+                    // Toggle the checkbox if the checkbox itself is clicked
+                    event.target.checked = !event.target.checked;
+                } else {
+                    // Toggle the checkbox if the artist name is clicked
+                    const checkbox = item.querySelector(".form-check-input");
+                    checkbox.checked = !checkbox.checked;
+                }
+                event.stopPropagation(); // Prevent the click event from propagating
+            });
+        });
     });
-
-
-    document.getElementById("searchBar").addEventListener("click", function() {
-    $("#searchModal").modal("toggle");
-});
-
-
-
 </script>
