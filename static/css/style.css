@@ -90,7 +90,7 @@ body {
 /* CSS */
 /* Apply custom styles to the modal content */
 .modal-content {
-    max-width: 800px;
+    max-width: 600px;
     margin: auto;
     /* Add other styling as needed */
 }
