@@ -72,9 +72,16 @@ body {
 /* Add this to your existing style.css or create a new CSS file and link it in your HTML */
 .custom-modal .form-check-label {
     display: inline-block;
-    width: 100px; /* Adjust the width as needed */
+    width:auto; /* Adjust the width as needed */
     vertical-align: top;
     margin-bottom: 15px; /* Add spacing between each category */
+    margin-left: 0.5vw;
+    margin-bottom: 1 !important;
+    font-weight: 500;
+}
+
+.custom-modal.form-check-input {
+    margin-bottom:0 !important;
 }
 
 .custom-modal .form-control {
@@ -131,7 +138,13 @@ body.modal-open .content-to-fade {
 .form-check {
     display:flex;
     align-items:start;
+    margin-bottom:0 !important;
 }
+
+.form-group {
+    margin-bottom: 1vh !important;
+}
+
 
 /* Custom class for horizontal checkboxes */
 .form-check-inline {
@@ -157,4 +170,7 @@ body.modal-open .content-to-fade {
     margin: 0.25rem 0;
 }
 
-
+.flag-icon {
+    max-width: 3vw;
+    margin: 0 !important;
+}
