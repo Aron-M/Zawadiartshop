@@ -16,6 +16,7 @@ class Product(models.Model):
     artist = models.CharField(max_length=100)
     origin = models.CharField(max_length=50)
     origin_image = CloudinaryField('origin_image')
+    style = models.CharField(max_length=50, default="Unknown")
     stock = models.PositiveIntegerField()
     price = models.DecimalField(max_digits=8, decimal_places=2)
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)

@@ -1,0 +1,739 @@
+[{
+        "model": "products.product",
+        "pk": 1,
+        "fields": {
+            "name": "African Sunset",
+            "description": "Vibrant painting depicting a beautiful African sunset.",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396977/An_atmospheric_painting_capturing_the_breathtaking_beauty_of_an_African_sunset._zcmy39.webp",
+            "artist": "Kwame Nkrumah",
+            "origin": "Ghana",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Impressionism",
+            "stock": 10,
+            "price": "250.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 2,
+        "fields": {
+            "name": "Savannah Serenity",
+            "description": "A tranquil painting capturing the serene beauty of the African savannah.",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396976/A_tranquil_painting_capturing_the_serene_beauty_of_the_African_savannah._sbkwcx.jpg",
+            "artist": "Zahara Kibibi",
+            "origin": "Kenya",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Realism",
+            "stock": 8,
+            "price": "300.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "name": "African Dreams",
+            "description": "An imaginative artwork reflecting the dreams and aspirations of the African people.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Abebe Chukwuma",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Surrealism",
+            "stock": 5,
+            "price": "180.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "name": "Wildlife Symphony",
+            "description": "A vibrant painting showcasing the diverse wildlife of the African continent.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Sanaa Diop",
+            "origin": "Senegal",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Expressionism",
+            "stock": 12,
+            "price": "400.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "name": "Harmony of Colors",
+            "description": "A vibrant and colorful painting celebrating the diversity of African cultures.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Leyla Abubakar",
+            "origin": "Ghana",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Abstract",
+            "stock": 7,
+            "price": "250.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "name": "Sunset Serenade",
+            "description": "An atmospheric painting capturing the breathtaking beauty of an African sunset.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Kwame Osaze",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Impressionism",
+            "stock": 10,
+            "price": "280.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "name": "African Rhythms",
+            "description": "A rhythmic painting inspired by traditional African music and dance.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Ayana Kamau",
+            "origin": "Kenya",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Modern",
+            "stock": 6,
+            "price": "220.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 8,
+        "fields": {
+            "name": "Serenity in Nature",
+            "description": "A peaceful painting depicting an African landscape with tranquil waters and lush vegetation.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Adeola Adeyemi",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Realism",
+            "stock": 8,
+            "price": "320.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 9,
+        "fields": {
+            "name": "Spirit of Unity",
+            "description": "An expressive painting symbolizing unity among African nations and cultures.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Musa Sankara",
+            "origin": "Senegal",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Expressionism",
+            "stock": 5,
+            "price": "190.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 10,
+        "fields": {
+            "name": "Whispers of the Savannah",
+            "description": "A captivating painting capturing the mystique of the African savannah at dusk.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Lila Amara",
+            "origin": "Tanzania",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Landscape",
+            "stock": 9,
+            "price": "270.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 11,
+        "fields": {
+            "name": "Harmony of Colors",
+            "description": "An abstract painting that explores the interplay of vibrant colors and emotions.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Kwame Adu",
+            "origin": "Ghana",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Abstract",
+            "stock": 7,
+            "price": "250.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 12,
+        "fields": {
+            "name": "Mystic Elegance",
+            "description": "A mesmerizing painting depicting an African woman adorned with traditional jewelry.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Sanaa Ndiaye",
+            "origin": "Senegal",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Portraiture",
+            "stock": 6,
+            "price": "180.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 13,
+        "fields": {
+            "name": "Sunset Serenade",
+            "description": "A romantic painting capturing the enchanting beauty of an African sunset over the horizon.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Zainab Kamara",
+            "origin": "Sierra Leone",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Impressionism",
+            "stock": 5,
+            "price": "210.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 14,
+        "fields": {
+            "name": "Soulful Melodies",
+            "description": "An evocative painting that captures the soulful melodies of South African music.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Thabo Molefe",
+            "origin": "South Africa",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Contemporary",
+            "stock": 8,
+            "price": "290.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 15,
+        "fields": {
+            "name": "African Spirit",
+            "description": "An evocative painting capturing the essence of African spirituality and cultural heritage.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Kwame Nkrumah",
+            "origin": "Ghana",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Symbolism",
+            "stock": 9,
+            "price": "280.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 16,
+        "fields": {
+            "name": "Golden Sahara",
+            "description": "A radiant painting depicting the golden sands of the Sahara desert at sunrise.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Sanaa Diop",
+            "origin": "Senegal",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Realism",
+            "stock": 8,
+            "price": "320.00",
+            "category": "Paintings"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 17,
+        "fields": {
+            "name": "African Harmony",
+            "description": "An elegant sculpture symbolizing the harmony of African cultures.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Kwame Nkrumah",
+            "origin": "Ghana",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Abstract",
+            "stock": 5,
+            "price": "350.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 18,
+        "fields": {
+            "name": "Unity in Stone",
+            "description": "A solid stone sculpture representing unity among African nations.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Abebe Chukwuma",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Realism",
+            "stock": 4,
+            "price": "280.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 19,
+        "fields": {
+            "name": "Serenity in Stone",
+            "description": "A peaceful stone sculpture depicting tranquility in an African landscape.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Sanaa Diop",
+            "origin": "Senegal",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Sculptural Realism",
+            "stock": 6,
+            "price": "320.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 20,
+        "fields": {
+            "name": "Spiritual Essence",
+            "description": "An ethereal sculpture capturing the spiritual essence of African traditions.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Kwame Osaze",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Abstract",
+            "stock": 7,
+            "price": "390.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 21,
+        "fields": {
+            "name": "Dancing in Bronze",
+            "description": "A dynamic bronze sculpture celebrating the energy of African dance.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Zahara Kibibi",
+            "origin": "Kenya",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Modern",
+            "stock": 5,
+            "price": "420.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 22,
+        "fields": {
+            "name": "Sculpted Melodies",
+            "description": "An artistic sculpture inspired by the rhythm and melody of African music.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Ayana Kamau",
+            "origin": "Kenya",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Contemporary",
+            "stock": 8,
+            "price": "380.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 23,
+        "fields": {
+            "name": "African Spirit",
+            "description": "A mystical sculpture embodying the spirit and essence of Africa.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Musa Sankara",
+            "origin": "Senegal",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Abstract Expressionism",
+            "stock": 7,
+            "price": "350.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 24,
+        "fields": {
+            "name": "Eternal Connection",
+            "description": "A symbolic sculpture representing the eternal connection between humans and nature.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Lila Amara",
+            "origin": "Tanzania",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Symbolism",
+            "stock": 6,
+            "price": "430.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 25,
+        "fields": {
+            "name": "Wisdom Carved in Wood",
+            "description": "A wise-looking wood sculpture symbolizing the wisdom of African traditions.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Adeola Adeyemi",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Carved",
+            "stock": 9,
+            "price": "290.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 26,
+        "fields": {
+            "name": "Rooted in Culture",
+            "description": "A cultural sculpture rooted in African heritage and traditions.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Sanaa Ndiaye",
+            "origin": "Senegal",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Cultural",
+            "stock": 5,
+            "price": "310.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 27,
+        "fields": {
+            "name": "Embrace of Stone",
+            "description": "A loving stone sculpture depicting an embrace between two figures.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Kwame Adu",
+            "origin": "Ghana",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Figurative",
+            "stock": 7,
+            "price": "370.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 28,
+        "fields": {
+            "name": "Essence of Nature",
+            "description": "An essence-filled sculpture celebrating the interconnectedness of African nature.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Zainab Kamara",
+            "origin": "Sierra Leone",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Abstract",
+            "stock": 6,
+            "price": "340.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 29,
+        "fields": {
+            "name": "Bronze Elegance",
+            "description": "An elegant bronze sculpture embodying the grace and elegance of African cultures.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Thabo Molefe",
+            "origin": "South Africa",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Modern",
+            "stock": 5,
+            "price": "390.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 30,
+        "fields": {
+            "name": "Sculpted Serenity",
+            "description": "A serene and calming sculpture capturing the tranquility of African landscapes.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Abebe Chukwuma",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Realism",
+            "stock": 6,
+            "price": "330.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 31,
+        "fields": {
+            "name": "Eternal Connection",
+            "description": "An ethereal sculpture symbolizing the eternal connection between humans and nature.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Kwame Osaze",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Abstract",
+            "stock": 7,
+            "price": "350.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 32,
+        "fields": {
+            "name": "Dancing in Bronze",
+            "description": "A dynamic bronze sculpture celebrating the energy of African dance.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Zahara Kibibi",
+            "origin": "Kenya",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Modern",
+            "stock": 8,
+            "price": "410.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 33,
+        "fields": {
+            "name": "Sculpted Melodies",
+            "description": "An artistic sculpture inspired by the rhythm and melody of African music.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Ayana Kamau",
+            "origin": "Kenya",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Contemporary",
+            "stock": 6,
+            "price": "380.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 34,
+        "fields": {
+            "name": "African Spirit",
+            "description": "A mystical sculpture embodying the spirit and essence of Africa.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Musa Sankara",
+            "origin": "Senegal",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Abstract Expressionism",
+            "stock": 5,
+            "price": "330.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 35,
+        "fields": {
+            "name": "Embrace of Stone",
+            "description": "A loving stone sculpture depicting an embrace between two figures.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Kwame Adu",
+            "origin": "Ghana",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Figurative",
+            "stock": 7,
+            "price": "370.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 36,
+        "fields": {
+            "name": "Essence of Nature",
+            "description": "An essence-filled sculpture celebrating the interconnectedness of African nature.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Zainab Kamara",
+            "origin": "Sierra Leone",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Abstract",
+            "stock": 6,
+            "price": "340.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 37,
+        "fields": {
+            "name": "Bronze Elegance",
+            "description": "An elegant bronze sculpture embodying the grace and elegance of African cultures.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Thabo Molefe",
+            "origin": "South Africa",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Modern",
+            "stock": 5,
+            "price": "390.00",
+            "category": "Sculptures"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 38,
+        "fields": {
+            "name": "Classic Elegance Frame",
+            "description": "A wooden, straight-edged frame that exudes classic elegance.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Kwame Nkrumah",
+            "origin": "Ghana",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Rustic",
+            "stock": 5,
+            "price": "150.00",
+            "category": "Frames"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 39,
+        "fields": {
+            "name": "Contemporary Fusion Frame",
+            "description": "A contemporary frame with a fusion of straight lines and modern design.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Zahara Kibibi",
+            "origin": "Kenya",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Contemporary",
+            "stock": 6,
+            "price": "180.00",
+            "category": "Frames"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 40,
+        "fields": {
+            "name": "Wooden Carved Frame",
+            "description": "An intricately wood-carved frame that adds an artistic touch to any artwork.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Abebe Chukwuma",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Wood-Carved",
+            "stock": 4,
+            "price": "210.00",
+            "category": "Frames"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 41,
+        "fields": {
+            "name": "Marble Accents Frame",
+            "description": "A frame with marble accents that adds a touch of luxury to your art.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Sanaa Diop",
+            "origin": "Senegal",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Luxury",
+            "stock": 7,
+            "price": "230.00",
+            "category": "Frames"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 42,
+        "fields": {
+            "name": "Rustic Wooden Frame",
+            "description": "A rustic wooden frame that adds warmth and character to your artwork.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Thabo Molefe",
+            "origin": "South Africa",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Rustic",
+            "stock": 8,
+            "price": "160.00",
+            "category": "Frames"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 43,
+        "fields": {
+            "name": "Modern Edge Frame",
+            "description": "A modern frame with sleek lines and edgy design for contemporary art.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Lila Amara",
+            "origin": "Tanzania",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Contemporary",
+            "stock": 5,
+            "price": "190.00",
+            "category": "Frames"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 44,
+        "fields": {
+            "name": "Carved Wooden Frame",
+            "description": "A frame with intricate wood carving, showcasing traditional craftsmanship.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Kwame Osaze",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Wood-Carved",
+            "stock": 6,
+            "price": "200.00",
+            "category": "Frames"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 45,
+        "fields": {
+            "name": "Minimalist Metal Frame",
+            "description": "A minimalist metal frame that enhances the simplicity of your artwork.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Adeola Adeyemi",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Minimalist",
+            "stock": 7,
+            "price": "170.00",
+            "category": "Frames"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 46,
+        "fields": {
+            "name": "Golden Elegance Frame",
+            "description": "A frame with golden accents that radiates elegance and sophistication.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Musa Sankara",
+            "origin": "Senegal",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Luxury",
+            "stock": 8,
+            "price": "220.00",
+            "category": "Frames"
+        }
+    }
+
+
+]
