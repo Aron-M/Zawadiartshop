@@ -733,6 +733,390 @@
             "price": "220.00",
             "category": "Frames"
         }
+    },
+    {
+        "model": "products.product",
+        "pk": 47,
+        "fields": {
+            "name": "African Bead Necklace",
+            "description": "Handcrafted bead necklace showcasing vibrant colors and African heritage.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Kwame Nkrumah",
+            "origin": "Ghana",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Traditional",
+            "stock": 10,
+            "price": "30.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 48,
+        "fields": {
+            "name": "Kenyan Maasai Bracelet",
+            "description": "Traditional Maasai bracelet handwoven with colorful beads and intricate patterns.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Zahara Kibibi",
+            "origin": "Kenya",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Ethnic",
+            "stock": 8,
+            "price": "25.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 49,
+        "fields": {
+            "name": "Nigerian Adire Cloth",
+            "description": "Adire-dyed cloth with intricate patterns, showcasing the artistry of Nigeria.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Abebe Chukwuma",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Textile",
+            "stock": 12,
+            "price": "40.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 50,
+        "fields": {
+            "name": "Senegalese Basket",
+            "description": "Handwoven basket made from natural fibers, representing Senegalese craftsmanship.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Sanaa Diop",
+            "origin": "Senegal",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Functional",
+            "stock": 15,
+            "price": "35.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 51,
+        "fields": {
+            "name": "Ghanaian Kente Cloth",
+            "description": "Handwoven Kente cloth with intricate patterns and vibrant colors from Ghana.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Leyla Abubakar",
+            "origin": "Ghana",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Textile",
+            "stock": 9,
+            "price": "45.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 52,
+        "fields": {
+            "name": "Tanzanian Tinga Tinga Painting",
+            "description": "Colorful Tinga Tinga painting depicting Tanzanian wildlife and landscapes.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Lila Amara",
+            "origin": "Tanzania",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Folk Art",
+            "stock": 11,
+            "price": "55.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 53,
+        "fields": {
+            "name": "Ndebele Beadwork",
+            "description": "Intricate Ndebele beadwork showcasing geometric designs and South African artistry.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Thabo Molefe",
+            "origin": "South Africa",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Ethnic",
+            "stock": 10,
+            "price": "28.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 54,
+        "fields": {
+            "name": "Nigerian Pottery",
+            "description": "Handcrafted Nigerian pottery featuring unique shapes and traditional techniques.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Adeola Adeyemi",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Ceramic",
+            "stock": 13,
+            "price": "50.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 55,
+        "fields": {
+            "name": "Kenyan Wood Carving",
+            "description": "Intricate wood carving from Kenya showcasing traditional motifs and artistry.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Zahara Kibibi",
+            "origin": "Kenya",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Wood-Carved",
+            "stock": 12,
+            "price": "48.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 56,
+        "fields": {
+            "name": "Ghanaian Beadwork",
+            "description": "Handcrafted beadwork from Ghana with vibrant colors and intricate designs.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Kwame Osaze",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Traditional",
+            "stock": 14,
+            "price": "33.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 57,
+        "fields": {
+            "name": "Senegalese Fabric Art",
+            "description": "Fabric art from Senegal featuring unique patterns and artistic expression.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Sanaa Diop",
+            "origin": "Senegal",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Textile",
+            "stock": 11,
+            "price": "38.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 58,
+        "fields": {
+            "name": "South African Beaded Sculpture",
+            "description": "Beaded sculpture from South Africa showcasing intricate beadwork and creativity.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Thabo Molefe",
+            "origin": "South Africa",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Sculptural",
+            "stock": 10,
+            "price": "55.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 59,
+        "fields": {
+            "name": "Nigerian Fabric Art",
+            "description": "Intricate fabric art from Nigeria featuring cultural motifs and traditional designs.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Abebe Chukwuma",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Textile",
+            "stock": 9,
+            "price": "42.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 60,
+        "fields": {
+            "name": "Kenyan Soapstone Carving",
+            "description": "Handcrafted soapstone carving from Kenya showcasing intricate details and craftsmanship.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Zainab Kamara",
+            "origin": "Sierra Leone",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Sculptural",
+            "stock": 13,
+            "price": "60.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 61,
+        "fields": {
+            "name": "Tanzanian Batik Art",
+            "description": "Handcrafted batik art from Tanzania featuring intricate wax-resist patterns.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Lila Amara",
+            "origin": "Tanzania",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Textile",
+            "stock": 11,
+            "price": "37.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 62,
+        "fields": {
+            "name": "Ndebele Beadwork Jewelry",
+            "description": "Handcrafted beadwork jewelry with Ndebele-inspired designs from South Africa.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Thabo Molefe",
+            "origin": "South Africa",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Ethnic",
+            "stock": 10,
+            "price": "28.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 63,
+        "fields": {
+            "name": "Nigerian Textile Art",
+            "description": "Intricate textile art from Nigeria featuring cultural motifs and vibrant colors.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Adeola Adeyemi",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Textile",
+            "stock": 12,
+            "price": "44.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 64,
+        "fields": {
+            "name": "Kenyan Wood Carved Mask",
+            "description": "Intricately carved wooden mask from Kenya showcasing traditional designs and artistry.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Zahara Kibibi",
+            "origin": "Kenya",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Wood-Carved",
+            "stock": 11,
+            "price": "48.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 65,
+        "fields": {
+            "name": "Ghanaian Adinkra Cloth",
+            "description": "Handprinted Adinkra cloth from Ghana featuring symbolic motifs and cultural significance.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Kwame Osaze",
+            "origin": "Ghana",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Textile",
+            "stock": 9,
+            "price": "42.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 66,
+        "fields": {
+            "name": "Senegalese Woven Mat",
+            "description": "Handwoven mat from Senegal showcasing intricate patterns and traditional craftsmanship.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Sanaa Diop",
+            "origin": "Senegal",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Functional",
+            "stock": 13,
+            "price": "30.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 67,
+        "fields": {
+            "name": "South African Wire Art",
+            "description": "Intricate wire art from South Africa showcasing creative sculptures and forms.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Thabo Molefe",
+            "origin": "South Africa",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Sculptural",
+            "stock": 10,
+            "price": "58.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 68,
+        "fields": {
+            "name": "Nigerian Pottery Vase",
+            "description": "Handcrafted Nigerian pottery vase featuring traditional patterns and functional design.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Abebe Chukwuma",
+            "origin": "Nigeria",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Ceramic",
+            "stock": 12,
+            "price": "48.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 69,
+        "fields": {
+            "name": "Kenyan Bead Coasters",
+            "description": "Set of handcrafted bead coasters from Kenya showcasing intricate beadwork and design.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Zainab Kamara",
+            "origin": "Sierra Leone",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Functional",
+            "stock": 14,
+            "price": "25.00",
+            "category": "Crafts"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 70,
+        "fields": {
+            "name": "Tanzanian Basketry",
+            "description": "Handwoven basketry from Tanzania featuring intricate patterns and functional design.",
+            "image": "path/to/cloudinary/image",
+            "artist": "Lila Amara",
+            "origin": "Tanzania",
+            "origin_image": "path/to/cloudinary/flag-image",
+            "style": "Functional",
+            "stock": 11,
+            "price": "35.00",
+            "category": "Crafts"
+        }
     }
 
 

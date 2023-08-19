@@ -7,5 +7,8 @@ app_name = 'products'
 
 urlpatterns = [
     path('products/', views.products, name='products'),
-    # Add URL patterns for other categories (frames, miscellaneous) as needed
+    path('paintings/', views.paintings, name='paintings'),
+    path('sculptures/', views.sculptures, name='sculptures'),
+    path('frames/', views.frames, name='frames'),
+    path('crafts/', views.crafts, name='crafts'),
 ]
