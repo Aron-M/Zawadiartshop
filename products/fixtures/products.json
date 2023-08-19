@@ -36,7 +36,7 @@
         "fields": {
             "name": "African Dreams",
             "description": "An imaginative artwork reflecting the dreams and aspirations of the African people.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396977/An_imaginative_artwork_reflecting_the_dreams_and_aspirations_of_the_African_people_ei27lb.jpg",
             "artist": "Abebe Chukwuma",
             "origin": "Nigeria",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -52,7 +52,7 @@
         "fields": {
             "name": "Wildlife Symphony",
             "description": "A vibrant painting showcasing the diverse wildlife of the African continent.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396976/A_vibrant_painting_showcasing_the_diverse_wildlife_of_the_African_continent_irxrvq.jpg",
             "artist": "Sanaa Diop",
             "origin": "Senegal",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -68,7 +68,7 @@
         "fields": {
             "name": "Harmony of Colors",
             "description": "A vibrant and colorful painting celebrating the diversity of African cultures.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396977/A_vibrant_and_colorful_painting_celebrating_the_diversity_of_African_cultures._hbji3d.jpg",
             "artist": "Leyla Abubakar",
             "origin": "Ghana",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -84,7 +84,7 @@
         "fields": {
             "name": "Sunset Serenade",
             "description": "An atmospheric painting capturing the breathtaking beauty of an African sunset.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396977/An_atmospheric_painting_capturing_the_breathtaking_beauty_of_an_African_sunset._zcmy39.webp",
             "artist": "Kwame Osaze",
             "origin": "Nigeria",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -100,7 +100,7 @@
         "fields": {
             "name": "African Rhythms",
             "description": "A rhythmic painting inspired by traditional African music and dance.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396976/A_rhythmic_painting_inspired_by_traditional_African_music_and_dance._c1eqzp.jpg",
             "artist": "Ayana Kamau",
             "origin": "Kenya",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -116,7 +116,7 @@
         "fields": {
             "name": "Serenity in Nature",
             "description": "A peaceful painting depicting an African landscape with tranquil waters and lush vegetation.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396976/A_peaceful_painting_depicting_an_African_landscape_with_tranquil_waters_and_lush_vegetation_iuhadk.webp",
             "artist": "Adeola Adeyemi",
             "origin": "Nigeria",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -132,7 +132,7 @@
         "fields": {
             "name": "Spirit of Unity",
             "description": "An expressive painting symbolizing unity among African nations and cultures.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396977/An_expressive_painting_symbolizing_unity_among_African_nations_and_cultures._kiwhrs.webp",
             "artist": "Musa Sankara",
             "origin": "Senegal",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -148,7 +148,7 @@
         "fields": {
             "name": "Whispers of the Savannah",
             "description": "A captivating painting capturing the mystique of the African savannah at dusk.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396976/A_captivating_painting_capturing_the_mystique_of_the_African_savannah_at_dusk._oaa8ep.jpg",
             "artist": "Lila Amara",
             "origin": "Tanzania",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -164,7 +164,7 @@
         "fields": {
             "name": "Harmony of Colors",
             "description": "An abstract painting that explores the interplay of vibrant colors and emotions.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396977/An_abstract_painting_that_explores_the_interplay_of_vibrant_colors_and_emotions_befjq2.jpg",
             "artist": "Kwame Adu",
             "origin": "Ghana",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -180,7 +180,7 @@
         "fields": {
             "name": "Mystic Elegance",
             "description": "A mesmerizing painting depicting an African woman adorned with traditional jewelry.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440956/A_mesmerizing_painting_depicting_an_African_woman_adorned_with_traditional_jewelry_kzuajd.jpg",
             "artist": "Sanaa Ndiaye",
             "origin": "Senegal",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -196,7 +196,7 @@
         "fields": {
             "name": "Sunset Serenade",
             "description": "A romantic painting capturing the enchanting beauty of an African sunset over the horizon.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396977/A_romantic_painting_capturing_the_enchanting_beauty_of_an_African_sunset_over_the_horizon_h2kk6h.png",
             "artist": "Zainab Kamara",
             "origin": "Sierra Leone",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -212,7 +212,7 @@
         "fields": {
             "name": "Soulful Melodies",
             "description": "An evocative painting that captures the soulful melodies of South African music.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396977/An_evocative_painting_that_captures_the_soulful_melodies_of_South_African_music_kxyc7v.jpg",
             "artist": "Thabo Molefe",
             "origin": "South Africa",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -228,7 +228,7 @@
         "fields": {
             "name": "African Spirit",
             "description": "An evocative painting capturing the essence of African spirituality and cultural heritage.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396978/An_evocative_painting_capturing_the_essence_of_African_spirituality_and_cultural_heritage_vzgqpe.jpg",
             "artist": "Kwame Nkrumah",
             "origin": "Ghana",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -244,7 +244,7 @@
         "fields": {
             "name": "Golden Sahara",
             "description": "A radiant painting depicting the golden sands of the Sahara desert at sunrise.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396976/A_radiant_painting_depicting_the_golden_sands_of_the_Sahara_desert_at_sunrise_hbanao.jpg",
             "artist": "Sanaa Diop",
             "origin": "Senegal",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -260,7 +260,7 @@
         "fields": {
             "name": "African Harmony",
             "description": "An elegant sculpture symbolizing the harmony of African cultures.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440447/sculptures/An_elegant_sculpture_symbolizing_the_harmony_of_African_cultures_nb0t4u.jpg",
             "artist": "Kwame Nkrumah",
             "origin": "Ghana",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -276,7 +276,7 @@
         "fields": {
             "name": "Unity in Stone",
             "description": "A solid stone sculpture representing unity among African nations.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440447/sculptures/A_solid_stone_sculpture_representing_unity_among_African_nations_w3w3kh.png",
             "artist": "Abebe Chukwuma",
             "origin": "Nigeria",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -292,7 +292,7 @@
         "fields": {
             "name": "Serenity in Stone",
             "description": "A peaceful stone sculpture depicting tranquility in an African landscape.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440447/sculptures/A_peaceful_stone_sculpture_depicting_tranquility_in_an_African_landscape._az95tr.png",
             "artist": "Sanaa Diop",
             "origin": "Senegal",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -308,7 +308,7 @@
         "fields": {
             "name": "Spiritual Essence",
             "description": "An ethereal sculpture capturing the spiritual essence of African traditions.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440453/sculptures/An_ethereal_sculpture_capturing_the_spiritual_essence_of_African_traditions_voittr.jpg",
             "artist": "Kwame Osaze",
             "origin": "Nigeria",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -324,7 +324,7 @@
         "fields": {
             "name": "Dancing in Bronze",
             "description": "A dynamic bronze sculpture celebrating the energy of African dance.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440445/sculptures/A_dynamic_bronze_sculpture_celebrating_the_energy_of_African_dance_ksdwfg.jpg",
             "artist": "Zahara Kibibi",
             "origin": "Kenya",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -340,7 +340,7 @@
         "fields": {
             "name": "Sculpted Melodies",
             "description": "An artistic sculpture inspired by the rhythm and melody of African music.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440447/sculptures/An_artistic_sculpture_inspired_by_the_rhythm_and_melody_of_African_music_o21uia.jpg",
             "artist": "Ayana Kamau",
             "origin": "Kenya",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -356,7 +356,7 @@
         "fields": {
             "name": "African Spirit",
             "description": "A mystical sculpture embodying the spirit and essence of Africa.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440446/sculptures/A_mystical_sculpture_embodying_the_spirit_and_essence_of_Africa_y0bjdm.png",
             "artist": "Musa Sankara",
             "origin": "Senegal",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -372,7 +372,7 @@
         "fields": {
             "name": "Eternal Connection",
             "description": "A symbolic sculpture representing the eternal connection between humans and nature.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440447/sculptures/A_symbolic_sculpture_representing_the_eternal_connection_between_humans_and_nature._wnximc.jpg",
             "artist": "Lila Amara",
             "origin": "Tanzania",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -388,7 +388,7 @@
         "fields": {
             "name": "Wisdom Carved in Wood",
             "description": "A wise-looking wood sculpture symbolizing the wisdom of African traditions.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440447/sculptures/A_wise-looking_wood_sculpture_symbolizing_the_wisdom_of_African_traditions_c30grh.png",
             "artist": "Adeola Adeyemi",
             "origin": "Nigeria",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -404,7 +404,7 @@
         "fields": {
             "name": "Rooted in Culture",
             "description": "A cultural sculpture rooted in African heritage and traditions.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692441383/sculptures/A_cultural_sculpture_rooted_in_African_heritage_and_traditions_mwwo02.png",
             "artist": "Sanaa Ndiaye",
             "origin": "Senegal",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -420,7 +420,7 @@
         "fields": {
             "name": "Embrace of Stone",
             "description": "A loving stone sculpture depicting an embrace between two figures.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440446/sculptures/A_loving_stone_sculpture_depicting_an_embrace_between_two_figures_zpaeyn.jpg",
             "artist": "Kwame Adu",
             "origin": "Ghana",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -436,7 +436,7 @@
         "fields": {
             "name": "Essence of Nature",
             "description": "An essence-filled sculpture celebrating the interconnectedness of African nature.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440448/sculptures/An_essence-filled_sculpture_celebrating_the_interconnectedness_of_African_nature_ja2ceh.png",
             "artist": "Zainab Kamara",
             "origin": "Sierra Leone",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -452,7 +452,7 @@
         "fields": {
             "name": "Bronze Elegance",
             "description": "An elegant bronze sculpture embodying the grace and elegance of African cultures.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440447/sculptures/An_elegant_bronze_sculpture_embodying_the_grace_and_elegance_of_African_cultures._kha7op.png",
             "artist": "Thabo Molefe",
             "origin": "South Africa",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -468,7 +468,7 @@
         "fields": {
             "name": "Sculpted Serenity",
             "description": "A serene and calming sculpture capturing the tranquility of African landscapes.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440446/sculptures/A_serene_and_calming_sculpture_capturing_the_tranquility_of_African_landscapes._du8mct.jpg",
             "artist": "Abebe Chukwuma",
             "origin": "Nigeria",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -484,7 +484,7 @@
         "fields": {
             "name": "Eternal Connection",
             "description": "An ethereal sculpture symbolizing the eternal connection between humans and nature.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440448/sculptures/An_ethereal_sculpture_symbolizing_the_eternal_connection_between_humans_and_nature_frvkgb.jpg",
             "artist": "Kwame Osaze",
             "origin": "Nigeria",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -498,9 +498,9 @@
         "model": "products.product",
         "pk": 32,
         "fields": {
-            "name": "Dancing in Bronze",
-            "description": "A dynamic bronze sculpture celebrating the energy of African dance.",
-            "image": "path/to/cloudinary/image",
+            "name": "Dancing in Stone",
+            "description": "A dynamic stone sculpture celebrating the energy of African dance.",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440445/sculptures/A_dynamic_stone_sculpture_celebrating_the_energy_of_African_dance_g2ww7b.jpg",
             "artist": "Zahara Kibibi",
             "origin": "Kenya",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -514,9 +514,9 @@
         "model": "products.product",
         "pk": 33,
         "fields": {
-            "name": "Sculpted Melodies",
-            "description": "An artistic sculpture inspired by the rhythm and melody of African music.",
-            "image": "path/to/cloudinary/image",
+            "name": "Sculpted Wisdom",
+            "description": "An artistic stone head sculpture of wise tribe chief.",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692441749/sculptures/Stone_head_figure_of_wise_tribe_chief_yn2mza.jpg",
             "artist": "Ayana Kamau",
             "origin": "Kenya",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -532,7 +532,7 @@
         "fields": {
             "name": "African Spirit",
             "description": "A mystical sculpture embodying the spirit and essence of Africa.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440446/sculptures/A_mystical_sculpture_of_African_culture_and_heritage_rqxyf3.png",
             "artist": "Musa Sankara",
             "origin": "Senegal",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -548,7 +548,7 @@
         "fields": {
             "name": "Embrace of Stone",
             "description": "A loving stone sculpture depicting an embrace between two figures.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692442096/sculptures/A_smooth_stone_sculpture_of_the_embrace_between_two_figures_zijqg4.jpg",
             "artist": "Kwame Adu",
             "origin": "Ghana",
             "origin_image": "path/to/cloudinary/flag-image",
@@ -564,7 +564,7 @@
         "fields": {
             "name": "Essence of Nature",
             "description": "An essence-filled sculpture celebrating the interconnectedness of African nature.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692440449/sculptures/An_essence-filled_sculpture_celebrating_the_interconnectedness_of_African_people_erj3wt.png",
             "artist": "Zainab Kamara",
             "origin": "Sierra Leone",
             "origin_image": "path/to/cloudinary/flag-image",
