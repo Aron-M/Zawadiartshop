@@ -44,10 +44,10 @@
                         Products
                     </a>
                     <ul class="dropdown-menu dropdown-menu-slide" aria-labelledby="productsDropdown">
-                        <li><a class="dropdown-item" href="#">Paintings</a></li>
-                        <li><a class="dropdown-item" href="#">Sculptures</a></li>
-                        <li><a class="dropdown-item" href="#">Frames</a></li>
-                        <li><a class="dropdown-item" href="#">Crafts</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products:paintings' %}">Paintings</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products:sculptures' %}">Sculptures</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products:frames' %}">Frames</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products:crafts' %}">Crafts</a></li>
                     </ul>
                 </li>
                 <!-- SALE link -->
