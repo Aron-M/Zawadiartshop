@@ -48,20 +48,23 @@
                     <!-- Repeat for other categories -->
                 </div>
 
-
+                <!-- Artists -->
                 <div class="form-group d-flex align-items-start">
                     <label class="form-check-label mt-2 me-3" for="artist">Artist:</label>
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary dropdown-toggle ms-4" type="button"
-                            data-bs-toggle="dropdown" data-bs-auto-close="false" aria-haspopup="true" aria-expanded="false">
+                            data-bs-toggle="dropdown" data-bs-auto-close="false" aria-haspopup="true"
+                            aria-expanded="false">
                             Select Artist
                         </button>
                         <div class="dropdown-menu" style="min-width: 82%;">
-                            <label class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
+                            <label
+                                class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
                                 Artist 1
                                 <input type="checkbox" class="form-check-input">
                             </label>
-                            <label class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
+                            <label
+                                class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
                                 Artist 2
                                 <input type="checkbox" class="form-check-input">
                             </label>
@@ -69,11 +72,6 @@
                         </div>
                     </div>
                 </div>
-                
-                
-                
-                
-
 
                 <!-- Origin -->
                 <div class="form-group">
@@ -81,7 +79,8 @@
                     <div class="form-check form-check-label form-check-inline mt-2 me-3">
                         <input type="checkbox" class="form-check-input" id="origin1">
                         <label class="form-check-label d-flex justify-content-center"><img
-                                src="{% static 'images/country-flags/south-africa (1).png' %}" class="flag-icon"></label>
+                                src="{% static 'images/country-flags/south-africa (1).png' %}"
+                                class="flag-icon"></label>
                     </div>
                     <div class="form-check form-check-label form-check-inline mt-2 me-3">
                         <input type="checkbox" class="form-check-input" id="origin2">
@@ -94,7 +93,8 @@
                 <!-- Price -->
                 <div class="form-group me-3">
                     <label class="form-check-label mt-1 me-2" for="price">Price ($):</label>
-                    <input type="number" class="form-control w-25 me-2" id="price" step="50"><span>*search for items under this amount</span>
+                    <input type="number" class="form-control w-25 me-2" id="price" step="50"><span>*search for items
+                        under this amount</span>
                 </div>
             </div>
             <div class="modal-footer">

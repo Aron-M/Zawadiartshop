@@ -3,7 +3,7 @@
         "pk": 1,
         "fields": {
             "name": "African Sunset",
-            "description": "Vibrant painting depicting a beautiful African sunset.",
+            "description": "Vibrant painting depicting buffaloes grazing under the beautiful African sunset.",
             "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396977/An_atmospheric_painting_capturing_the_breathtaking_beauty_of_an_African_sunset._zcmy39.webp",
             "artist": "Kwame Nkrumah",
             "origin": "Ghana",

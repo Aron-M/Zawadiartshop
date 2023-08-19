@@ -158,11 +158,6 @@ body.modal-open .content-to-fade {
     min-width: 100%;
 }
 
-/* Ensure the dropdown menu doesn't overlap the input */
-/* .dropdown-toggle::after {
-    display: none;
-} */
-
 /* Style the checkboxes in the dropdown menu */
 .dropdown-menu .form-check {
     display: flex;
@@ -173,4 +168,32 @@ body.modal-open .content-to-fade {
 .flag-icon {
     max-width: 3vw;
     margin: 0 !important;
+}
+
+.card img {
+    /* Set a fixed height for the card to ensure consistent size */
+    height: 55vh;
+    max-width: 28vw;
+    border: 1px solid #131212;
+    /* Add other styling properties as needed */
+}
+
+.custom-card {
+    width: auto; /* Adjust card width based on image */
+    display: inline-block; /* Display the card as an inline block */
+    margin-right: 10px; /* Add some spacing between cards */
+}
+
+.card {
+    max-width: 28vw; /* Set the maximum width for the card */
+    margin: 0 auto; /* Center the card horizontally */
+}
+
+.card-img-top {
+    max-width: 100%; /* Make the image occupy the full width of the card */
+    height: auto; /* Maintain the image's aspect ratio */
+}
+
+.card-body {
+    padding: 1rem; /* Add padding to the card body */
 }
