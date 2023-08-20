@@ -57,38 +57,138 @@
                             aria-expanded="false">
                             Select Artist
                         </button>
-                        <div class="dropdown-menu" style="min-width: 82%;">
+                        <div class="dropdown-menu custom-dropdown-menu" style="min-width: 82%;">
                             <label
                                 class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
-                                Artist 1
+                                Kwame Nkrumah
                                 <input type="checkbox" class="form-check-input">
                             </label>
                             <label
                                 class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
-                                Artist 2
+                                Thabo Molefe
                                 <input type="checkbox" class="form-check-input">
                             </label>
-                            <!-- Repeat for other artists -->
+                            <label
+                                class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
+                                Leyla Abubakar
+                                <input type="checkbox" class="form-check-input">
+                            </label>
+                            <label
+                                class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
+                                Sanaa Diop
+                                <input type="checkbox" class="form-check-input">
+                            </label>
+                            <label
+                                class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
+                                Zahara Kibibi
+                                <input type="checkbox" class="form-check-input">
+                            </label>
+                            <label
+                                class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
+                                Kwame Osaze
+                                <input type="checkbox" class="form-check-input">
+                            </label>
+                            <label
+                                class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
+                                Adeola Adeyemi
+                                <input type="checkbox" class="form-check-input">
+                            </label>
+                            <label
+                                class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
+                                Ayana Kamau
+                                <input type="checkbox" class="form-check-input">
+                            </label>
+                            <label
+                                class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
+                                Musa Sankara
+                                <input type="checkbox" class="form-check-input">
+                            </label>
+                            <label
+                                class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
+                                Lila Amara
+                                <input type="checkbox" class="form-check-input">
+                            </label>
+                            <label
+                                class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
+                                Abebe Chukwuma
+                                <input type="checkbox" class="form-check-input">
+                            </label>
+                            <label
+                                class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
+                                Kwame Adu
+                                <input type="checkbox" class="form-check-input">
+                            </label>
+                            <label
+                                class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
+                                Sanaa Ndiaye
+                                <input type="checkbox" class="form-check-input">
+                            </label>
+                            <label
+                                class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
+                                Zainab Kamara
+                                <input type="checkbox" class="form-check-input">
+                        </label>
                         </div>
                     </div>
+                    <span class="ms-3 mt-2">
+                        <span id="selected-artist-count"></span>
+                    </span>
                 </div>
 
                 <!-- Origin -->
-                <div class="form-group">
-                    <label class="form-check-label mt-2 me-4" for="origin">Origin:</label>
-                    <div class="form-check form-check-label form-check-inline mt-2 me-3">
-                        <input type="checkbox" class="form-check-input" id="origin1">
-                        <label class="form-check-label d-flex justify-content-center"><img
-                                src="{% static 'images/country-flags/south-africa (1).png' %}"
-                                class="flag-icon"></label>
+                <div class="form-group" id="origin-icons">
+                    <label class="form-check-label mt-2" for="origin">Origin:</label>
+                    <div class="form-check form-check-label form-check-inline mt-2 me-1">
+                        <label class="form-check-label d-flex flex-column align-items-center">
+                            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif.png"
+                                class="flag-icon" title="Ghana">
+                            <p class="mb-0">GHA</p>
+                        </label>
                     </div>
-                    <div class="form-check form-check-label form-check-inline mt-2 me-3">
-                        <input type="checkbox" class="form-check-input" id="origin2">
-                        <label class="form-check-label d-flex justify-content-center"><img
-                                src="{% static 'images/country-flags/ghana.png' %}" class="flag-icon"></label>
+                    <div class="form-check form-check-label form-check-inline mt-2 me-1">
+                        <label class="form-check-label d-flex flex-column align-items-center">
+                            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523654/flag%20icons/kenya_cgsacm.png"
+                                class="flag-icon" title="Kenya">
+                            <p class="mb-0">KEN</p>
+                        </label>
                     </div>
-                    <!-- Repeat for other origin flags -->
+                    <div class="form-check form-check-label form-check-inline mt-2 me-1">
+                        <label class="form-check-label d-flex flex-column align-items-center">
+                            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png"
+                                class="flag-icon" title="Nigeria">
+                            <p class="mb-0">NGA</p>
+                        </label>
+                    </div>
+                    <div class="form-check form-check-label form-check-inline mt-2 me-1">
+                        <label class="form-check-label d-flex flex-column align-items-center">
+                            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/south-africa_1_hyh59u.png"
+                                class="flag-icon" title="South Africa">
+                            <p class="mb-0">RSA</p>
+                        </label>
+                    </div>
+                    <div class="form-check form-check-label form-check-inline mt-2 me-1">
+                        <label class="form-check-label d-flex flex-column align-items-center">
+                            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/tanzania_pi6tn0.png"
+                                class="flag-icon" title="Tanzania">
+                            <p class="mb-0">TZA</p>
+                        </label>
+                    </div>
+                    <div class="form-check form-check-label form-check-inline mt-2 me-1">
+                        <label class="form-check-label d-flex flex-column align-items-center">
+                            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523491/flag%20icons/sierra-leone_tkvubf.png"
+                                class="flag-icon" title="Sierra Leone">
+                            <p class="mb-0">SLE</p>
+                        </label>
+                    </div>
+                    <div class="form-check form-check-label form-check-inline mt-2 me-1">
+                        <label class="form-check-label d-flex flex-column align-items-center">
+                            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png"
+                                class="flag-icon" title="Senegal">
+                            <p class="mb-0">SEN</p>
+                        </label>
+                    </div>
                 </div>
+                
 
                 <!-- Price -->
                 <div class="form-group me-3">

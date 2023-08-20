@@ -35,6 +35,35 @@
     <!-- Add the Bootstrap JavaScript (and jQuery) -->
 
     {% block extra_js %}
+    <script>
+    $(document).ready(function() {
+        // Function to toggle the selected class and border on click
+        $('#origin-icons .flag-icon').on('click', function() {
+            $(this).toggleClass('selected');
+        });
+    });
+
+    // To update the selected artist count
+    const selectedArtistCountSpan = document.getElementById('selected-artist-count');
+    const checkboxes = document.querySelectorAll('.form-check-input');
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateSelectedCount);
+    });
+
+    function updateSelectedCount() {
+        const selectedCount = document.querySelectorAll('.form-check-input:checked').length;
+
+        if (selectedCount > 0) {
+            selectedArtistCountSpan.textContent = `${selectedCount} artist${selectedCount === 1 ? '' : 's'} selected`;
+            selectedArtistCountSpan.style.display = 'inline';
+            selectedArtistCountSpan.style.color = 'green';
+            selectedArtistCountSpan.style.fontStyle = 'italic';
+        } else {
+            selectedArtistCountSpan.style.display = 'none';
+        }
+    }
+</script>
     {% endblock %}
 </body>
 
