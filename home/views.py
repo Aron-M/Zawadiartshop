@@ -5,4 +5,4 @@ from django.shortcuts import render
 
 def homepage_view(request):
     # Render the homepage template
-    return render(request, '/workspace/Zawadiartshop/home/templates/homepage.html')
+    return render(request, 'homepage.html')
