@@ -2,16 +2,17 @@
 {% load static %}
 
 {% block content %}
-  <h1 class="d-flex flex-column justify-content-center align-items-center mt-3">ALL PRODUCTS</h1>
-  <div class="row">
+<h1 class="d-flex flex-column justify-content-center align-items-center mt-3 products">ALL PRODUCTS</h1>
+<div class="row">
     {% for product in products %}
-    <div class="col-md-4 mb-3">
+    <div class="col-md-4 p-5 mb-3">
         <div class="card">
             <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.fields.name }}">
             <div class="card-body">
                 <h5 class="card-title">{{ product.name }}</h5>
                 <p class="card-text" style="max-width: 100%;">{{ product.description }}</p>
-                <p class="card-text">{{ product.artist }}</p>
+                <p class="card-text">{{ product.artist }}<span class="fw-bold ms-5">{{ product.origin_image }}</span></p>
+                <p><span class="fw-bold">Style: </span>{{ product.style }}</p>
                 <p class="card-text">{{ product.origin }}</p>
                 <p class="card-text">Price: ${{ product.price }}</p>
                 <a href="#" class="btn btn-primary">Add to Cart</a>
@@ -21,4 +22,3 @@
     {% endfor %}
 </div>
 {% endblock %}
-

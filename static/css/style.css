@@ -1,11 +1,10 @@
-body {
+.base-body {
     background-image: url('https://res.cloudinary.com/dj3upv8lw/image/upload/v1692439951/savannah_nm23cv.jpg');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center center; 
     min-height: 100vh;
 }
-
 
 .container {
     flex: 1;
@@ -172,8 +171,9 @@ body.modal-open .content-to-fade {
 
 .card img {
     /* Set a fixed height for the card to ensure consistent size */
-    height: 55vh;
-    max-width: 28vw;
+    min-height: 45vh;
+    max-height: 65vh;
+    width: auto;
     border: 1px solid #131212;
     /* Add other styling properties as needed */
 }
@@ -185,7 +185,7 @@ body.modal-open .content-to-fade {
 }
 
 .card {
-    max-width: 28vw; /* Set the maximum width for the card */
+    width: auto; /* Set the maximum width for the card */
     margin: 0 auto; /* Center the card horizontally */
 }
 
