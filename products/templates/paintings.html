@@ -2,23 +2,29 @@
 {% load static %}
 
 {% block content %}
-  <h1 class="d-flex flex-column justify-content-center align-items-center mt-3">PAINTINGS</h1>
-    <div class="row">
-      {% for product in products %}
-        <div class="col-md-4 p-5 mb-3">
-          <div class="card">
-            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.fields.name }}">
+<h1 class="d-flex flex-column justify-content-center align-items-center mt-3 products">PAINTINGS</h1>
+<div class="row">
+    {% for product in products %}
+    <div class="col-md-4 p-5 mb-3">
+        <div class="card">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
             <div class="card-body">
-              <h5 class="card-title">{{ product.name }}</h5>
-              <p class="card-text">{{ product.description }}</p>
-              <p class="card-text">{{ product.artist }}</p>
-              <p class="card-text">{{ product.origin }}</p>
-              <p class="card-text">Price: ${{ product.price }}</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text m-0">{{ product.description }}</p>
+                <div class="d-flex justify-content-start m-0">
+                    <p class="card-text fw-bold mt-3 me-5 mr-5">{{ product.artist }}</p>
+                    <div class="d-flex align-items-center">
+                        <img src="{{ product.origin_image.url }}" alt="{{ product.origin }}" class="flag-icon pl-3 pe-2">
+                        <p class="card-text">{{ product.origin }}</p>
+                    </div>
+                </div>
+                <p><span class="fw-bold">Style: </span>{{ product.style }}</p>
+                <p class="card-text">Price: ${{ product.price }}</p>
+                <a href="#" class="btn btn-success">View</a>
+                <a href="#" class="btn btn-primary">Add to Cart</a>               
             </div>
-          </div>
         </div>
-      {% endfor %}
     </div>
-  </div>
+    {% endfor %}
+</div>
 {% endblock %}

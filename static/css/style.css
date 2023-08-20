@@ -165,11 +165,12 @@ body.modal-open .content-to-fade {
 }
 
 .flag-icon {
-    max-width: 3vw;
+    max-width: 5vw;
+    height: 5vh !important;
     margin: 0 !important;
 }
 
-.card img {
+.card-img-top {
     /* Set a fixed height for the card to ensure consistent size */
     min-height: 45vh;
     max-height: 65vh;
@@ -197,3 +198,8 @@ body.modal-open .content-to-fade {
 .card-body {
     padding: 1rem; /* Add padding to the card body */
 }
+
+.card-img-top:hover {
+    transform: scale(1.05); /* Scale the image by 5% */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+  }
