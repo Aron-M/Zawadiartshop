@@ -9,6 +9,12 @@ def products(request):
     return render(request, 'products.html', context)
 
 
+def artists(request):
+    artists = Product.objects.values_list('artist', flat=True).distinct()  # Get distinct artist names
+    context = {'artists': artists}
+    return render(request, '/workspace/Zawadiartshop/home/templates/homepage.html', context)
+
+
 def paintings(request):
     paintings = Product.objects.filter(category='Paintings')
     return render(request, 'paintings.html', {'products': paintings})
@@ -29,6 +35,3 @@ def crafts(request):
     return render(request, 'crafts.html', {'products': crafts})
 
 
-def artists(request):
-    artist = Product.objects.filter(category='Artists')
-    return render(request, 'homepage.html', {'products': artist})

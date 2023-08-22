@@ -58,10 +58,10 @@
                             Select Artist
                         </button>
                         <div class="dropdown-menu custom-dropdown-menu" style="min-width: 82%;">
-                            {% for product in products %}
+                            {% for artist in artists %}
                             <label
                                 class="dropdown-item form-check d-flex justify-content-between align-items-center custom-dropdown-item">
-                                {{ product.artist }}
+                                {{ artist }}
                                 <input type="checkbox" class="form-check-input">
                             </label>
                             {% endfor %}
@@ -141,6 +141,5 @@
         </div>
     </div>
 </div>
-
 
 {% endblock %}

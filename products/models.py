@@ -3,12 +3,6 @@ from django.db import models
 
 
 class Product(models.Model):
-    CATEGORY_CHOICES = [
-        ('paintings', 'Paintings'),
-        ('sculptures', 'Sculptures'),
-        ('frames', 'Frames'),
-        ('crafts', 'Crafts'),
-    ]
 
     name = models.CharField(max_length=100)
     description = models.TextField()
@@ -19,7 +13,7 @@ class Product(models.Model):
     style = models.CharField(max_length=50, default="Unknown")
     stock = models.PositiveIntegerField()
     price = models.DecimalField(max_digits=8, decimal_places=2)
-    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
+    category = models.CharField(max_length=20)
 
     def __str__(self):
         return self.name
