@@ -27,3 +27,8 @@ def frames(request):
 def crafts(request):
     crafts = Product.objects.filter(category='Crafts')
     return render(request, 'crafts.html', {'products': crafts})
+
+
+def artists(request):
+    artist = Product.objects.filter(category='Artists')
+    return render(request, 'homepage.html', {'products': artist})
