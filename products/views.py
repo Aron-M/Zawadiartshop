@@ -9,9 +9,18 @@ def products(request):
     return render(request, 'products.html', context)
 
 
-def artists(request):
-    artists = Product.objects.values_list('artist', flat=True).distinct()  # Get distinct artist names
-    context = {'artists': artists}
+def searchmodal(request):
+    artists = Product.objects.values_list('artist', flat=True).distinct()
+    category = Product.objects.values_list('category', flat=True).distinct()
+    origin_image = Product.objects.values_list('origin_image', flat=True).distinct()
+    origin = Product.objects.values_list('origin', flat=True).distinct()
+    price = Product.objects.values_list('price', flat=True).distinct()  # Get distinct artist names
+    context = {
+               'artists': artists,
+               'category': category,
+               'origin_image': origin_image,
+               'origin': origin,
+               'price': price}
     return render(request, '/workspace/Zawadiartshop/home/templates/homepage.html', context)
 
 

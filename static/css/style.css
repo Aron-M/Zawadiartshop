@@ -74,7 +74,7 @@
     width:auto; /* Adjust the width as needed */
     vertical-align: top;
     margin-bottom: 15px; /* Add spacing between each category */
-    margin-left: 0.5vw;
+    /* margin-left: 0.5vw; */
     margin-bottom: 1 !important;
     font-weight: 500;
 }
@@ -148,12 +148,15 @@ body.modal-open .content-to-fade {
     border-color: #2f2c2c;
 }
 
+.category-form-check-input {
+    border-color: #2f2c2c;
+}
+
 
 /* Custom class for horizontal checkboxes */
 .form-check-inline {
     display: inline-flex;
     align-items: center;
-    margin-right: 20px; /* Adjust the spacing between checkboxes if needed */
 }
 
 /* Adjust the dropdown menu position */

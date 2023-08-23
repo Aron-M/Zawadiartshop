@@ -28,22 +28,13 @@
             <div class="modal-body">
                 <!-- Category -->
                 <div class="form-group">
-                    <label class="form-check-label mt-3 me-3" for="category">Category:</label>
+                    <label class="form-check-label mt-3 me-1" for="category">Category:</label>
                     <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="category1">
-                        <label class="form-check-label mt-3" for="category1">Paintings</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="category2">
-                        <label class="form-check-label mt-3" for="category2">Sculptures</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="category3">
-                        <label class="form-check-label mt-3" for="category3">Frames</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="category4">
-                        <label class="form-check-label mt-3" for="category4">Crafts</label>
+                        {% for category in category %}
+                        <input type="checkbox" class="category-form-check-input d-flex justify-content-between me-1" id="
+                            category1">
+                        <label class="form-check-label ps-1 mt-3 me-5" for="category1">{{ category }}</label>
+                        {% endfor %}
                     </div>
                     <!-- Repeat for other categories -->
                 </div>
@@ -53,7 +44,7 @@
                     <label class="form-check-label mt-2 me-3" for="artist">Artist:</label>
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary dropdown-toggle ms-4" type="button"
-                            data-bs-toggle="dropdown" data-bs-auto-close="false" aria-haspopup="true"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true"
                             aria-expanded="false">
                             Select Artist
                         </button>
@@ -74,63 +65,20 @@
 
                 <!-- Origin -->
                 <div class="form-group" id="origin-icons">
-                    <label class="form-check-label mt-2" for="origin">Origin:</label>
-                    <div class="form-check form-check-label form-check-inline mt-2 me-1">
-                        <label class="form-check-label d-flex flex-column align-items-center">
-                            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif.png"
-                                class="flag-icon" title="Ghana">
+                    <label class="form-check-label mt-3" for="origin">Origin:</label>
+                    <div class="form-check form-check-label form-check-inline me-1">
+                        {% for origin_image in origin_image %}
+                        <a class="btn">
+                            <img src="{{ origin_image }}" class="flag-icon" title="{{ origin_image.origin }}">
                             <p class="mb-0">GHA</p>
-                        </label>
-                    </div>
-                    <div class="form-check form-check-label form-check-inline mt-2 me-1">
-                        <label class="form-check-label d-flex flex-column align-items-center">
-                            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523654/flag%20icons/kenya_cgsacm.png"
-                                class="flag-icon" title="Kenya">
-                            <p class="mb-0">KEN</p>
-                        </label>
-                    </div>
-                    <div class="form-check form-check-label form-check-inline mt-2 me-1">
-                        <label class="form-check-label d-flex flex-column align-items-center">
-                            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png"
-                                class="flag-icon" title="Nigeria">
-                            <p class="mb-0">NGA</p>
-                        </label>
-                    </div>
-                    <div class="form-check form-check-label form-check-inline mt-2 me-1">
-                        <label class="form-check-label d-flex flex-column align-items-center">
-                            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/south-africa_1_hyh59u.png"
-                                class="flag-icon" title="South Africa">
-                            <p class="mb-0">RSA</p>
-                        </label>
-                    </div>
-                    <div class="form-check form-check-label form-check-inline mt-2 me-1">
-                        <label class="form-check-label d-flex flex-column align-items-center">
-                            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/tanzania_pi6tn0.png"
-                                class="flag-icon" title="Tanzania">
-                            <p class="mb-0">TZA</p>
-                        </label>
-                    </div>
-                    <div class="form-check form-check-label form-check-inline mt-2 me-1">
-                        <label class="form-check-label d-flex flex-column align-items-center">
-                            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523491/flag%20icons/sierra-leone_tkvubf.png"
-                                class="flag-icon" title="Sierra Leone">
-                            <p class="mb-0">SLE</p>
-                        </label>
-                    </div>
-                    <div class="form-check form-check-label form-check-inline mt-2 me-1">
-                        <label class="form-check-label d-flex flex-column align-items-center">
-                            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png"
-                                class="flag-icon" title="Senegal">
-                            <p class="mb-0">SEN</p>
-                        </label>
+                        </a>
+                        {% endfor %}
                     </div>
                 </div>
-                
-
                 <!-- Price -->
-                <div class="form-group me-3">
-                    <label class="form-check-label mt-1 me-2" for="price">Price ($):</label>
-                    <input type="number" class="form-control w-25 me-2" id="price" step="50"><span>*search for items
+                <div class="form-group mt-2 me-3">
+                    <label class="form-check-label me-2" for="price">Price ($):</label>
+                    <input type="number" class="form-control w-25 me-2 mt-2" id="price" step="50"><span>*search for items
                         under this amount</span>
                 </div>
             </div>
