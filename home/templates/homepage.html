@@ -69,15 +69,15 @@
                     <div class="form-check form-check-label form-check-inline me-1">
                         {% for origin_image in origin_image %}
                         <a class="btn">
-                            <img src="{{ origin_image }}" class="flag-icon" title="{{ origin_image.origin }}">
-                            <p class="mb-0">GHA</p>
+                            <img src="{{ origin_image }}" class="flag-icon" title="{{ origin }}">
+                    {% endfor %}
                         </a>
-                        {% endfor %}
+                        
                     </div>
                 </div>
                 <!-- Price -->
                 <div class="form-group mt-2 me-3">
-                    <label class="form-check-label me-2" for="price">Price ($):</label>
+                    <label class="form-check-label me-2 mt-3" for="price">Price ($):</label>
                     <input type="number" class="form-control w-25 me-2 mt-2" id="price" step="50"><span>*search for items
                         under this amount</span>
                 </div>

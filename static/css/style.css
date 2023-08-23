@@ -185,12 +185,14 @@ body.modal-open .content-to-fade {
 .flag-icon:hover {
     transform: scale(1.3);
     cursor:pointer;
+    transition: ease-in(0.5s) !important;
 }
 
 .flag-icon.selected {
     border: 2px solid black;
     border-radius: 95%;
     transform: scale(1.05);
+    
 }
 
 .card-img-top {

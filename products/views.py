@@ -14,12 +14,15 @@ def searchmodal(request):
     category = Product.objects.values_list('category', flat=True).distinct()
     origin_image = Product.objects.values_list('origin_image', flat=True).distinct()
     origin = Product.objects.values_list('origin', flat=True).distinct()
-    price = Product.objects.values_list('price', flat=True).distinct()  # Get distinct artist names
+    origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
+    price = Product.objects.values_list('price', flat=True).distinct()
+    products = Product.objects.filter(category='origin')
     context = {
                'artists': artists,
                'category': category,
                'origin_image': origin_image,
                'origin': origin,
+               'origin_code': origin_code,
                'price': price}
     return render(request, '/workspace/Zawadiartshop/home/templates/homepage.html', context)
 
