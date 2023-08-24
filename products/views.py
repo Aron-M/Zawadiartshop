@@ -29,6 +29,7 @@ def searchmodal(request):
 
 def product_search(request):
     selected_artists = request.GET.getlist('artist')
+    print("Selected artists:", selected_artists)
     selected_categories = request.GET.getlist('category')
     selected_origins = request.GET.getlist('origin')
     max_price = request.GET.get('price')
