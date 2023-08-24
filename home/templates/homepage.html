@@ -28,7 +28,7 @@
             <div class="modal-body">
                 <!-- Category -->
                 <div class="form-group">
-                    <label class="form-check-label mt-3 me-1" for="category">Category:</label>
+                    <label class="form-check-label mt-3 me-4" for="category">Category:</label>
                     <div class="form-check form-check-inline">
                         {% for category in category %}
                         <input type="checkbox" class="category-form-check-input d-flex justify-content-between me-1" id="
@@ -39,7 +39,7 @@
                 </div>
                 <!-- Artists -->
                 <div class="form-group d-flex align-items-start">
-                    <label class="form-check-label mt-2 me-3" for="artist">Artist:</label>
+                    <label class="form-check-label mt-2 me-4" for="artist">Artist:</label>
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary dropdown-toggle ms-4" type="button"
                             data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true"
@@ -62,9 +62,9 @@
                 </div>
                 <!-- Origin -->
                 <div class="form-group" id="origin-icons">
-                    <label class="form-check-label mt-3" for="origin">Origin:</label>
-                    <div class="form-check form-check-label form-check-inline me-1">
-                        <div class="form-check form-check-label form-check-inline me-1">
+                    <label class="form-check-label mt-3 me-4" for="origin">Origin:</label>
+                    <div class="form-check form-check-label form-check-inline">
+                        <div class="form-check form-check-label form-check-inline">
                             {% for origin_image_tuple in origin_image %}
                             <a class="btn">
                                 <img src="{{ origin_image_tuple.0 }}" class="flag-icon"
@@ -76,16 +76,16 @@
                     </div>
                 </div>
                 <!-- Price -->
-                <div class="form-group mt-2 me-3">
-                    <label class="form-check-label me-2 mt-3" for="price">Price ($):</label>
-                    <input type="number" class="form-control w-25 me-2 mt-2" id="price" step="50"><span>*search for
+                <div class="form-group me-3">
+                    <label class="form-check-label mt-1 me-2" for="price">Price ($):</label>
+                    <input type="number" class="form-control w-25 me-2" id="price" step="50"><span>*search for
                         items
                         under this amount</span>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Search</button>
+                <button type="button" class="btn btn-primary" onclick="location.href='{% url 'products:product_search' %}'">Search</button>
             </div>
         </div>
     </div>

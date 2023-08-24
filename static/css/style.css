@@ -157,6 +157,7 @@ body.modal-open .content-to-fade {
 .form-check-inline {
     display: inline-flex;
     align-items: center;
+    padding: 0;
 }
 
 /* Adjust the dropdown menu position */

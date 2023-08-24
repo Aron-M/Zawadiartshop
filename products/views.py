@@ -27,6 +27,35 @@ def searchmodal(request):
     return render(request, '/workspace/Zawadiartshop/home/templates/homepage.html', context)
 
 
+def product_search(request):
+    selected_artists = request.GET.getlist('artist')
+    selected_categories = request.GET.getlist('category')
+    selected_origins = request.GET.getlist('origin')
+    max_price = request.GET.get('price')
+
+    # Create a dictionary to hold the filter conditions
+    filters = {}
+
+    if selected_artists:
+        filters['artist__in'] = selected_artists
+    if selected_categories:
+        filters['category__in'] = selected_categories
+    if selected_origins:
+        filters['origin__in'] = selected_origins
+    if max_price:
+        filters['price__lte'] = max_price
+
+    # Apply the filters to the queryset
+    filtered_products = Product.objects.filter(**filters)
+
+    context = {
+        'filtered_products': filtered_products,
+    }
+    return render(request, 'product_search.html', context)
+
+
+
+
 def paintings(request):
     paintings = Product.objects.filter(category='Paintings')
     return render(request, 'paintings.html', {'products': paintings})
