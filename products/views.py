@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Product
+from django.db.models import Q
 
 
 def products(request):
@@ -12,11 +13,10 @@ def products(request):
 def searchmodal(request):
     artists = Product.objects.values_list('artist', flat=True).distinct()
     category = Product.objects.values_list('category', flat=True).distinct()
-    origin_image = Product.objects.values_list('origin_image', flat=True).distinct()
+    origin_image = Product.objects.values_list('origin_image', 'origin', 'origin_code').distinct()
     origin = Product.objects.values_list('origin', flat=True).distinct()
     origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
     price = Product.objects.values_list('price', flat=True).distinct()
-    products = Product.objects.filter(category='origin')
     context = {
                'artists': artists,
                'category': category,

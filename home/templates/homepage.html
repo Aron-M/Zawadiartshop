@@ -36,9 +36,7 @@
                         <label class="form-check-label ps-1 mt-3 me-5" for="category1">{{ category }}</label>
                         {% endfor %}
                     </div>
-                    <!-- Repeat for other categories -->
                 </div>
-
                 <!-- Artists -->
                 <div class="form-group d-flex align-items-start">
                     <label class="form-check-label mt-2 me-3" for="artist">Artist:</label>
@@ -62,23 +60,26 @@
                         <span id="selected-artist-count"></span>
                     </span>
                 </div>
-
                 <!-- Origin -->
                 <div class="form-group" id="origin-icons">
                     <label class="form-check-label mt-3" for="origin">Origin:</label>
                     <div class="form-check form-check-label form-check-inline me-1">
-                        {% for origin_image in origin_image %}
-                        <a class="btn">
-                            <img src="{{ origin_image }}" class="flag-icon" title="{{ origin }}">
-                    {% endfor %}
-                        </a>
-                        
+                        <div class="form-check form-check-label form-check-inline me-1">
+                            {% for origin_image_tuple in origin_image %}
+                            <a class="btn">
+                                <img src="{{ origin_image_tuple.0 }}" class="flag-icon"
+                                    title="{{ origin_image_tuple.1 }}">
+                                <p>{{ origin_image_tuple.2 }}</p>
+                            </a>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
                 <!-- Price -->
                 <div class="form-group mt-2 me-3">
                     <label class="form-check-label me-2 mt-3" for="price">Price ($):</label>
-                    <input type="number" class="form-control w-25 me-2 mt-2" id="price" step="50"><span>*search for items
+                    <input type="number" class="form-control w-25 me-2 mt-2" id="price" step="50"><span>*search for
+                        items
                         under this amount</span>
                 </div>
             </div>
