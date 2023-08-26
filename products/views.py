@@ -40,27 +40,28 @@ def product_search(request):
         filters['artist__in'] = selected_artists
     if selected_categories:
         filters['category__in'] = selected_categories
-
-    # Fetch origins of selected artists
-    artist_origins = Product.objects.filter(artist__in=selected_artists).values_list('origin', flat=True).distinct()
-
-    # Filter and keep only selected origins that are present in artist_origins
-    valid_selected_origins = [origin for origin in selected_origins if origin in artist_origins]
-
-    if valid_selected_origins:
-        filters['origin__in'] = valid_selected_origins
-
+    if selected_origins:
+        filters['origin__in'] = selected_origins
     if max_price:
         filters['price__lte'] = max_price
 
     # Apply the filters to the queryset
     filtered_products = Product.objects.filter(**filters)
 
+    # Prepare filter values for the summary
+    filtered_categories = selected_categories
+    filtered_origins = selected_origins
+    filtered_artists = selected_artists
+    filtered_price = max_price
+
     context = {
         'filtered_products': filtered_products,
+        'filtered_categories': filtered_categories,
+        'filtered_origins': filtered_origins,
+        'filtered_artists': filtered_artists,
+        'filtered_price': filtered_price,
     }
     return render(request, 'product_search.html', context)
-
 
 
 def paintings(request):

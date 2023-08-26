@@ -3,6 +3,21 @@
 
 {% block content %}
 <h1 class="d-flex flex-column justify-content-center align-items-center mt-3 products">YOUR SEARCH</h1>
+<div class="filter-summary">
+    Displaying your choices of 
+    <p>{% if filtered_categories %}
+        {{ filtered_categories|join:", " }}</p><p> from
+    {% endif %}
+    {% if filtered_origins %}
+        {{ filtered_origins|join:", " }}</p><p> by artists:
+    {% endif %}
+    {% if filtered_artists %}
+        {{ filtered_artists|join:", " }}</p><p>under the value of ${{ filtered_price }}</p> 
+    {% endif %}
+</div>
+
+
+
 <div class="row">
     {% for product in filtered_products %}
     <div class="col-md-4 p-5 mb-3">

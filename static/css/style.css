@@ -267,3 +267,15 @@ body.modal-open .content-to-fade {
     transform: scale(1); /* Return to the default scale when not hovered */
     transition: transform 0.5s ease-in-out;
 }
+
+.filter-summary {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    max-width: 35vw;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+}
