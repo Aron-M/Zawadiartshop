@@ -24,7 +24,7 @@ def searchmodal(request):
                'origin': origin,
                'origin_code': origin_code,
                'price': price}
-    return render(request, '/workspace/Zawadiartshop/home/templates/homepage.html', context)
+    return render(request, 'homepage.html', context)
 
 
 def product_search(request):
@@ -53,8 +53,6 @@ def product_search(request):
         'filtered_products': filtered_products,
     }
     return render(request, 'product_search.html', context)
-
-
 
 
 def paintings(request):

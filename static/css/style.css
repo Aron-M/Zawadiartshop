@@ -144,12 +144,19 @@ body.modal-open .content-to-fade {
     margin-bottom: 1vh !important;
 }
 
+
 .form-check-input {
     border-color: #2f2c2c;
 }
 
 .category-form-check-input {
     border-color: #2f2c2c;
+}
+
+.larger-checkbox {
+    width: 20px;  /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    /* Add other styling if desired */
 }
 
 
@@ -177,12 +184,9 @@ body.modal-open .content-to-fade {
     overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
 }
 
-.flag-icon {
-    max-width: 5vw;
-    height: 5vh !important;
-    margin: 0 !important;
+.flag-icon{
+    width: 2.6vw;
 }
-
 .flag-icon:hover {
     transform: scale(1.3);
     cursor:pointer;
@@ -230,3 +234,36 @@ body.modal-open .content-to-fade {
     transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
     cursor: pointer;
   }
+
+.hidden-checkbox {
+    position: absolute;
+    left: -9999px;
+}
+
+.checkbox-label {
+    display: inline-block;
+    cursor: pointer;
+    /* Add your styling for the checkbox appearance here */
+}
+
+.checkbox-label img {
+    max-width: 2.5vw;
+}
+
+.checkbox-label img:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+    transition: transform 0.3s ease-in; /* Transition transform property over 0.5 seconds with ease-in timing function */
+}
+
+.checkbox-label img.selected {
+    border: 2px solid black;
+    border-radius: 95%;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out; /* Example transition for the 'selected' state */
+}
+
+.checkbox-label img:not(:hover) {
+    transform: scale(1); /* Return to the default scale when not hovered */
+    transition: transform 0.5s ease-in-out;
+}

@@ -63,6 +63,16 @@
             selectedArtistCountSpan.style.display = 'none';
         }
     }
+
+    let checkboxLabels = document.querySelectorAll('.checkbox-label');
+
+checkboxLabels.forEach(label => {
+    label.addEventListener('click', () => {
+        let checkbox = label.querySelector('.hidden-checkbox');
+        checkbox.checked = !checkbox.checked;
+    });
+});
+
 </script>
     {% endblock %}
 </body>

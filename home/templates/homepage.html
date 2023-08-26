@@ -25,23 +25,24 @@
 <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg custom-modal">
         <div class="modal-content">
-            <form action="{% url 'products:product_search' %}" method="get">  <!-- Use a <form> tag here -->
+            <form action="{% url 'products:product_search' %}" method="get">
                 <div class="modal-body">
                     <!-- Category -->
                     <div class="form-group">
                         <label class="form-check-label mt-3 me-4" for="category">Category:</label>
                         <div class="form-check form-check-inline">
                             {% for category in category %}
-                            <input type="checkbox" class="category-form-check-input d-flex justify-content-between me-1" name="category" value="{{ category }}">
+                            <input type="checkbox" class="category-form-check-input d-flex justify-content-between mt-1 larger-checkbox" 
+                             name="category" value="{{ category }}">
                             <label class="form-check-label ps-1 mt-3 me-5" for="category1">{{ category }}</label>
                             {% endfor %}
                         </div>
                     </div>
                     <!-- Artists -->
                     <div class="form-group d-flex align-items-start">
-                        <label class="form-check-label mt-2 me-4" for="artist">Artist:</label>
+                        <label class="form-check-label mt-2 me-1" for="artist">Artist:</label>
                         <div class="input-group-append">
-                            <button class="btn btn-outline-secondary dropdown-toggle ms-4" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-outline-secondary dropdown-toggle ms-5" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
                                 Select Artist
                             </button>
                             <div class="dropdown-menu custom-dropdown-menu" style="min-width: 82%;">
@@ -57,30 +58,30 @@
                             <span id="selected-artist-count"></span>
                         </span>
                     </div>
+                    <!-- Origin -->
                     <div class="form-group" id="origin-icons">
-                        <label class="form-check-label mt-3 me-4" for="origin">Origin:</label>
-                        <div class="form-check form-check-label form-check-inline">
+                        <label class="form-check-label mt-3" for="origin">Origin:</label>
+                        <div class="form-check form-check-label form-check-inline ms-5">
                             {% for origin_image_tuple in origin_image %}
-                            <input type="checkbox" class="form-check-input" name="origin" value="{{ origin_image_tuple.1 }}">
-                            <a class="btn">
+                            <label class="checkbox-label me-4 mt-2">
+                                <input type="checkbox" class="hidden-checkbox" name="origin" value="{{ origin_image_tuple.1 }}">
                                 <img src="{{ origin_image_tuple.0 }}" class="flag-icon" title="{{ origin_image_tuple.1 }}">
-                                <p>{{ origin_image_tuple.2 }}</p>
-                            </a>
+                                <p class="ms-1">{{ origin_image_tuple.2 }}</p>
+                            </label>
                             {% endfor %}
                         </div>
                     </div>
                     <!-- Price -->
-                    <div class="form-group me-3">
-                        <label class="form-check-label mt-1 me-2" for="price">Price ($):</label>
+                    <div class="form-group">
+                        <label class="form-check-label mt-1 me-3" for="price">Price ($):</label>
                         <input type="number" class="form-control w-25 me-2" id="price" name="price" step="50">
                         <span>*search for items under this amount</span>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Search</button>  <!-- Use type="submit" to trigger form submission -->
-                </div>
-            </form>  <!-- Close the <form> tag -->
+                    <button type="submit" class="btn btn-primary">Search</button> 
+            </form>
         </div>
     </div>
 </div>
