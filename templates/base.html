@@ -73,6 +73,10 @@ checkboxLabels.forEach(label => {
     });
 });
 
+document.getElementById("show-origins-button").addEventListener("click", function () {
+            document.getElementById("origins-not-matching-artists").style.display = "block";
+        });
+    
 </script>
     {% endblock %}
 </body>

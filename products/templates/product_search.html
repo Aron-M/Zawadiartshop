@@ -38,6 +38,26 @@
         {% endif %}
     </div>
 
+    {% if origins_not_matching_artists %}
+    <div class="alert alert-warning mt-4 ms-5">
+        It seems you have chosen origins that are not from the artists you selected.
+        If you are interested in art from these origins, click
+        <button class="btn btn-link" id="show-origins-button">here</button>.
+    </div>
+    {% endif %}
+    
+    <div class="row origins-not-matching-artists mt-4 ms-5" id="origins-not-matching-artists" style="display: none;">
+        <div class="col-md-12">
+            <p>Origins not matching selected artists:</p>
+            <ul>
+                {% for origin in origins_not_matching_artists %}
+                <li>{{ origin }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+
     <div class="row">
         {% for product in filtered_products %}
             <div class="col-md-4 p-5 mb-3">
@@ -63,4 +83,5 @@
             </div>
         {% endfor %}
     </div>
+
 {% endblock %}
