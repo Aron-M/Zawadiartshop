@@ -31,6 +31,7 @@ def product_search(request):
     selected_artists = request.GET.getlist('artist')
     selected_categories = request.GET.getlist('category')
     selected_origins = request.GET.getlist('origin')
+    selected_origin_images = request.GET.getlist('origin_image')
     max_price = request.GET.get('price')
 
     # Create a dictionary to hold the filter conditions
@@ -42,6 +43,8 @@ def product_search(request):
         filters['category__in'] = selected_categories
     if selected_origins:
         filters['origin__in'] = selected_origins
+    if selected_origin_images:
+        filters['origin_image__in'] = selected_origin_images
     if max_price:
         filters['price__lte'] = max_price
 
@@ -54,10 +57,25 @@ def product_search(request):
     filtered_artists = selected_artists
     filtered_price = max_price
 
+    # Prepare a set to hold the origins of selected artists
+    selected_artist_origins = set()
+
+    # Filter products by selected artists and get their origins
+    if selected_artists:
+        selected_artist_origins = set(Product.objects.filter(artist__in=selected_artists).values_list('origin', flat=True))
+
+    # Prepare origin image tuples
+    filtered_origin_image_tuples = []
+    for origin in selected_artist_origins:
+        product_with_origin = Product.objects.filter(artist__in=selected_artists, origin=origin).first()
+        if product_with_origin:
+            filtered_origin_image_tuples.append((product_with_origin.origin_image.url, origin))
+
     context = {
         'filtered_products': filtered_products,
         'filtered_categories': filtered_categories,
         'filtered_origins': filtered_origins,
+        'filtered_origin_image_tuples': filtered_origin_image_tuples,
         'filtered_artists': filtered_artists,
         'filtered_price': filtered_price,
     }
