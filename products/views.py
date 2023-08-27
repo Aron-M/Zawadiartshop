@@ -63,15 +63,15 @@ def product_search(request):
     if selected_artists:
         selected_artist_origins = set(Product.objects.filter(artist__in=selected_artists).values_list('origin', flat=True))
 
+    # Fetch origin images for the selected artists
+    artist_origin_images = []
+    for origin in selected_artist_origins:
+        product_with_origin = Product.objects.filter(artist__in=selected_artists, origin=origin).first()
+        if product_with_origin:
+            artist_origin_images.append((product_with_origin.origin_image.url, origin))
+
     # Filter selected origins to only include those that match selected artists' origins
     filtered_origins = list(filter(lambda origin: origin in selected_artist_origins, selected_origins))
-
-    # Prepare origin image tuples
-    filtered_origin_image_tuples = []
-    for origin in filtered_origins:
-        product_with_origin = Product.objects.filter(origin=origin).first()
-        if product_with_origin:
-            filtered_origin_image_tuples.append((product_with_origin.origin_image.url, origin))
 
     # Prepare origins not matching selected artists
     origins_not_matching_artists = [origin for origin in selected_origins if origin not in selected_artist_origins]
@@ -80,12 +80,13 @@ def product_search(request):
         'filtered_products': filtered_products,
         'filtered_categories': filtered_categories,
         'filtered_origins': filtered_origins,
-        'filtered_origin_image_tuples': filtered_origin_image_tuples,
+        'filtered_origin_image_tuples': artist_origin_images,  # Use artist_origin_images here
         'filtered_artists': filtered_artists,
         'filtered_price': filtered_price,
         'origins_not_matching_artists': origins_not_matching_artists,
     }
     return render(request, 'product_search.html', context)
+
 
 
 

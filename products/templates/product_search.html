@@ -2,60 +2,60 @@
 {% load static %}
 
 {% block content %}
-    <h1 class="d-flex flex-column justify-content-center align-items-center mt-3 products">YOUR SEARCH</h1>
-    <div class="filter-summary mt-2 ms-5">
-        <h5>Displaying your choices of</h5>
-        <p class="mt-2">
-            {% if filtered_categories %}
-                <strong>{{ filtered_categories|slice:"0:-1"|join:", " }}</strong>
-                {% if filtered_categories|length > 1 %} &amp;{% endif %}
-                <strong>{{ filtered_categories|last }}</strong>
-            {% endif %}
-        </p>
-        <p>
-            from
-            {% if filtered_origins %}
-                <strong>
-                    {% for origin_image_tuple in filtered_origin_image_tuples %}
-                        <img src="{{ origin_image_tuple.0 }}" class="flag-icon">{{ origin_image_tuple.1 }}
-                        {% if not forloop.last %}
-                            {% if forloop.revcounter == 2 %} &amp;{% else %}, {% endif %}
-                        {% endif %}
-                    {% endfor %}
-                </strong>
-            {% endif %}
-        </p>
-        <p>
-            by artists:
-            {% if filtered_artists %}
-                <strong>{{ filtered_artists|slice:"0:-1"|join:", " }}</strong>
-                {% if filtered_artists|length > 1 %} &amp;{% endif %}
-                <strong>{{ filtered_artists|last }}</strong>
-            {% endif %}
-        </p>
-        {% if filtered_price %}
-            <p>under the value of $<strong>{{ filtered_price }}</strong></p>
-        {% endif %}
-    </div>
-
-    {% if origins_not_matching_artists %}
-    <div class="alert alert-warning mt-4 ms-5">
-        It seems you have chosen origins that are not from the artists you selected.
-        If you are interested in art from these origins, click
-        <button class="btn btn-link" id="show-origins-button">here</button>.
-    </div>
-    {% endif %}
+<h1 class="d-flex flex-column justify-content-center align-items-center mt-3 products">YOUR SEARCH</h1>
     
-    <div class="row origins-not-matching-artists mt-4 ms-5" id="origins-not-matching-artists" style="display: none;">
-        <div class="col-md-12">
-            <p>Origins not matching selected artists:</p>
-            <ul>
-                {% for origin in origins_not_matching_artists %}
-                <li>{{ origin }}</li>
+<div class="filter-summary mt-2 ms-5">
+    <h5>Displaying your choices of</h5>
+    <p class="mt-2">
+        {% if filtered_categories %}
+            <strong>{{ filtered_categories|slice:"0:-1"|join:", " }}</strong>
+            {% if filtered_categories|length > 1 %} &amp;{% endif %}
+            <strong>{{ filtered_categories|last }}</strong>
+        {% endif %}
+    </p>
+    
+    <p>
+        from
+        {% if filtered_origin_image_tuples %}
+            <strong>
+                {% for origin_image_tuple in filtered_origin_image_tuples %}
+                    <img src="{{ origin_image_tuple.0 }}" class="flag-icon">{{ origin_image_tuple.1 }}
+                    {% if not forloop.last %}
+                        {% if forloop.revcounter == 2 %} &amp;{% else %}, {% endif %}
+                    {% endif %}
                 {% endfor %}
-            </ul>
-        </div>
+            </strong>
+        {% endif %}
+    </p>
+    
+    <p>
+        by artists:
+        {% if filtered_artists %}
+            <strong>{{ filtered_artists|slice:"0:-1"|join:", " }}</strong>
+            {% if filtered_artists|length > 1 %} &amp;{% endif %}
+            <strong>{{ filtered_artists|last }}</strong>
+        {% endif %}
+    </p>
+    
+    {% if filtered_price %}
+        <p>under the value of $<strong>{{ filtered_price }}</strong></p>
+    {% endif %}
+</div>
+
+{% if origins_not_matching_artists %}
+    <div class="mt-3 ms-5">
+        <p>
+            It seems you have chosen an origin that is not from the artists you selected.
+            If you are interested in art from the following origins:
+            {% for origin in origins_not_matching_artists %}
+                <button class="btn btn-link">{{ origin }}</button>
+            {% endfor %}
+        </p>
     </div>
+{% endif %}
+
+        
+    
 
 
     <div class="row">
