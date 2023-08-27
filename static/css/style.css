@@ -35,17 +35,31 @@ p {
 
 /* Styling for the search bar and search button container */
 .search-container {
+    width: 45vw;
+}
+
+.search-container-home {
     display: flex;
     justify-content: center;
-    align-items: center; /* Vertically align items */
-    margin-top: 8vh;
+    width: 45vw;
+}
+.home-searchbar {
+    display: flex;
+    align-self: center !important;
+    margin-top: 12vh;
+}
+
+.refined-search-container{
+    display: flex;
+    justify-content:flex-start;
+    align-items: start !important;
+    margin-top: 4vh;
 }
 
 /* Styling for the search bar */
 .search-bar {
     background-color: #333;
     color: white;
-    width: 40%; /* Adjust the width to make the search bar shorter */
     padding: 10px; /* Add padding to the search bar */
     border-radius: 5px; /* Add border radius for a rounded look */
     margin-right: 0; /* Add margin between the search bar and the button */
@@ -188,7 +202,8 @@ body.modal-open .content-to-fade {
 }
 
 .flag-icon{
-    width: 2.6vw;
+    width: 2.6vw !important;
+    height: auto !important;
 }
 .flag-icon:hover {
     transform: scale(1.3);
@@ -219,14 +234,23 @@ body.modal-open .content-to-fade {
 }
 
 .card {
-    width: auto; /* Set the maximum width for the card */
-    margin: 0 auto; /* Center the card horizontally */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    max-width: 30vw;
 }
 
 .card-img-top {
-    max-width: 100%; /* Make the image occupy the full width of the card */
+    width: 100%; /* Make the image occupy the full width of the card */
     height: auto; /* Maintain the image's aspect ratio */
 }
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+}
+
 
 .card-body {
     padding: 1rem; /* Add padding to the card body */

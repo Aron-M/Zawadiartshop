@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Product
 from django.db.models import Q
-
+from django.template.loader import render_to_string
 
 def products(request):
     # Retrieve all products from the database
@@ -24,6 +24,7 @@ def searchmodal(request):
                'origin': origin,
                'origin_code': origin_code,
                'price': price}
+    template_name = 'homepage.html'
     return render(request, 'homepage.html', context)
 
 
@@ -41,8 +42,6 @@ def product_search(request):
         filters['artist__in'] = selected_artists
     if selected_categories:
         filters['category__in'] = selected_categories
-    if selected_origins:
-        filters['origin__in'] = selected_origins
     if selected_origin_images:
         filters['origin_image__in'] = selected_origin_images
     if max_price:
@@ -63,15 +62,12 @@ def product_search(request):
     if selected_artists:
         selected_artist_origins = set(Product.objects.filter(artist__in=selected_artists).values_list('origin', flat=True))
 
-    # Fetch origin images for the selected artists
-    artist_origin_images = []
+    # Prepare origin image tuples
+    filtered_origin_image_tuples = []
     for origin in selected_artist_origins:
-        product_with_origin = Product.objects.filter(artist__in=selected_artists, origin=origin).first()
+        product_with_origin = Product.objects.filter(origin=origin).first()
         if product_with_origin:
-            artist_origin_images.append((product_with_origin.origin_image.url, origin))
-
-    # Filter selected origins to only include those that match selected artists' origins
-    filtered_origins = list(filter(lambda origin: origin in selected_artist_origins, selected_origins))
+            filtered_origin_image_tuples.append((product_with_origin.origin_image.url, origin))
 
     # Prepare origins not matching selected artists
     origins_not_matching_artists = [origin for origin in selected_origins if origin not in selected_artist_origins]
@@ -79,12 +75,19 @@ def product_search(request):
     context = {
         'filtered_products': filtered_products,
         'filtered_categories': filtered_categories,
-        'filtered_origins': filtered_origins,
-        'filtered_origin_image_tuples': artist_origin_images,  # Use artist_origin_images here
+        'filtered_origins': selected_artist_origins,
+        'filtered_origin_image_tuples': filtered_origin_image_tuples,
         'filtered_artists': filtered_artists,
         'filtered_price': filtered_price,
         'origins_not_matching_artists': origins_not_matching_artists,
     }
+
+    # Render the searchmodal template to a string
+    searchmodal_html = render_to_string('/workspace/Zawadiartshop/templates/layouts/searchbar.html', context)
+
+    # Add the searchmodal HTML to the context
+    context['searchmodal_html'] = searchmodal_html
+
     return render(request, 'product_search.html', context)
 
 
