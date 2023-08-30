@@ -18,10 +18,10 @@
 
             <p>
                 from
-                {% if filtered_origins %}
+                {% if filtered_origin_image_tuples %}
                 <strong>
-                    {% for origin in filtered_origins %}
-                    {{ origin }}
+                    {% for origin_image_tuple in filtered_origin_image_tuples %}
+                    <img src="{{ origin_image_tuple.0 }}" class="flag-icon ms-1 me-2">{{ origin_image_tuple.1 }}
                     {% if not forloop.last %}
                     {% if forloop.revcounter == 2 %} &amp;{% else %}, {% endif %}
                     {% endif %}
@@ -29,6 +29,7 @@
                 </strong>
                 {% endif %}
             </p>
+            
 
             <p>
                 by artist(s):
