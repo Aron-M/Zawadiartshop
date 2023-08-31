@@ -237,7 +237,7 @@ body.modal-open .content-to-fade {
     display: flex;
     flex-wrap: wrap;
     gap: 1vw;
-    max-width: 30vw;
+    width: 25vw;
 }
 
 .card-img-top {
@@ -251,9 +251,14 @@ body.modal-open .content-to-fade {
     object-fit:fill;
 }
 
+.card-smaller {
+    transform: scale(0.85); /* 75% of the original size */
+}
+
 
 .card-body {
     padding: 1rem; /* Add padding to the card body */
+
 }
 
 .card-img-top:hover {
