@@ -17,8 +17,9 @@
             </p>
 
             <p>
-                from
+                
                 {% if filtered_origin_image_tuples %}
+                from
                 <strong>
                     {% for origin_image_tuple in filtered_origin_image_tuples %}
                     <img src="{{ origin_image_tuple.0 }}" class="flag-icon ms-1 me-2">{{ origin_image_tuple.1 }}
@@ -31,9 +32,8 @@
             </p>
             
 
-            <p>
+            <p>{% if filtered_artists %}
                 by artist(s):
-                {% if filtered_artists %}
                 <strong>{{ filtered_artists|slice:"0:-1"|join:", " }}</strong>
                 {% if filtered_artists|length > 1 %} &amp;{% endif %}
                 <strong>{{ filtered_artists|last }}</strong>

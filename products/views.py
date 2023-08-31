@@ -31,10 +31,6 @@ def searchmodal(request):
     return render(request, 'homepage.html', context)
 
 
-from django.shortcuts import render
-from django.template.loader import render_to_string
-from .models import Product
-
 def product_search(request):
     selected_artists = request.GET.getlist('artist')
     selected_categories = request.GET.getlist('category')
@@ -76,6 +72,11 @@ def product_search(request):
     if selected_artists:
         selected_artist_origins = set(Product.objects.filter(artist__in=selected_artists).values_list('origin', flat=True))
 
+    # If only an origin is selected, render its related products and add the origin to selected_origins
+    if not selected_artists and selected_origins:
+        filtered_products = Product.objects.filter(origin__in=selected_origins)
+        selected_artist_origins.update(selected_origins)
+
     # Prepare origin image tuples
     filtered_origin_image_tuples = []
     for origin in selected_artist_origins:
@@ -102,20 +103,6 @@ def product_search(request):
         'price': price
     }
 
-    # If only origin is selected
-    if not selected_artists and selected_origins:
-        origin_products = Product.objects.filter(origin__in=selected_origins)
-        origin_artists = set(Product.objects.filter(origin__in=selected_origins).values_list('artist', flat=True))
-        
-        # Update filtered_products with origin products
-        filtered_products = origin_products
-
-        # Update selected_artist_origins with selected origins
-        selected_artist_origins.update(selected_origins)
-
-        context['artists_of_selected_origins'] = origin_artists
-        context['selected_origins'] = selected_origins
-
     # Render the searchmodal template to a string
     searchmodal_html = render_to_string('/workspace/Zawadiartshop/templates/layouts/searchbar.html', context)
 
@@ -123,6 +110,7 @@ def product_search(request):
     context['searchmodal_html'] = searchmodal_html
 
     return render(request, 'product_search.html', context)
+
 
 
 def paintings(request):
