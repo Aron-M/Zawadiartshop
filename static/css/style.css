@@ -35,11 +35,6 @@ p {
 
 /* Styling for the search bar and search button container */
 
-.search-container-home {
-    display: flex;
-    justify-content: center;
-    width: 35vw;
-}
 
 .home-searchbar {
     display: flex;

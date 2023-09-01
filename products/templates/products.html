@@ -4,6 +4,12 @@
 {% block content %}
 <h1 class="d-flex flex-column justify-content-center align-items-center mt-3 products">ALL PRODUCTS</h1>
 <div class="row">
+    <div class="col-md-4">
+        <p>{{ searchmodal_html|safe }}</p>
+    </div>
+    <div class="col-md-8"></div>
+</div>
+<div class="row">
     {% for product in products %}
     <div class="col-md-3 mb-3 ps-0">
         <div class="card card-smaller">

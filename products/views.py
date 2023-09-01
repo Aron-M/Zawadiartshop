@@ -4,13 +4,6 @@ from django.db.models import Q
 from django.template.loader import render_to_string
 
 
-def products(request):
-    # Retrieve all products from the database
-    products = Product.objects.all()
-    context = {'products': products}
-    return render(request, 'products.html', context)
-
-
 def searchmodal(request):
     artists = Product.objects.values_list('artist', flat=True).distinct()
     category = Product.objects.values_list('category', flat=True).distinct()
@@ -112,10 +105,52 @@ def product_search(request):
     return render(request, 'product_search.html', context)
 
 
+def products(request):
+    # Retrieve all products from the database
+    products = Product.objects.all()
+    artists = Product.objects.values_list('artist', flat=True).distinct()
+    category = Product.objects.values_list('category', flat=True).distinct()
+    origin_image = Product.objects.values_list('origin_image', 'origin', 'origin_code').distinct()
+    origin = Product.objects.values_list('origin', flat=True).distinct()
+    origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
+    price = Product.objects.values_list('price', flat=True).distinct()
+    context = {'products': products,
+               'artists': artists,
+               'category': category,
+               'origin_image': origin_image,
+               'origin': origin,
+               'origin_code': origin_code,
+               'price': price
+            }
+    searchmodal_html = render_to_string('/workspace/Zawadiartshop/templates/layouts/searchbar.html', context)
+
+    # Add the searchmodal HTML to the context
+    context['searchmodal_html'] = searchmodal_html
+    return render(request, 'products.html', context)
+
 
 def paintings(request):
     paintings = Product.objects.filter(category='Paintings')
-    return render(request, 'paintings.html', {'products': paintings})
+    artists = Product.objects.values_list('artist', flat=True).distinct()
+    category = Product.objects.values_list('category', flat=True).distinct()
+    origin_image = Product.objects.values_list('origin_image', 'origin', 'origin_code').distinct()
+    origin = Product.objects.values_list('origin', flat=True).distinct()
+    origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
+    price = Product.objects.values_list('price', flat=True).distinct()
+    context = {
+        'products': paintings,
+        'artists': artists,
+        'category': category,
+        'origin_image': origin_image,
+        'origin': origin,
+        'origin_code': origin_code,
+        'price': price
+    }
+    searchmodal_html = render_to_string('/workspace/Zawadiartshop/templates/layouts/searchbar.html', context)
+
+    # Add the searchmodal HTML to the context
+    context['searchmodal_html'] = searchmodal_html
+    return render(request, 'paintings.html', context)
 
 
 def sculptures(request):
@@ -144,11 +179,45 @@ def sculptures(request):
 
 def frames(request):
     frames = Product.objects.filter(category='Frames')
-    return render(request, 'frames.html', {'products': frames})
+    artists = Product.objects.values_list('artist', flat=True).distinct()
+    category = Product.objects.values_list('category', flat=True).distinct()
+    origin_image = Product.objects.values_list('origin_image', 'origin', 'origin_code').distinct()
+    origin = Product.objects.values_list('origin', flat=True).distinct()
+    origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
+    price = Product.objects.values_list('price', flat=True).distinct()
+    context = {
+        'products': frames,
+        'artists': artists,
+        'category': category,
+        'origin_image': origin_image,
+        'origin': origin,
+        'origin_code': origin_code,
+        'price': price
+    }
+    searchmodal_html = render_to_string('layouts/searchbar.html', context, request=request)
+    context['searchmodal_html'] = searchmodal_html
+    return render(request, 'frames.html', context)
 
 
 def crafts(request):
     crafts = Product.objects.filter(category='Crafts')
-    return render(request, 'crafts.html', {'products': crafts})
+    artists = Product.objects.values_list('artist', flat=True).distinct()
+    category = Product.objects.values_list('category', flat=True).distinct()
+    origin_image = Product.objects.values_list('origin_image', 'origin', 'origin_code').distinct()
+    origin = Product.objects.values_list('origin', flat=True).distinct()
+    origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
+    price = Product.objects.values_list('price', flat=True).distinct()
+    context = {
+        'products': crafts,
+        'artists': artists,
+        'category': category,
+        'origin_image': origin_image,
+        'origin': origin,
+        'origin_code': origin_code,
+        'price': price
+    }
+    searchmodal_html = render_to_string('layouts/searchbar.html', context, request=request)
+    context['searchmodal_html'] = searchmodal_html
+    return render(request, 'crafts.html', context)
 
 
