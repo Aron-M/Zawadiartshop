@@ -5,9 +5,10 @@
 <h1 class="d-flex flex-column justify-content-center align-items-center mt-3 products">FRAMES</h1>
 <div class="row">
     {% for product in products %}
-    <div class="col-md-4 p-5 mb-3">
-        <div class="card">
-            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+    <div class="col-md-3 mb-3 ps-0">
+        <div class="card card-smaller">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}" data-bs-toggle="modal"
+                data-bs-target="#myModal{{ product.pk }}">
             <div class="card-body">
                 <h5 class="card-title">{{ product.name }}</h5>
                 <p class="card-text m-0">{{ product.description }}</p>

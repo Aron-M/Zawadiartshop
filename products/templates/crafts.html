@@ -5,9 +5,10 @@
 <h1 class="d-flex flex-column justify-content-center align-items-center mt-3 products">CRAFTS</h1>
 <div class="row">
     {% for product in products %}
-    <div class="col-md-4 p-5 mb-3">
-        <div class="card">
-            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+    <div class="col-md-3 mb-3 ps-0">
+        <div class="card card-smaller">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}" data-bs-toggle="modal"
+                data-bs-target="#myModal{{ product.pk }}">
             <div class="card-body">
                 <h5 class="card-title">{{ product.name }}</h5>
                 <p class="card-text m-0">{{ product.description }}</p>
@@ -22,6 +23,21 @@
                 <p class="card-text">Price: ${{ product.price }}</p>
                 <a href="#" class="btn btn-success">View</a>
                 <a href="#" class="btn btn-primary">Add to Cart</a>               
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal{{ product.pk }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>"{{ product.name }}" by {{ product.artist }}</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid">
+                </div>
             </div>
         </div>
     </div>

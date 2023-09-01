@@ -17,7 +17,7 @@
             </p>
 
             <p>
-                
+
                 {% if filtered_origin_image_tuples %}
                 from
                 <strong>
@@ -30,7 +30,7 @@
                 </strong>
                 {% endif %}
             </p>
-            
+
 
             <p>{% if filtered_artists %}
                 by artist(s):
@@ -59,7 +59,14 @@
             </p>
 
             {% endif %}
-            <p>Refine your search here: {{ searchmodal_html|safe }}</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <p class="mt-3">Refine your search here:
+                </div>
+                <div class="col-md-8">
+                    <p>{{ searchmodal_html|safe }}</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -67,9 +74,10 @@
 
 <div class="row">
     {% for product in filtered_products %}
-    <div class="col-md-3 mb-3">
-        <div class="card card-smaller">
-            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}" data-bs-toggle="modal" data-bs-target="#myModal{{ product.pk }}">
+    <div class="col-md-3 mb-3 ps-2">
+        <div class="card card-smaller user-select-none">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}" data-bs-toggle="modal"
+                data-bs-target="#myModal{{ product.pk }}">
             <div class="card-body">
                 <h5 class="card-title">{{ product.name }}</h5>
                 <p class="card-text m-0">{{ product.description }}</p>
@@ -89,7 +97,8 @@
         </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="myModal{{ product.pk }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="myModal{{ product.pk }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">

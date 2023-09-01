@@ -120,7 +120,26 @@ def paintings(request):
 
 def sculptures(request):
     sculptures = Product.objects.filter(category='Sculptures')
-    return render(request, 'sculptures.html', {'products': sculptures})
+    artists = Product.objects.values_list('artist', flat=True).distinct()
+    category = Product.objects.values_list('category', flat=True).distinct()
+    origin_image = Product.objects.values_list('origin_image', 'origin', 'origin_code').distinct()
+    origin = Product.objects.values_list('origin', flat=True).distinct()
+    origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
+    price = Product.objects.values_list('price', flat=True).distinct()
+    context = {
+        'products': sculptures,
+        'artists': artists,
+        'category': category,
+        'origin_image': origin_image,
+        'origin': origin,
+        'origin_code': origin_code,
+        'price': price
+    }
+    searchmodal_html = render_to_string('/workspace/Zawadiartshop/templates/layouts/searchbar.html', context)
+
+    # Add the searchmodal HTML to the context
+    context['searchmodal_html'] = searchmodal_html
+    return render(request, 'sculptures.html', context)
 
 
 def frames(request):

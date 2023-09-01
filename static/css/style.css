@@ -34,27 +34,19 @@ p {
 }
 
 /* Styling for the search bar and search button container */
-.search-container {
-    width: 45vw;
-}
 
 .search-container-home {
     display: flex;
     justify-content: center;
-    width: 45vw;
+    width: 35vw;
 }
+
 .home-searchbar {
     display: flex;
     align-self: center !important;
     margin-top: 12vh;
 }
 
-.refined-search-container{
-    display: flex;
-    justify-content:flex-start;
-    align-items: start !important;
-    margin-top: 4vh;
-}
 
 /* Styling for the search bar */
 .search-bar {
@@ -236,7 +228,6 @@ body.modal-open .content-to-fade {
 .card {
     display: flex;
     flex-wrap: wrap;
-    gap: 1vw;
     width: 25vw;
 }
 
