@@ -205,38 +205,6 @@ body.modal-open .content-to-fade {
     
 }
 
-.card-img-top {
-    /* Set a fixed height for the card to ensure consistent size */
-    min-height: 45vh;
-    max-height: 65vh;
-    width: auto;
-    border: 1px solid #131212;
-    /* Add other styling properties as needed */
-}
-
-.custom-card {
-    width: auto; /* Adjust card width based on image */
-    display: inline-block; /* Display the card as an inline block */
-    margin-right: 10px; /* Add some spacing between cards */
-}
-
-.card {
-    display: flex;
-    flex-wrap: wrap;
-    width: 25vw;
-}
-
-.card-img-top {
-    width: 100%; /* Make the image occupy the full width of the card */
-    height: auto; /* Maintain the image's aspect ratio */
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit:fill;
-}
-
 .card-smaller {
     transform: scale(0.85); /* 75% of the original size */
 }
