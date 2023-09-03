@@ -26,8 +26,11 @@
               value="{{ cart_item.quantity }}" value="0" min="1">
           </td>
           <td>
-            <button class="btn btn-info btn-update" data-cart-item="{{ cart_item.id }}">Update</button>
-            <button class="btn btn-danger btn-remove-from-cart" data-cart-item="{{ cart_item.id }}">Remove</button>
+            <form method="post" action="{% url 'cart:remove_from_cart' cart_item.id %}">
+              {% csrf_token %}
+              <button class="btn btn-info btn-update" data-cart-item="{{ cart_item.id }}">Update</button>
+              <button type="submit" class="btn btn-danger">Remove</button>
+            </form>
           </td>
           <td class="cart-total">${{ cart_item.product.price }}</td>
         </tr>

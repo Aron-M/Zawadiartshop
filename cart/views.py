@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.sessions.models import Session
 from cart.models import Cart, CartItem
+from django.http import HttpResponse
 from products.models import Product
 
 
@@ -38,18 +39,10 @@ def add_to_cart(request, product_id):
         cart_item.quantity += 1
         cart_item.save()
 
-    return redirect('cart:add_to_cart')
+    return redirect('cart:cart_view')
 
 
 def remove_from_cart(request, cart_item_id):
-    # Get the current user's session
-    session_key = request.session.session_key
-    session = Session.objects.get(session_key=session_key)
-
-    # Retrieve the user's cart for this session
-    cart = Cart.objects.get(session=session)
-
-    # Remove the selected item from the cart
-    CartItem.objects.filter(cart=cart, id=cart_item_id).delete()
-
-    return redirect('cart:remove_from_cart')
+    cart_item = get_object_or_404(CartItem, id=cart_item_id)
+    cart_item.delete()
+    return redirect('cart:cart_view')
