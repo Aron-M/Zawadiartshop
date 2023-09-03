@@ -26,8 +26,8 @@
     {% endblock %}
 
     <!-- Footer -->
-    
-    
+
+
     <!-- Custom JS-->
     {% include 'components/script/navbarjs.html' %}
     <!-- Bootstrap JS-->
@@ -36,48 +36,54 @@
 
     {% block extra_js %}
     <script>
-    $(document).ready(function() {
-        // Function to toggle the selected class and border on click
-        $('#origin-icons .flag-icon').on('click', function() {
-            $(this).toggleClass('selected');
+        $(document).ready(function () {
+            // Function to toggle the selected class and border on click
+            $('#origin-icons .flag-icon').on('click', function () {
+                $(this).toggleClass('selected');
+            });
         });
-    });
 
-    // To update the selected artist count
-    const selectedArtistCountSpan = document.getElementById('selected-artist-count');
-    const checkboxes = document.querySelectorAll('.form-check-input');
+        // To update the selected artist count
+        const selectedArtistCountSpan = document.getElementById('selected-artist-count');
+        const checkboxes = document.querySelectorAll('.form-check-input');
 
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', updateSelectedCount);
-    });
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateSelectedCount);
+        });
 
-    function updateSelectedCount() {
-        const selectedCount = document.querySelectorAll('.form-check-input:checked').length;
+        function updateSelectedCount() {
+            const selectedCount = document.querySelectorAll('.form-check-input:checked').length;
 
-        if (selectedCount > 0) {
-            selectedArtistCountSpan.textContent = `${selectedCount} artist${selectedCount === 1 ? '' : 's'} selected`;
-            selectedArtistCountSpan.style.display = 'inline';
-            selectedArtistCountSpan.style.color = 'green';
-            selectedArtistCountSpan.style.fontStyle = 'italic';
-        } else {
-            selectedArtistCountSpan.style.display = 'none';
+            if (selectedCount > 0) {
+                selectedArtistCountSpan.textContent = `${selectedCount} artist${selectedCount === 1 ? '' : 's'} selected`;
+                selectedArtistCountSpan.style.display = 'inline';
+                selectedArtistCountSpan.style.color = 'green';
+                selectedArtistCountSpan.style.fontStyle = 'italic';
+            } else {
+                selectedArtistCountSpan.style.display = 'none';
+            }
         }
-    }
 
-    let checkboxLabels = document.querySelectorAll('.checkbox-label');
+        let checkboxLabels = document.querySelectorAll('.checkbox-label');
 
-checkboxLabels.forEach(label => {
-    label.addEventListener('click', () => {
-        let checkbox = label.querySelector('.hidden-checkbox');
-        checkbox.checked = !checkbox.checked;
-    });
-});
+        checkboxLabels.forEach(label => {
+            label.addEventListener('click', () => {
+                let checkbox = label.querySelector('.hidden-checkbox');
+                checkbox.checked = !checkbox.checked;
+            });
+        });
 
-document.getElementById("show-origins-button").addEventListener("click", function () {
+        document.getElementById("show-origins-button").addEventListener("click", function () {
             document.getElementById("origins-not-matching-artists").style.display = "block";
         });
-    
-</script>
+
+        $(document).ready(function () {
+        // Trigger the custom alert modal with the alert message
+        var alertMessage = "{{ alert_message|escapejs }}";  // Escape the message for JavaScript
+        $("#alertMessage").text(alertMessage);
+        $("#customAlertModal").modal("show");
+    });
+    </script>
     {% endblock %}
 </body>
 
