@@ -8,6 +8,7 @@ from products.models import Product
 from django.shortcuts import render
 from cart.models import CartItem
 
+
 def cart_view(request):
     session_key = request.session.session_key
 

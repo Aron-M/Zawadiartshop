@@ -25,7 +25,7 @@
           <td>
             <form class="d-flex" method="post" action="{% url 'cart:update_cart_item' cart_item.id %}">
               {% csrf_token %}
-              <input type="number" class="form-control cart-quantity me-2" name="quantity" value="{{ cart_item.quantity }}" min="1">
+              <input type="number" class="form-control cart-quantity me-2 w-25" name="quantity" value="{{ cart_item.quantity }}" min="1">
               <button type="submit" class="btn btn-info">Update</button>
             </form>
           </td>
@@ -50,20 +50,20 @@
       <a href="#" class="btn btn-primary">Proceed to Checkout</a>
     </div>
   </div>
-<!-- Modal -->
-{% for cart_item in cart_items %}
-<div class="modal fade" id="myModal{{ cart_item.id }}" tabindex="-1" aria-labelledby="exampleModalLabel{{ cart_item.id }}" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <p>{{ cart_item.product.name }} by {{ cart_item.product.artist }}</p>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="{{ cart_item.product.image.url }}" alt="{{ cart_item.product.name }}" class="img-fluid">
+  <!-- Modal -->
+  {% for cart_item in cart_items %}
+  <div class="modal fade" id="myModal{{ cart_item.product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel{{ cart_item.product.id }}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p>{{ cart_item.product.name }} by {{ cart_item.product.artist }}</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="{{ cart_item.product.image.url }}" alt="{{ cart_item.product.name }}" class="img-fluid">
+        </div>
       </div>
     </div>
   </div>
-</div>
-{% endfor %}
+  {% endfor %}
 {% endblock %}
