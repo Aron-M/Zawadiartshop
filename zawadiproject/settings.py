@@ -33,6 +33,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu104.gitpod.io']
 
+CORS_ALLOWED_ORIGINS = [
+    "8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu104.gitpod.io",
+]
 
 # Application definition
 
