@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
   <h1 class="d-flex justify-content-center mt-3">Your Shopping Cart</h1>
-  <a href="{% url 'products:product_search' %}" class="btn btn-success w-25 d-flex align-self-center justify-content-center mt-5">
+  <a href="{% url 'products:products' %}" class="btn btn-success w-25 d-flex align-self-center justify-content-center mt-5">
     Click here to continue your shopping!</a>
     <div class="d-flex flex-column align-items-center mt-5">
       <table class="table w-75 mb-0">
@@ -46,10 +46,12 @@
           {% endfor %}
         </tbody>
       </table>
-      <div class="d-flex justify-content-end align-items-center bg-white mt-2 p-2">
+      <div class="w-75 d-flex justify-content-end">
+      <div class="bg-white p-2">
         <h3 class=" mt-2">Total: $<span id="cart-total-amount">{{ cart_total }}</span></h3>
-        <a href="#" class="btn btn-primary ms-2">Proceed to Checkout</a>
+        <a href="#" class="btn btn-primary">Proceed to Checkout</a>
       </div>
+    </div>
     </div>
     
     
