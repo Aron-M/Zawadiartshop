@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.sessions.models import Session
-from .models import Cart, CartItem
+from cart.models import Cart, CartItem
 from products.models import Product
 
 
@@ -18,24 +18,23 @@ def cart_view(request):
     
 
 def add_to_cart(request, product_id):
-    # Get the product based on the product_id
+    # Retrieve the product by its ID or return a 404 response if not found
     product = get_object_or_404(Product, id=product_id)
 
-    # Retrieve the session key
+    # Get or create the user's session
     session_key = request.session.session_key
+    if not session_key:
+        request.session.save()
+        session_key = request.session.session_key
 
-    # Create or get the cart associated with the session
-    cart, created = Cart.objects.get_or_create(session=session_key)
+    # Get or create the user's cart
+    cart, created = Cart.objects.get_or_create(session_id=session_key)
 
-    # Check if the product is already in the cart
-    cart_item, item_created = CartItem.objects.get_or_create(cart=cart, product=product)
+    # Add the product to the cart (you should adjust this logic based on your cart structure)
+    cart_item, created = cart.cartitem_set.get_or_create(product=product)
+    cart_item.quantity += 1
+    cart_item.save()
 
-    # If the item was already in the cart, increase its quantity by 1
-    if not item_created:
-        cart_item.quantity += 1
-        cart_item.save()
-
-    # Redirect to the cart view or any other appropriate view
     return redirect('cart:cart_view')
 
 
