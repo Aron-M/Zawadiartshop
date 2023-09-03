@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
   <h1 class="d-flex justify-content-center mt-3">Your Shopping Cart</h1>
-
+  <a href="{% url 'cart:cart_view' %}" class="btn btn-primary">Refresh Cart</a>
   <div class="d-flex flex-column align-items-center mt-5">
     <table class="table w-75">
       <thead>
@@ -9,8 +9,8 @@
           <th scope="col" class="col">Product</th>
           <th scope="col" class="col">Price</th>
           <th scope="col" class="col">Quantity</th>
-          <th scope="col" class="col">Total</th>
           <th scope="col" class="col">Actions</th>
+          <th scope="col" class="col">Total</th>
         </tr>
       </thead>
       <tbody>
@@ -25,10 +25,11 @@
             <input type="number" class="form-control cart-quantity w-25" data-cart-item="{{ cart_item.id }}"
               value="{{ cart_item.quantity }}" value="0" min="1">
           </td>
-          <td class="cart-total">${{ cart_item.total }}</td>
           <td>
+            <button class="btn btn-info btn-update" data-cart-item="{{ cart_item.id }}">Update</button>
             <button class="btn btn-danger btn-remove-from-cart" data-cart-item="{{ cart_item.id }}">Remove</button>
           </td>
+          <td class="cart-total">${{ cart_item.product.price }}</td>
         </tr>
         {% empty %}
         <tr>

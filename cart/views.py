@@ -30,12 +30,15 @@ def add_to_cart(request, product_id):
     # Get or create the user's cart
     cart, created = Cart.objects.get_or_create(session_id=session_key)
 
-    # Add the product to the cart (you should adjust this logic based on your cart structure)
+    # Check if the product is already in the cart
     cart_item, created = cart.cartitem_set.get_or_create(product=product)
-    cart_item.quantity += 1
-    cart_item.save()
 
-    return redirect('cart:cart_view')
+    # If the product is already in the cart, increment its quantity by 1
+    if not created:
+        cart_item.quantity += 1
+        cart_item.save()
+
+    return redirect('cart:add_to_cart')
 
 
 def remove_from_cart(request, cart_item_id):
