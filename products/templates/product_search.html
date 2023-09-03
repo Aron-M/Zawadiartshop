@@ -92,7 +92,12 @@
                 <p><span class="fw-bold">Style: </span>{{ product.style }}</p>
                 <p class="card-text">Price: ${{ product.price }}</p>
                 <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal{{ product.pk }}">View</a>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
+                <form method="post" action="{% url 'cart:cart' product.id %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="quantity" value="1">
+                    <button type="submit" class="btn btn-primary">Add to Cart</button>
+                  </form>
+                  
             </div>
         </div>
     </div>

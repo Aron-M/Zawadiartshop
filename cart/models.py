@@ -1,12 +1,12 @@
-from django.db import models
-from products.models import Product  # Import your Product model from your main app
 
+from django.db import models
+from django.contrib.sessions.models import Session
+
+class Cart(models.Model):
+    session = models.OneToOneField(Session, on_delete=models.CASCADE, default=None)
+    products = models.ManyToManyField('products.Product', through='CartItem')
 
 class CartItem(models.Model):
-    # user = models.ForeignKey(User, on_delete=models.CASCADE)  # If you have user authentication
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
+    product = models.ForeignKey('products.Product', on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=1)
-
-    def __str__(self):
-        return f"{self.quantity} x {self.product.name}"
-
