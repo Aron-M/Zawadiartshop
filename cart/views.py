@@ -5,18 +5,26 @@ from django.http import HttpResponse
 from products.models import Product
 
 
+from django.shortcuts import render
+from cart.models import CartItem
+
 def cart_view(request):
     session_key = request.session.session_key
 
     if session_key:
         cart_items = CartItem.objects.filter(cart__session=session_key)
-        cart_total = sum(item.product.price * item.quantity for item in cart_items)
+
+        # Calculate the total for each item and add it to the cart_item objects
+        for cart_item in cart_items:
+            cart_item.total = cart_item.product.price * cart_item.quantity
+
+        cart_total = sum(cart_item.total for cart_item in cart_items)
     else:
         cart_items = []
         cart_total = 0
 
     return render(request, 'cart.html', {'cart_items': cart_items, 'cart_total': cart_total})
-    
+
 
 def add_to_cart(request, product_id):
     # Retrieve the product by its ID or return a 404 response if not found
@@ -45,4 +53,17 @@ def add_to_cart(request, product_id):
 def remove_from_cart(request, cart_item_id):
     cart_item = get_object_or_404(CartItem, id=cart_item_id)
     cart_item.delete()
+    return redirect('cart:cart_view')
+
+
+def update_cart_item(request, cart_item_id):
+    cart_item = get_object_or_404(CartItem, id=cart_item_id)
+
+    if request.method == 'POST':
+        new_quantity = int(request.POST['quantity'])
+
+        if new_quantity > 0:
+            cart_item.quantity = new_quantity
+            cart_item.save()
+
     return redirect('cart:cart_view')
