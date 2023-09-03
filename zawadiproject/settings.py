@@ -37,6 +37,8 @@ CORS_ALLOWED_ORIGINS = [
     "8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu104.gitpod.io",
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu104.gitpod.io']
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -119,6 +121,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 SESSION_COOKIE_NAME = 'cart_cookies'
+SESSION_COOKIE_SECURE = False  # Set to True for production with HTTPS
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # Set to True for sessions to expire on browser close
+SESSION_COOKIE_AGE = 1209600  # Default is 2 weeks (in seconds)
+
 
 
 # Internationalization

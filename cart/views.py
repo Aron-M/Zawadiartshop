@@ -1,6 +1,4 @@
-# views.py
-
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, redirect
 from django.contrib.sessions.models import Session
 from .models import Cart, CartItem
 from products.models import Product
@@ -16,26 +14,25 @@ def cart_view(request):
         cart_items = []
         cart_total = 0
 
-    return render(request, 'cart/cart.html', {'cart_items': cart_items, 'cart_total': cart_total})
+    return render(request, 'cart:cart_view', {'cart_items': cart_items, 'cart_total': cart_total})
     
 
 def add_to_cart(request, product_id):
-    # Get the product based on the product_id from the URL
+    # Get the product based on the product_id or return a 404 if it doesn't exist
     product = get_object_or_404(Product, pk=product_id)
 
-    # Get or create the user's cart based on their session
+    # Get the session key from the request or create a new one
     session_key = request.session.session_key
     if not session_key:
         request.session.save()
         session_key = request.session.session_key
 
-    cart, created = Cart.objects.get_or_create(session=session_key)
+    # Get or create the Cart object associated with the session
+    session = Session.objects.get(session_key=session_key)
+    cart, created = Cart.objects.get_or_create(session=session)
 
-    # Check if the product is already in the cart; if so, update quantity
-    cart_item, item_created = CartItem.objects.get_or_create(cart=cart, product=product)
-    if not item_created:
-        cart_item.quantity += 1
-        cart_item.save()
+    # Create a CartItem and associate it with the product and cart
+    CartItem.objects.create(cart=cart, product=product, quantity=1)
 
     return redirect('cart:add_to_cart')
 
@@ -51,4 +48,4 @@ def remove_from_cart(request, cart_item_id):
     # Remove the selected item from the cart
     CartItem.objects.filter(cart=cart, id=cart_item_id).delete()
 
-    return redirect('cart:cart')
+    return redirect('cart:remove_from_cart')
