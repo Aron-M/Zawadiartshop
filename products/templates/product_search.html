@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block content %}
-<h1 class="d-flex flex-column justify-content-center align-items-center mt-3 mb-5">YOUR SEARCH</h1>
-
+<body>
+<h1 class="d-flex flex-column justify-content-center align-items-center mt-4 mb-5 text-white">YOUR SEARCH</h1>
 <div class="row">
     <div class="col-md-5">
         <div class="filter-summary ms-3">
@@ -51,8 +51,8 @@
         <div class="refine-search me-3">
             {% if origins_not_matching_artists %}
             <p>
-            <p>It seems you are also interested in art from {% for origin in origins_not_matching_artists %}
-                <label class="fw-bold">{{ origin }}</label> {% if not forloop.last %}
+            <p class="product-header">It seems you are also interested in art from {% for origin in origins_not_matching_artists %}
+                <label class="fw-bold product-header">{{ origin }}</label> {% if not forloop.last %}
                 {% if forloop.revcounter == 2 %} &amp;{% else %}, {% endif %}
                 {% endif %}{% endfor %} although it didn't match any of the artists you selected.
             </p>
@@ -61,10 +61,10 @@
             {% endif %}
             <div class="row">
                 <div>
-                    <p class="ms-3">Refine your search here:
+                    <p class="product-header">Refine your search here:
                 </div>
-                <div class="me-3">
-                    <p>{{ searchmodal_html|safe }}</p>
+                <div class="me-3 ms-0 w-50">
+                    <p >{{ searchmodal_html|safe }}</p>
                 </div>
             </div>
         </div>
@@ -140,5 +140,6 @@
         </div>
     </div>
 </div>
+</body>
 {% endfor %}
 {% endblock %}

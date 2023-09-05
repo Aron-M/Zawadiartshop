@@ -1,74 +1,77 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1 class="d-flex justify-content-center mt-3">Your Shopping Cart</h1>
-  <a href="{% url 'products:products' %}" class="btn btn-success w-25 d-flex align-self-center justify-content-center mt-5">
-    Click here to continue your shopping!</a>
-    <div class="d-flex flex-column align-items-center mt-5">
-      <table class="table w-75 mb-0">
-        <thead>
-          <tr>
-            <th scope="col" class="col">Product</th>
-            <th scope="col" class="col">Price</th>
-            <th scope="col" class="col">Quantity</th>
-            <th scope="col" class="col">Actions</th>
-            <th scope="col" class="col">Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for cart_item in cart_items %}
-          <tr>
-            <td>
-              <img src="{{ cart_item.product.image.url }}" alt="{{ cart_item.product.name }}" 
-              class="img-thumbnail cart-img card-img-top" style="width: 50px; height: 50px;" 
-              data-bs-toggle="modal" data-bs-target="#myModal{{ cart_item.product.id }}">
-              <label class="fw-bold me-5">{{ cart_item.product.name }}</label> by {{cart_item.product.artist }}
-            </td>
-            <td>${{ cart_item.product.price }}</td>
-            <td>
-              <form class="d-flex" method="post" action="{% url 'cart:update_cart_item' cart_item.id %}">
-                {% csrf_token %}
-                <input type="number" class="form-control cart-quantity me-2 w-25" name="quantity" value="{{ cart_item.quantity }}" min="1">
-                <button type="submit" class="btn btn-info">Update</button>
-              </form>
-            </td>
-            <td>
-              <form method="post" action="{% url 'cart:remove_from_cart' cart_item.id %}">
-                {% csrf_token %}
-                <button type="submit" class="btn btn-danger">Remove</button>
-              </form>
-            </td>
-            <td class="cart-total">${{ cart_item.total }}</td>
-          </tr>
-          {% empty %}
-          <tr>
-            <td colspan="5">Your cart is empty</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-      <div class="w-75 d-flex justify-content-end">
-      <div class="bg-white p-2">
-        <h3 class=" mt-2">Total: $<span id="cart-total-amount">{{ cart_total }}</span></h3>
-        <a href="#" class="btn btn-primary">Proceed to Checkout</a>
+<h1 class="d-flex justify-content-center mt-3 text-white">Your Shopping Cart</h1>
+<a href="{% url 'products:products' %}"
+  class="btn btn-success w-25 d-flex align-self-center justify-content-center mt-5">
+  Click here to continue your shopping!</a>
+<div class="d-flex flex-column align-items-center mt-5">
+  <table class="table w-75 mb-0">
+    <thead>
+      <tr>
+        <th scope="col" class="col">Product</th>
+        <th scope="col" class="col">Price</th>
+        <th scope="col" class="col">Quantity</th>
+        <th scope="col" class="col">Actions</th>
+        <th scope="col" class="col">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for cart_item in cart_items %}
+      <tr>
+        <td>
+          <img src="{{ cart_item.product.image.url }}" alt="{{ cart_item.product.name }}"
+            class="img-thumbnail cart-img card-img-top" style="width: 50px; height: 50px;" data-bs-toggle="modal"
+            data-bs-target="#myModal{{ cart_item.product.id }}">
+          <label class="fw-bold me-5">{{ cart_item.product.name }}</label> by {{cart_item.product.artist }}
+        </td>
+        <td>${{ cart_item.product.price }}</td>
+        <td>
+          <form class="d-flex" method="post" action="{% url 'cart:update_cart_item' cart_item.id %}">
+            {% csrf_token %}
+            <input type="number" class="form-control cart-quantity me-2 w-25" name="quantity"
+              value="{{ cart_item.quantity }}" min="1">
+            <button type="submit" class="btn btn-info">Update</button>
+          </form>
+        </td>
+        <td>
+          <form method="post" action="{% url 'cart:remove_from_cart' cart_item.id %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Remove</button>
+          </form>
+        </td>
+        <td class="cart-total">${{ cart_item.total }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="5">Your cart is empty</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div class="w-75 d-flex justify-content-end">
+    <div class="bg-white p-2">
+      <h3 class=" mt-2">Total: $<span id="cart-total-amount">{{ cart_total }}</span></h3>
+      <a href="#" class="btn btn-primary">Proceed to Checkout</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+{% for cart_item in cart_items %}
+<div class="modal fade" id="myModal{{ cart_item.product.id }}" tabindex="-1"
+  aria-labelledby="exampleModalLabel{{ cart_item.product.id }}" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p>{{ cart_item.product.name }} by {{ cart_item.product.artist }}</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </div>
-    </div>
-    
-    
-  <!-- Modal -->
-  {% for cart_item in cart_items %}
-  <div class="modal fade" id="myModal{{ cart_item.product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel{{ cart_item.product.id }}" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <p>{{ cart_item.product.name }} by {{ cart_item.product.artist }}</p>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="{{ cart_item.product.image.url }}" alt="{{ cart_item.product.name }}" class="img-fluid">
-        </div>
+      <div class="modal-body">
+        <img src="{{ cart_item.product.image.url }}" alt="{{ cart_item.product.name }}" class="img-fluid">
       </div>
     </div>
   </div>
-  {% endfor %}
+</div>
+{% endfor %}
 {% endblock %}

@@ -1,9 +1,21 @@
-.base-body {
+#home-body {
     background-image: url('https://res.cloudinary.com/dj3upv8lw/image/upload/v1692439951/savannah_nm23cv.jpg');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center center; 
     min-height: 100vh;
+}
+
+body {
+    background-color: #4e4343 !important;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    min-height: 100vh;
+}
+
+.product-header {
+    color: #f5f5f5 !important;
 }
 
 .container {
@@ -269,4 +281,8 @@ body.modal-open .content-to-fade {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-size: 16px;
     color: #333;
+}
+
+.grand-total {
+    margin-left: 30vw;
 }
