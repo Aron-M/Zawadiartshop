@@ -215,6 +215,12 @@ body.modal-open .content-to-fade {
 
 }
 
+.cardrow {
+    padding-right: 0 !important;
+    padding-left:0 !important;
+    margin-top:0 !important;
+}
+
 .card-img-top:hover {
     transform: scale(1.05); /* Scale the image by 5% */
     transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */

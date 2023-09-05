@@ -6,7 +6,7 @@
 
 <div class="row">
     <div class="col-md-5">
-        <div class="filter-summary ms-5">
+        <div class="filter-summary ms-3">
             <h5 class="text-decoration-underline mb-3">Displaying your choices of:</h5>
             <p class="mt-2">
                 {% if filtered_categories %}
@@ -60,10 +60,10 @@
 
             {% endif %}
             <div class="row">
-                <div class="col-md-4">
-                    <p class="mt-3">Refine your search here:
+                <div>
+                    <p class="ms-3">Refine your search here:
                 </div>
-                <div class="col-md-8">
+                <div class="me-3">
                     <p>{{ searchmodal_html|safe }}</p>
                 </div>
             </div>
@@ -71,7 +71,7 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row cardrow" data-masonry='{"percentPosition": true }'>
     {% for product in filtered_products %}
     <div class="col-lg-3 col-md-6 mb-3 ps-2">
         <div class="card card-smaller user-select-none">
