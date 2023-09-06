@@ -2,15 +2,17 @@
 {% load static %}
 
 {% block content %}
-<h1 class="d-flex flex-column justify-content-center align-items-center mt-3 products">ALL PRODUCTS</h1>
+<body>
+<h1 class="d-flex flex-column justify-content-center align-items-center mt-3 mb-3 products">ALL PRODUCTS</h1>
 <div class="d-flex flex-column align-items-center">
-    <div class="w-25">
+    <div class="w-25 mb-3">
         <p>{{ searchmodal_html|safe }}</p>
     </div>
 </div>
-<div class="row">
+
+<div class="row cardrow" data-masonry='{"percentPosition": true }'>
     {% for product in products %}
-    <div class="col-lg-3 col-md-6 mb-3">
+    <div class="col-lg-3 col-md-6 mb-3 ps-2">
         <div class="card card-smaller user-select-none">
             <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}" data-bs-toggle="modal"
                 data-bs-target="#myModal{{ product.pk }}">
@@ -38,9 +40,9 @@
         </div>
     </div>
     <!-- Modals -->
-    <div class="modal fade" id="myModal{{ product.pk }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div class="modal fade p-0 " id="myModal{{ product.pk }}" data-bs-backdrop="static" position: fixed tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-lg ms-0 me-5 p-0">
             <div class="modal-content">
                 <div class="modal-header">
                     <p>"{{ product.name }}" by {{ product.artist }}</p>
@@ -77,5 +79,6 @@
         </div>
     </div>
 </div>
+</body>
 {% endfor %}
 {% endblock %}

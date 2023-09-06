@@ -71,7 +71,7 @@
     </div>
 </div>
 
-<div class="row cardrow" data-masonry='{"percentPosition": true }'>
+<div class="row cardrow">
     {% for product in filtered_products %}
     <div class="col-lg-3 col-md-6 mb-3 ps-2">
         <div class="card card-smaller user-select-none">
@@ -101,9 +101,9 @@
         </div>
     </div>
     <!-- Modals -->
-    <div class="modal fade p-0" id="myModal{{ product.pk }}" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div class="modal fade p-0 " id="myModal{{ product.pk }}" data-bs-backdrop="static" position: fixed tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-lg ms-0 me-5 p-0">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <p>"{{ product.name }}" by {{ product.artist }}</p>
