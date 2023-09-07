@@ -3,14 +3,14 @@
 
 {% block content %}
 <body>
-<h1 class="d-flex flex-column justify-content-center align-items-center mt-3 mb-3 products">ALL PRODUCTS</h1>
+<h1 class="d-flex flex-column justify-content-center align-items-center mt-3 mb-3 products text-white">ALL PRODUCTS</h1>
 <div class="d-flex flex-column align-items-center">
     <div class="w-25 mb-3">
         <p>{{ searchmodal_html|safe }}</p>
     </div>
 </div>
 
-<div class="row cardrow" data-masonry='{"percentPosition": true }'>
+<div class="row cardrow">
     {% for product in products %}
     <div class="col-lg-3 col-md-6 mb-3 ps-2">
         <div class="card card-smaller user-select-none">

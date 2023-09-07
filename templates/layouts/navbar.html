@@ -5,44 +5,45 @@
         <div class="d-flex justify-content-between w-100">
             <a class="navbar-brand text-white" href="#">Zawadi African Art</a>
             <!-- Additional nav links (center-aligned) -->
-        <ul class="navbar-nav mx-auto mt-5">
-            <!-- Home link -->
-            <li class="nav-item">
-                <a class="nav-link text-white" href="{% url 'products:home' %}">Home</a>
-            </li>
-            <!-- Products link with dropdown menu -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Products
-                </a>
-                <ul class="dropdown-menu dropdown-menu-slide" aria-labelledby="productsDropdown">
-                    <li><a class="dropdown-item" href="{% url 'products:products' %}">All Products</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products:paintings' %}">Paintings</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products:sculptures' %}">Sculptures</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products:frames' %}">Frames</a></li>
-                    <li><a class="dropdown-item" href="{% url 'products:crafts' %}">Crafts</a></li>
-                </ul>
-            </li>
-            <!-- SALE link -->
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">SALE</a>
-            </li>
-            <!-- FAQ's link -->
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">FAQ's</a>
-            </li>
-            <!-- Track my delivery link -->
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">Track my delivery</a>
-            </li>
-        </ul>
+            <ul class="navbar-nav mx-auto mt-5">
+                <!-- Home link -->
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'products:home' %}">Home</a>
+                </li>
+                <!-- Products link with dropdown menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="productsDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-slide" aria-labelledby="productsDropdown">
+                        <li><a class="dropdown-item" href="{% url 'products:products' %}">All Products</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products:paintings' %}">Paintings</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products:sculptures' %}">Sculptures</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products:frames' %}">Frames</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products:crafts' %}">Crafts</a></li>
+                    </ul>
+                </li>
+                <!-- SALE link -->
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">SALE</a>
+                </li>
+                <!-- FAQ's link -->
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">FAQ's</a>
+                </li>
+                <!-- Track my delivery link -->
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Track my delivery</a>
+                </li>
+            </ul>
             <ul class="navbar-nav">
                 <!-- Basket icon link -->
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{% url 'cart:cart_view' %}">
                         <i class="fas fa-shopping-basket"></i> Cart
-                    </a>  
-                </li>               
+                    </a>
+                </li>
                 <!-- Login icon link -->
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">
@@ -56,6 +57,11 @@
                     </a>
                 </li>
             </ul>
+            <!-- Custom notification div (hidden by default) -->
+            <div id="cart-notification" class="cart-notification"
+                style="max-width: 300px; display: none;">
+                You have <span id="cart-quantity">0</span> products in your cart.
+            </div>
         </div>
     </div>
 </nav>

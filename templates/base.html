@@ -83,6 +83,32 @@
         $("#alertMessage").text(alertMessage);
         $("#customAlertModal").modal("show");
     });
+    document.addEventListener("DOMContentLoaded", function () {
+  // Find all "Add to Cart" buttons
+  const addToCartButtons = document.querySelectorAll(".add-to-cart-button");
+
+  // Find the cart notification div
+  const cartNotification = document.getElementById("cart-notification");
+
+  // Initialize the cart count
+  let cartCount = 0;
+
+  // Function to update the cart notification
+  function updateCartNotification() {
+    cartNotification.textContent = `You have ${cartCount} product(s) in your cart`;
+  }
+
+  // Add click event listeners to all "Add to Cart" buttons
+  addToCartButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Increment the cart count
+      cartCount += 1;
+
+      // Update the cart notification
+      updateCartNotification();
+    });
+  });
+});
     </script>
     {% endblock %}
 </body>
