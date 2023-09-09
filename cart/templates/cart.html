@@ -4,8 +4,8 @@
 <a href="{% url 'products:products' %}"
   class="btn btn-success w-25 d-flex align-self-center justify-content-center mt-5">
   Click here to continue your shopping!</a>
-<div class="d-flex flex-column align-items-center mt-5">
-  <table class="table w-75 mb-0">
+<div class="d-flex flex-column align-items-center mt-5 mb-2">
+  <table class="table w-75 mb-0 rounded">
     <thead>
       <tr>
         <th scope="col" class="col">Product</th>
@@ -34,10 +34,8 @@
           </form>
         </td>
         <td>
-          <form method="post" action="{% url 'cart:remove_from_cart' cart_item.id %}">
-            {% csrf_token %}
-            <button type="submit" class="btn btn-danger">Remove</button>
-          </form>
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+            data-bs-target="#confirmationModal{{ cart_item.id }}">Remove</button>
         </td>
         <td class="cart-total">${{ cart_item.total }}</td>
       </tr>
@@ -48,15 +46,38 @@
       {% endfor %}
     </tbody>
   </table>
-  <div class="w-75 d-flex justify-content-end">
-    <div class="bg-white p-2">
-      <h3 class=" mt-2">Total: $<span id="cart-total-amount">{{ cart_total }}</span></h3>
-      <a href="#" class="btn btn-primary">Proceed to Checkout</a>
+  <div class="w-75 d-flex flex-column align-items-end">
+    <div class="d-flex flex-column align-items-end bg-white p-2 w-100">
+      <h3>Total: $<span id="cart-total-amount">{{ cart_total }}</span></h3>
+      <a href="#" class="btn btn-primary ps-4">Proceed to Checkout</a>
     </div>
   </div>
 </div>
 
-
+<!-- Defensive Modal -->
+{% for cart_item in cart_items %}
+<div class="modal fade" id="confirmationModal{{ cart_item.id }}" tabindex="-1" aria-labelledby="confirmationModalLabel{{ cart_item.id }}"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel{{ cart_item.id }}">Remove product</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to remove this product from your cart?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <form method="post" action="{% url 'cart:remove_from_cart' cart_item.id %}">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-danger">Remove</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
 <!-- Modal -->
 {% for cart_item in cart_items %}
 <div class="modal fade" id="myModal{{ cart_item.product.id }}" tabindex="-1"

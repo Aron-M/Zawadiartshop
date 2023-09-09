@@ -286,3 +286,8 @@ body.modal-open .content-to-fade {
 .grand-total {
     margin-left: 30vw;
 }
+
+.grandtotal {
+    display: flex;
+    align-items: end;
+}
