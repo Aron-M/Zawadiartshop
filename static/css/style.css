@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #4e4343 !important;
+    background-color: #302b2b !important;
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center center; 
@@ -21,6 +21,22 @@ body {
     right: 0;
     z-index: 99999;
   }
+
+.africa-icon {
+    width: 4.5vw;
+    height: 7vh;
+    margin-left: 3vw;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ffda05f5 !important;
+    transition: color 0.4s ease-in-out;
+}
+
+.navbar-brand.brand-link:hover {
+    color:  #ffda05f5 !important;
+    transition: color 0.4s ease-in-out;
+}
 
 .modal {
     margin-top:13vh;
@@ -310,4 +326,8 @@ body.modal-open .content-to-fade {
 .grandtotal {
     display: flex;
     align-items: end;
+}
+
+.authentication {
+    margin-top: 12rem;
 }

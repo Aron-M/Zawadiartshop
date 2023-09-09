@@ -3,7 +3,10 @@
     <div class="container">
         <!-- First navbar (top) with sign-up, login, and basket links -->
         <div class="d-flex justify-content-between w-100">
-            <a class="navbar-brand text-white" href="#">Zawadi African Art</a>
+            <div class="row">
+                <a class="navbar-brand text-white mb-0 brand-link" href="{% url 'products:home' %}">Zawadi African Art</a>
+            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1694301588/geography-icon-africa_krdrhf_p82puu.png" class="africa-icon img-fluid d-flex flex-column justify-content-center mt-0">
+            </div>
             <!-- Additional nav links (center-aligned) -->
             <ul class="navbar-nav mx-auto mt-5">
                 <!-- Home link -->

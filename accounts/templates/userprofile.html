@@ -3,8 +3,15 @@
 
 {% block content %}
 <div class="container mt-5">
-    <h1>Welcome, {{ user.username }}!</h1>
-    <p>Thank you for registering with us.</p>
+    <div class="container mt-5">
+        {% if user %}
+            <h1 class="mt-5 text-white">Welcome, {{ user.username }}!</h1>
+        {% else %}
+            <p>User not found.</p>
+        {% endif %}
+        <!-- Other content here -->
+    </div>
+    <p class="text-white ms-3">Thank you for registering with us.</p>
     <!-- You can add more content here as needed -->
 </div>
 {% endblock %}

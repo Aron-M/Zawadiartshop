@@ -12,7 +12,7 @@ def register_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('user_profile')  # Redirect to your home page
+            return redirect('user_profile')
     else:
         form = RegistrationForm()
     return render(request, '/workspace/Zawadiartshop/accounts/templates/signup.html', {'form': form})
@@ -27,7 +27,7 @@ def login_view(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('/workspace/Zawadiartshop/home/templates/homepage.html')  # Redirect to your home page
+                return redirect('user_profile')
     else:
         form = LoginForm()
     return render(request, '/workspace/Zawadiartshop/accounts/templates/login.html', {'form': form})

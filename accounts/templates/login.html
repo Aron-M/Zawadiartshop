@@ -2,14 +2,29 @@
 
 {% block content %}
 <div class="container mt-5">
-    <h2>Log In</h2>
-    <form method="post" class="mt-3">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Log In</button>
-    </form>
-    <p class="mt-3">
-        Don't have an account? <a href="{% url 'signup' %}">Register</a>
-    </p>
+    <div class="row justify-content-center authentication">
+        <div class="col-md-6">
+            <div class="card rounded p-3">
+                <h2 class="text-center mb-4">Login</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="id_username" class="form-label me-2">Username:</label>
+                        {{ form.username }}
+                    </div>
+                    <div class="mb-3">
+                        <label for="id_password" class="form-label me-3">Password:</label>
+                        {{ form.password }}
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+                <p class="mt-3 text-end">
+                    Don't have an account? <a href="{% url 'signup' %}">Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
