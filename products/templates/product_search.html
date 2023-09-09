@@ -2,8 +2,7 @@
 {% load static %}
 
 {% block content %}
-<body>
-<h1 class="d-flex flex-column justify-content-center align-items-center mt-4 mb-5 text-white">YOUR SEARCH</h1>
+<h1 class="d-flex flex-column justify-content-center align-items-center template-header text-white">YOUR SEARCH</h1>
 <div class="row">
     <div class="col-md-5">
         <div class="filter-summary ms-3">
@@ -15,9 +14,7 @@
                 <strong>{{ filtered_categories|last }}</strong>
                 {% endif %}
             </p>
-
             <p>
-
                 {% if filtered_origin_image_tuples %}
                 from
                 <strong>
@@ -93,33 +90,34 @@
                 <form method="post" action="{% url 'cart:add_to_cart' product.id %}" target="cart-iframe">
                     {% csrf_token %}
                     <input type="hidden" name="quantity" value="1">
-                    <button type="submit" id="add-to-cart-button{{ product.pk }}" class="btn btn-primary add-to-cart-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ product.pk }}" data-product-id="{{ product.pk }}">Add to Cart</button>
-
+                    <button type="submit" id="add-to-cart-button{{ product.pk }}" class="btn btn-primary add-to-cart-button" 
+                    data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ product.pk }}" 
+                    data-product-id="{{ product.pk }}">Add to Cart</button>
                 </form>
                 <iframe name="cart-iframe" id="cart-iframe" style="display:none;"></iframe>
             </div>
         </div>
     </div>
     <!-- Modals -->
-    <div class="modal fade p-0 " id="myModal{{ product.pk }}" data-bs-backdrop="static" position: fixed tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <p>"{{ product.name }}" by {{ product.artist }}</p>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid">
-                </div>
-            </div>
+    <div class="modal fade" id="myModal{{ product.pk }}" tabindex="-1"
+    aria-labelledby="exampleModalLabel{{ product.id }}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p>{{ product.name }} by {{ product.artist }}</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+          <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid">
+        </div>
+      </div>
     </div>
+  </div>
     {% endfor %}
 </div>
 
 {% for product in filtered_products %}
-<div class="modal fade" id="staticBackdrop{{ product.pk }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+<div class="modal productaddedmodal fade" id="staticBackdrop{{ product.pk }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -140,6 +138,5 @@
         </div>
     </div>
 </div>
-</body>
 {% endfor %}
 {% endblock %}

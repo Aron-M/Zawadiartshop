@@ -97,9 +97,10 @@
   function updateCartNotification() {
     cartNotification.textContent = `You have ${cartCount} product(s) in your cart`;
   }
+});
 
-  // Add click event listeners to all "Add to Cart" buttons
-  addToCartButtons.forEach((button) => {
+// Add click event listeners to all "Add to Cart" buttons
+addToCartButtons.forEach((button) => {
     button.addEventListener("click", function () {
       // Increment the cart count
       cartCount += 1;
@@ -108,7 +109,6 @@
       updateCartNotification();
     });
   });
-});
     </script>
     {% endblock %}
 </body>

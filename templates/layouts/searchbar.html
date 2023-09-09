@@ -13,7 +13,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade mt-2" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade mt-4" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg custom-modal">
         <div class="modal-content">
             <form action="{% url 'products:product_search' %}" method="get">
@@ -69,7 +69,7 @@
                         <span>For items under $200 check out our Crafts section!</span>
                     </div>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer p-1">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
                     <button type="submit" class="btn btn-primary">Search</button> 
             </form>

@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<h1 class="d-flex flex-column justify-content-center align-items-center mt-3 products text-white">PAINTINGS</h1>
+<h1 class="d-flex flex-column justify-content-center align-items-center template-header text-white">PAINTINGS</h1>
 <div class="d-flex flex-column align-items-center">
     <div class="w-25">
         <p>{{ searchmodal_html|safe }}</p>
@@ -40,7 +40,7 @@
     <!-- Modals -->
     <div class="modal fade" id="myModal{{ product.pk }}" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered mt-5 modal-md">
             <div class="modal-content">
                 <div class="modal-header">
                     <p>"{{ product.name }}" by {{ product.artist }}</p>
