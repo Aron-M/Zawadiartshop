@@ -18,7 +18,7 @@ def checkout_view(request):
     else:
         form = DeliveryAddressForm()
 
-    return render(request, 'checkout/checkout.html', {'form': form})
+    return render(request, 'checkout.html', {'form': form})
 
 def confirmation_view(request):
     # You can fetch order details here to display on the confirmation page

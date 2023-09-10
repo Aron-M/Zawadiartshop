@@ -2,9 +2,58 @@
 {% load static %}
 
 {% block content %}
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Proceed to Payment</button>
-</form>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6  authentication">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Checkout</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+
+                        <!-- Buttons -->
+                        <div class="d-flex justify-content-between">
+                            <a href="{% url 'cart:cart_view' %}" class="btn btn-secondary">Back to Cart</a>
+                            <a href="{% url 'products:home' %}" class="btn btn-primary">Continue Shopping</a>
+                            <button type="submit" class="btn btn-success">Proceed to Payment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 authentication">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Cart Summary</h2>
+                </div>
+                <div class="card-body">
+                    <!-- Cart Summary Table -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for cart_item in cart_items %}
+                            <tr>
+                                <td>{{ cart_item.product.name }}</td>
+                                <td>{{ cart_item.quantity }}</td>
+                                <td>${{ cart_item.product.price }}</td>
+                                <td>${{ cart_item.total }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
