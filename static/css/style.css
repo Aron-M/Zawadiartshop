@@ -28,6 +28,10 @@ body {
     margin-left: 3vw;
 }
 
+.zawadi {
+    max-width: min-content;
+}
+
 .navbar-nav .nav-item .nav-link:hover {
     color: #f9f100fd !important;
     transition: color 0.4s ease-in-out;

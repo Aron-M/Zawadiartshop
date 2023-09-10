@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container mt-5">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center authentication">
         <div class="col-md-6">
             <div class="card p-4">
                 {% if user %}
@@ -14,8 +14,9 @@
                 <!-- Other content here -->
                 
                 <div class="text-center">
-                    <p class="text-white ms-3">Thank you for registering with us.</p>
-                    <a href="{% url 'home' %}" class="btn btn-success">Go to Homepage</a>
+                    <p class="ms-3">Thank you for registering with us.</p>
+                    <a href="{% url 'products:home' %}" class="btn btn-success mt-1 mb-2">Go to Homepage</a>
+                    <p class="ms-3">to start shopping for some amazing art!</p>
                 </div>
             </div>
         </div>

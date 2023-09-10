@@ -3,9 +3,11 @@
     <div class="container">
         <!-- First navbar (top) with sign-up, login, and basket links -->
         <div class="d-flex justify-content-between w-100">
-            <div class="row">
-                <a class="navbar-brand text-white mb-0 brand-link" href="{% url 'products:home' %}">Zawadi African Art</a>
-            <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1694301588/geography-icon-africa_krdrhf_p82puu.png" class="africa-icon img-fluid d-flex flex-column justify-content-center mt-0">
+            <div class="row zawadi">
+                <a class="navbar-brand text-white mb-0 brand-link" href="{% url 'products:home' %}">Zawadi African
+                    Art</a>
+                <img src="https://res.cloudinary.com/dj3upv8lw/image/upload/v1694301588/geography-icon-africa_krdrhf_p82puu.png"
+                    class="africa-icon img-fluid mt-0">
             </div>
             <!-- Additional nav links (center-aligned) -->
             <ul class="navbar-nav mx-auto mt-5">
@@ -78,16 +80,14 @@
                 {% endif %}
             </ul>
             <!-- Custom notification div (hidden by default) -->
-            <div id="cart-notification" class="cart-notification"
-                style="max-width: 300px; display: none;">
+            <div id="cart-notification" class="cart-notification" style="max-width: 300px; display: none;">
                 You have <span id="cart-quantity">0</span> products in your cart.
             </div>
         </div>
-            <!-- Custom notification div (hidden by default) -->
-            <div id="cart-notification" class="cart-notification"
-                style="max-width: 300px; display: none;">
-                You have <span id="cart-quantity">0</span> products in your cart.
-            </div>
+        <!-- Custom notification div (hidden by default) -->
+        <div id="cart-notification" class="cart-notification" style="max-width: 300px; display: none;">
+            You have <span id="cart-quantity">0</span> products in your cart.
         </div>
+    </div>
     </div>
 </nav>
