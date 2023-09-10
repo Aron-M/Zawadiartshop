@@ -1,3 +1,4 @@
+<!-- custom_login.html -->
 {% extends 'base.html' %}
 
 {% block content %}
@@ -8,14 +9,13 @@
                 <h2 class="text-center mb-4">Login</h2>
                 <form method="post">
                     {% csrf_token %}
-                    <div class="mb-3">
-                        <label for="id_username" class="form-label me-2">Username:</label>
-                        {{ form.username }}
-                    </div>
-                    <div class="mb-3">
-                        <label for="id_password" class="form-label me-3">Password:</label>
-                        {{ form.password }}
-                    </div>
+                    {{ form.username.label_tag }} {{ form.username }}
+                    {{ form.password.label_tag }} {{ form.password }}
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            {{ form.non_field_errors }}
+                        </div>
+                    {% endif %}
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary">Login</button>
                     </div>
@@ -28,3 +28,4 @@
     </div>
 </div>
 {% endblock %}
+

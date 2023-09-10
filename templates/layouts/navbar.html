@@ -55,6 +55,14 @@
                         <i class="fas fa-shopping-basket"></i> Cart
                     </a>
                 </li>
+                {% if user.is_authenticated %}
+                <!-- Log Out link (only visible when authenticated) -->
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'logout' %}">
+                        <i class="fas fa-sign-out-alt"></i> Log Out
+                    </a>
+                </li>
+                {% else %}
                 <!-- Login icon link -->
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{% url 'login' %}">
@@ -67,7 +75,14 @@
                         <i class="fas fa-user-plus"></i> Sign Up
                     </a>
                 </li>
+                {% endif %}
             </ul>
+            <!-- Custom notification div (hidden by default) -->
+            <div id="cart-notification" class="cart-notification"
+                style="max-width: 300px; display: none;">
+                You have <span id="cart-quantity">0</span> products in your cart.
+            </div>
+        </div>
             <!-- Custom notification div (hidden by default) -->
             <div id="cart-notification" class="cart-notification"
                 style="max-width: 300px; display: none;">

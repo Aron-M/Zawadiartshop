@@ -1,10 +1,11 @@
-# accounts/views.py
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
-from .forms import RegistrationForm, LoginForm
+from .forms import RegistrationForm, CustomLoginForm
+from django.contrib.auth.views import LogoutView
+from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
-
-
+from django.contrib import messages
+import logging
 
 def register_view(request):
     if request.method == 'POST':
@@ -12,32 +13,35 @@ def register_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('user_profile')
+            return redirect('user_profile')  # Redirect to 'user_profile' after signup
     else:
         form = RegistrationForm()
-    return render(request, '/workspace/Zawadiartshop/accounts/templates/signup.html', {'form': form})
+    return render(request, 'registration/signup.html', {'form': form})
 
+logger = logging.getLogger(__name__)
 
-def login_view(request):
+def custom_login_view(request):
     if request.method == 'POST':
-        form = LoginForm(request.POST)
+        form = CustomLoginForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('user_profile')
+                # Redirect to 'welcome_back' after login
+                return redirect('welcome_back')  # Redirect to 'welcome_back' after login
+            else:
+                form.add_error(None, 'Invalid username or password')
     else:
-        form = LoginForm()
-    return render(request, '/workspace/Zawadiartshop/accounts/templates/login.html', {'form': form})
-
-
+        form = CustomLoginForm()
+    return render(request, 'registration/login.html', {'form': form})
 @login_required
 def user_profile(request):
-    return render(request, 'userprofile.html', {'user': request.user})
+    return render(request, 'registration/userprofile.html', {'user': request.user})  # Use 'userprofile.html' here
 
+def welcome_back(request):
+    return render(request, 'registration/welcome_back.html', {'user': request.user})
 
-def logout_view(request):
-    logout(request)
-    return redirect('/workspace/Zawadiartshop/home/templates/homepage.html')  # Redirect to your home page
+class CustomLogoutView(LogoutView):
+    next_page = reverse_lazy('products:home')

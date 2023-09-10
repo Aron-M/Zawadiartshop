@@ -1,0 +1,17 @@
+<!-- userprofile.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="container mt-5">
+        {% if user %}
+            <h1 class="mt-5 text-white">Hi there, {{ user.username }}!</h1>
+        {% else %}
+            <p>User not found.</p>
+        {% endif %}
+        <!-- Other content here -->
+    </div>
+    <p class="text-white ms-3">Welcome back, enjoy your shopping!</p>
+    <!-- You can add more content here as needed -->
+</div>
+{% endblock %}
