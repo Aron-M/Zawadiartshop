@@ -23,18 +23,18 @@ body {
   }
 
 .africa-icon {
-    width: 4.5vw;
-    height: 7vh;
+    width: 4.5rem;
+    height: 3.5rem;
     margin-left: 3vw;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    color: #ffda05f5 !important;
+    color: #f9f100fd !important;
     transition: color 0.4s ease-in-out;
 }
 
 .navbar-brand.brand-link:hover {
-    color:  #ffda05f5 !important;
+    color:  #f9f100fd !important;
     transition: color 0.4s ease-in-out;
 }
 
