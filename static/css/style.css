@@ -20,6 +20,13 @@ body {
     left: 0;
     right: 0;
     z-index: 99999;
+    width:inherit;
+    margin: 0 !important;
+  }
+
+.navcontainer {
+    margin: 0 !important;
+    width:max-content;
   }
 
 .africa-icon {
@@ -334,4 +341,8 @@ body.modal-open .content-to-fade {
 
 .authentication {
     margin-top: 12rem;
+}
+
+.navbar-alert {
+    max-width: auto;
 }
