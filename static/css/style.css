@@ -20,14 +20,16 @@ body {
     left: 0;
     right: 0;
     z-index: 99999;
-    width:inherit;
+    width:initial;
     margin: 0 !important;
   }
 
 .navcontainer {
-    margin: 0 !important;
-    width:max-content;
+    margin-top: 0 !important;
+    width:max-content !important;
+    padding:0 !important;
   }
+
 
 .africa-icon {
     width: 4.5rem;
@@ -42,6 +44,14 @@ body {
 .navbar-nav .nav-item .nav-link:hover {
     color: #f9f100fd !important;
     transition: color 0.4s ease-in-out;
+}
+
+.navbar-nav {
+    padding-right:0 !important;
+}
+
+.navlink {
+    padding:0 !important;
 }
 
 .navbar-brand.brand-link:hover {

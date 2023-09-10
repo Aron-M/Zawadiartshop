@@ -9,6 +9,11 @@ from django.shortcuts import render
 from cart.models import CartItem
 
 
+def calculate_cart_total(cart_items):
+    return cart_items.aggregate(total_products=Sum('quantity'))['total_products'] or 0
+
+from django.db.models import Sum  # Import Sum aggregation function
+
 def cart_view(request):
     session_key = request.session.session_key
 
@@ -20,11 +25,19 @@ def cart_view(request):
             cart_item.total = cart_item.product.price * cart_item.quantity
 
         cart_total = sum(cart_item.total for cart_item in cart_items)
+
+        # Function to calculate the total number of products
+        def calculate_total_products():
+            return cart_items.aggregate(total_products=Sum('quantity'))['total_products']
+
+        total_products = calculate_total_products()
     else:
         cart_items = []
         cart_total = 0
+        total_products = 0
 
-    return render(request, 'cart.html', {'cart_items': cart_items, 'cart_total': cart_total})
+    return render(request, 'cart.html', {'cart_items': cart_items, 'cart_total': cart_total, 'total_products': total_products})
+
 
 
 def add_to_cart(request, product_id):

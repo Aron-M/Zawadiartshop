@@ -1,5 +1,5 @@
 <!-- navbar.html -->
-<nav class="navbar navbar-expand-lg navbar-light bg-dark w-100" id="Navbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark  w-100" id="Navbar">
     <div class="container navcontainer">
         <!-- First navbar (top) with sign-up, login, and basket links -->
         <div class="col-md-2 d-flex justify-content-between">
@@ -84,12 +84,14 @@
                     </li>
                     {% endif %}
                 </ul>
-                <!-- Alert message placeholder -->
-                <div class="alert alert-success alert-dismissible fade show d-none navbar-alert p-1" id="persistent-alert"
-                    role="alert">
-                    This is a persistent message. You are logged in.
-                    <!-- Add a close button here if you want users to dismiss the alert manually -->
+                <div class="alert alert-success alert-dismissible fade show d-none navbar-alert p-1" id="persistent-alert" role="alert">
+                    Hi, {{ user.username }}! You have {% for cart_item in cart_items %}
+                    {% if forloop.first %}
+                        {{ total_products }}
+                    {% endif %}
+                {% endfor %} product(s) in your cart.
                 </div>
+                
             </div>
         </div>
     </div>
