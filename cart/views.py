@@ -3,16 +3,12 @@ from django.contrib.sessions.models import Session
 from cart.models import Cart, CartItem
 from django.http import HttpResponse
 from products.models import Product
-
-
-from django.shortcuts import render
-from cart.models import CartItem
+from django.db.models import Sum
 
 
 def calculate_cart_total(cart_items):
     return cart_items.aggregate(total_products=Sum('quantity'))['total_products'] or 0
 
-from django.db.models import Sum  # Import Sum aggregation function
 
 def cart_view(request):
     session_key = request.session.session_key
@@ -35,8 +31,15 @@ def cart_view(request):
         cart_items = []
         cart_total = 0
         total_products = 0
+    
+    context = {
+        'cart_items': cart_items,
+        'cart_total': cart_total,
+        'total_products': total_products,
+    }
 
-    return render(request, 'cart.html', {'cart_items': cart_items, 'cart_total': cart_total, 'total_products': total_products})
+    return render(request, 'cart.html', context)
+
 
 
 

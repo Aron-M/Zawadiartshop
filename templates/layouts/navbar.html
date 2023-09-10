@@ -85,11 +85,7 @@
                     {% endif %}
                 </ul>
                 <div class="alert alert-success alert-dismissible fade show d-none navbar-alert p-1" id="persistent-alert" role="alert">
-                    Hi, {{ user.username }}! You have {% for cart_item in cart_items %}
-                    {% if forloop.first %}
-                        {{ total_products }}
-                    {% endif %}
-                {% endfor %} product(s) in your cart.
+                    Hi, {{ user.username }}! You have {{ total_products }} product(s) in your cart.
                 </div>
                 
             </div>
