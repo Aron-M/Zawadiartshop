@@ -63,10 +63,9 @@
                         </a>
                     </li>
                     {% if user.is_authenticated %}
-                    <!-- Log Out link (only visible when authenticated) -->
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{% url 'logout' %}">
-                            <i class="fas fa-sign-out-alt"></i> Log Out
+                        <a class="nav-link text-white" href="#logoutModal" data-bs-toggle="modal" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt"></i> Logout
                         </a>
                     </li>
                     {% else %}
@@ -85,14 +84,36 @@
                     {% endif %}
                 </ul>
                 <div class="alert alert-success alert-dismissible fade show d-none navbar-alert p-1" id="persistent-alert" role="alert">
-                    Hi, {{ user.username }}! You have {{ total_products }} product(s) in your cart.
+                    {% if total_products == 0 %}
+                        Hi, {{ user.username }}! Welcome and happy shopping!
+                    {% else %}
+                        Hi, {{ user.username }}! You have {{ total_products }} product(s) in your cart.
+                    {% endif %}
                 </div>
+                
                 
             </div>
         </div>
     </div>
     </div>
 </nav>
+<!-- Logout Modal -->
+<div class="modal fade authentication" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="logoutModalLabel">Confirm Logout</h5>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to log out?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% if user.is_authenticated %}
 <script>

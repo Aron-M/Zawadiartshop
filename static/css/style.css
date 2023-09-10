@@ -22,6 +22,7 @@ body {
     z-index: 99999;
     width:initial;
     margin: 0 !important;
+    padding:0 !important;
   }
 
 .navcontainer {
