@@ -1,17 +1,24 @@
-<!-- userprofile.html -->
 {% extends "base.html" %}
 
 {% block content %}
 <div class="container mt-5">
-    <div class="container mt-5">
-        {% if user %}
-            <h1 class="mt-5 text-white">Welcome, {{ user.username }}!</h1>
-        {% else %}
-            <p>User not found.</p>
-        {% endif %}
-        <!-- Other content here -->
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card p-4">
+                {% if user %}
+                    <h1 class="text-center mb-4">Welcome, {{ user.username }}!</h1>
+                {% else %}
+                    <p class="text-center">User not found.</p>
+                {% endif %}
+                
+                <!-- Other content here -->
+                
+                <div class="text-center">
+                    <p class="text-white ms-3">Thank you for registering with us.</p>
+                    <a href="{% url 'home' %}" class="btn btn-success">Go to Homepage</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <p class="text-white ms-3">Thank you for registering with us.</p>
-    <!-- You can add more content here as needed -->
 </div>
 {% endblock %}
