@@ -41,8 +41,6 @@ def cart_view(request):
     return render(request, 'cart.html', context)
 
 
-
-
 def add_to_cart(request, product_id):
     # Retrieve the product by its ID or return a 404 response if not found
     product = get_object_or_404(Product, id=product_id)

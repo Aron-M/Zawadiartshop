@@ -7,19 +7,13 @@
         <div class="col-md-6  authentication">
             <div class="card">
                 <div class="card-header">
-                    <h2>Checkout</h2>
+                    <h2>Customer Information</h2>
                 </div>
                 <div class="card-body">
                     <form method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
-
-                        <!-- Buttons -->
-                        <div class="d-flex justify-content-between">
-                            <a href="{% url 'cart:cart_view' %}" class="btn btn-secondary">Back to Cart</a>
-                            <a href="{% url 'products:home' %}" class="btn btn-primary">Continue Shopping</a>
-                            <button type="submit" class="btn btn-success">Proceed to Payment</button>
-                        </div>
+                        <a href="" class="btn btn-primary d-flex justify-content-center">Save Details</a>
                     </form>
                 </div>
             </div>
@@ -43,7 +37,10 @@
                         <tbody>
                             {% for cart_item in cart_items %}
                             <tr>
-                                <td>{{ cart_item.product.name }}</td>
+                                
+                                <td><img src="{{ cart_item.product.image.url }}" alt="{{ cart_item.product.name }}"
+                                    class="img-thumbnail cart-img card-img-top me-2" style="width: 50px; height: 50px;" data-bs-toggle="modal"
+                                    data-bs-target="#myModal{{ cart_item.product.id }}">{{ cart_item.product.name }}</td>
                                 <td>{{ cart_item.quantity }}</td>
                                 <td>${{ cart_item.product.price }}</td>
                                 <td>${{ cart_item.total }}</td>
@@ -51,6 +48,13 @@
                             {% endfor %}
                         </tbody>
                     </table>
+                    <div class="d-flex justify-content-end">
+                        <h3 class="me-3">Total: $<span id="cart-total-amount">{{ cart_total }}</span></h3>
+                      </div>
+                      <div class="d-flex justify-content-end">
+                        <a href="{% url 'cart:cart_view' %}" class="btn btn-secondary me-3">Back to Cart</a>
+                        <button type="submit" class="btn btn-success me-3">Proceed to Payment</button>
+                    </div>
                 </div>
             </div>
         </div>
