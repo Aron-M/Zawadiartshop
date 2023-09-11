@@ -634,7 +634,7 @@
         "fields": {
             "name": "Classic Elegance Frame",
             "description": "A wooden, straight-edged frame that exudes classic elegance.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694417751/frames/A_wooden_straight-edged_frame_that_exudes_classic_elegance_x07ehd.avif",
             "artist": "Kwame Nkrumah",
             "origin": "Ghana",
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif.png",
@@ -651,7 +651,7 @@
         "fields": {
             "name": "Contemporary Fusion Frame",
             "description": "A contemporary frame with a fusion of straight lines and modern design.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694418222/frames/A%20contemporary%20frame%20with%20a%20fusion%20of%20straight%20lines%20and%20modern%20design.webp",
             "artist": "Zahara Kibibi",
             "origin": "Kenya",
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523654/flag%20icons/kenya_cgsacm.png",
@@ -668,7 +668,7 @@
         "fields": {
             "name": "Wooden Carved Frame",
             "description": "An intricately wood-carved frame that adds an artistic touch to any artwork.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694417752/frames/An_intricately_wood-carved_frame_that_adds_an_artistic_touch_to_any_artwork_klz024.avif",
             "artist": "Abebe Chukwuma",
             "origin": "Nigeria",
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
@@ -685,7 +685,7 @@
         "fields": {
             "name": "Marble Accents Frame",
             "description": "A frame with marble accents that adds a touch of luxury to your art.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694417751/frames/A_frame_with_marble_accents_that_adds_a_touch_of_luxury_to_your_art_jqax7x.jpg",
             "artist": "Sanaa Diop",
             "origin": "Senegal",
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
@@ -702,7 +702,7 @@
         "fields": {
             "name": "Rustic Wooden Frame",
             "description": "A rustic wooden frame that adds warmth and character to your artwork.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694417752/frames/wooden_tree_infused_natural_frame_estojy.jpg",
             "artist": "Thabo Molefe",
             "origin": "South Africa",
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/south-africa_1_hyh59u.png",
@@ -719,7 +719,7 @@
         "fields": {
             "name": "Modern Edge Frame",
             "description": "A modern frame with sleek lines and edgy design for contemporary art.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694417751/frames/A_modern_frame_with_sleek_lines_and_edgy_design_for_contemporary_art_iresqq.webp",
             "artist": "Lila Amara",
             "origin": "Tanzania",
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/tanzania_pi6tn0.png",
@@ -736,7 +736,7 @@
         "fields": {
             "name": "Carved Wooden Frame",
             "description": "A frame with intricate wood carving, showcasing traditional craftsmanship.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694418477/frames/A_frame_with_intricate_wood_carving_showcasing_traditional_craftsmanship_wxh7hg.webp",
             "artist": "Kwame Osaze",
             "origin": "Nigeria",
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
@@ -753,7 +753,7 @@
         "fields": {
             "name": "Minimalist Metal Frame",
             "description": "A minimalist metal frame that enhances the simplicity of your artwork.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694417752/frames/metal_frame_that_enhances_the_simplicity_of_your_artwork_wqygvw.jpg",
             "artist": "Adeola Adeyemi",
             "origin": "Nigeria",
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
@@ -770,7 +770,7 @@
         "fields": {
             "name": "Golden Elegance Frame",
             "description": "A frame with golden accents that radiates elegance and sophistication.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694418566/frames/A_frame_with_golden_accents_that_radiates_elegance_and_sophistication_xygsbb.webp",
             "artist": "Musa Sankara",
             "origin": "Senegal",
             "origin_code": "SEN",
