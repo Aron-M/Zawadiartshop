@@ -787,7 +787,7 @@
         "fields": {
             "name": "African Bead Necklace",
             "description": "Handcrafted bead necklace showcasing vibrant colors and African heritage.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450158/frames/Ghanaian_Adinkra_Cloth_vvofls.jpg",
             "artist": "Kwame Nkrumah",
             "origin": "Ghana",
             "origin_code": "GHA",
@@ -804,7 +804,7 @@
         "fields": {
             "name": "Kenyan Maasai Bracelet",
             "description": "Traditional Maasai bracelet handwoven with colorful beads and intricate patterns.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450160/frames/Kenyan_Maasai_Bracelet_ugmsoj.jpg",
             "artist": "Zahara Kibibi",
             "origin": "Kenya",
             "origin_code": "KEN",
@@ -821,7 +821,7 @@
         "fields": {
             "name": "Nigerian Adire Cloth",
             "description": "Adire-dyed cloth with intricate patterns, showcasing the artistry of Nigeria.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450164/frames/Nigerian_Adire_Cloth_mbytkk.webp",
             "artist": "Abebe Chukwuma",
             "origin": "Nigeria",
             "origin_code": "NGA",
@@ -838,7 +838,7 @@
         "fields": {
             "name": "Senegalese Basket",
             "description": "Handwoven basket made from natural fibers, representing Senegalese craftsmanship.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450166/frames/Senegalese_Basket_ocypel.webp",
             "artist": "Sanaa Diop",
             "origin": "Senegal",
             "origin_code": "SEN",
@@ -855,7 +855,7 @@
         "fields": {
             "name": "Ghanaian Kente Cloth",
             "description": "Handwoven Kente cloth with intricate patterns and vibrant colors from Ghana.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450159/frames/Ghanaian_Kente_Cloth_nvxwwe.webp",
             "artist": "Leyla Abubakar",
             "origin": "Ghana",
             "origin_code": "GHA",
@@ -872,7 +872,7 @@
         "fields": {
             "name": "Tanzanian Tinga Tinga Painting",
             "description": "Colorful Tinga Tinga painting depicting Tanzanian wildlife and landscapes.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450171/frames/Tanzanian_Tinga_Tinga_Painting_gohkuq.webp",
             "artist": "Lila Amara",
             "origin": "Tanzania",
             "origin_code": "TZA",
@@ -889,7 +889,7 @@
         "fields": {
             "name": "Ndebele Beadwork",
             "description": "Intricate Ndebele beadwork showcasing geometric designs and South African artistry.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450163/frames/Ndebele_Beadwork_Jewelry_rd67dw.avif",
             "artist": "Thabo Molefe",
             "origin": "South Africa",
             "origin_code": "RSA",
@@ -906,7 +906,7 @@
         "fields": {
             "name": "Nigerian Pottery",
             "description": "Handcrafted Nigerian pottery featuring unique shapes and traditional techniques.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450165/frames/Nigerian_Pottery_Vase_xn4q45.webp",
             "artist": "Adeola Adeyemi",
             "origin": "Nigeria",
             "origin_code": "NGA",
@@ -923,7 +923,7 @@
         "fields": {
             "name": "Kenyan Wood Carving",
             "description": "Intricate wood carving from Kenya showcasing traditional motifs and artistry.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450162/frames/Kenyan_Wood_Carving_go5x5p.jpg",
             "artist": "Zahara Kibibi",
             "origin": "Kenya",
             "origin_code": "KEN",
@@ -940,7 +940,7 @@
         "fields": {
             "name": "Ghanaian Beadwork",
             "description": "Handcrafted beadwork from Ghana with vibrant colors and intricate designs.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450159/frames/Ghanaian_Beadwork_nkoco7.jpg",
             "artist": "Kwame Osaze",
             "origin": "Nigeria",
             "origin_code": "NGA",
@@ -957,7 +957,7 @@
         "fields": {
             "name": "Senegalese Fabric Art",
             "description": "Fabric art from Senegal featuring unique patterns and artistic expression.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450167/frames/Senegalese_Fabric_Art_jabvqh.webp",
             "artist": "Sanaa Diop",
             "origin": "Senegal",
             "origin_code": "SEN",
@@ -974,7 +974,7 @@
         "fields": {
             "name": "South African Beaded Sculpture",
             "description": "Beaded sculpture from South Africa showcasing intricate beadwork and creativity.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450168/frames/South_African_Beaded_Sculpture_vtcoyz.jpg",
             "artist": "Thabo Molefe",
             "origin": "South Africa",
             "origin_code": "RSA",
@@ -991,7 +991,7 @@
         "fields": {
             "name": "Nigerian Fabric Art",
             "description": "Intricate fabric art from Nigeria featuring cultural motifs and traditional designs.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450164/frames/Nigerian_Fabric_Art_rc0pnr.webp",
             "artist": "Abebe Chukwuma",
             "origin": "Nigeria",
             "origin_code": "NGA",
@@ -1006,9 +1006,9 @@
         "model": "products.product",
         "pk": 60,
         "fields": {
-            "name": "Kenyan Soapstone Carving",
-            "description": "Handcrafted soapstone carving from Kenya showcasing intricate details and craftsmanship.",
-            "image": "path/to/cloudinary/image",
+            "name": "Sierra Leone Soapstone Carving",
+            "description": "Handcrafted soapstone carving from Sierra Leone showcasing intricate details and craftsmanship.",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450161/frames/Kenyan_Soapstone_Carving_jnmq1h.avif",
             "artist": "Zainab Kamara",
             "origin": "Sierra Leone",
             "origin_code": "SLE",
@@ -1025,7 +1025,7 @@
         "fields": {
             "name": "Tanzanian Batik Art",
             "description": "Handcrafted batik art from Tanzania featuring intricate wax-resist patterns.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450170/frames/Tanzanian_Batik_Art_fnfee4.webp",
             "artist": "Lila Amara",
             "origin": "Tanzania",
             "origin_code": "TZA",
@@ -1042,7 +1042,7 @@
         "fields": {
             "name": "Ndebele Beadwork Jewelry",
             "description": "Handcrafted beadwork jewelry with Ndebele-inspired designs from South Africa.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450163/frames/Ndebele_Beadwork_Jewelry_rd67dw.avif",
             "artist": "Thabo Molefe",
             "origin": "South Africa",
             "origin_code": "RSA",
@@ -1059,7 +1059,7 @@
         "fields": {
             "name": "Nigerian Textile Art",
             "description": "Intricate textile art from Nigeria featuring cultural motifs and vibrant colors.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450166/frames/Nigerian_Textile_Art_ac5de4.jpg",
             "artist": "Adeola Adeyemi",
             "origin": "Nigeria",
             "origin_code": "NGA",
@@ -1076,7 +1076,7 @@
         "fields": {
             "name": "Kenyan Wood Carved Mask",
             "description": "Intricately carved wooden mask from Kenya showcasing traditional designs and artistry.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450161/frames/Kenyan_Wood_Carved_Mask_jr0as8.webp",
             "artist": "Zahara Kibibi",
             "origin": "Kenya",
             "origin_code": "KEN",
@@ -1093,7 +1093,7 @@
         "fields": {
             "name": "Ghanaian Adinkra Cloth",
             "description": "Handprinted Adinkra cloth from Ghana featuring symbolic motifs and cultural significance.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450158/frames/Ghanaian_Adinkra_Cloth_vvofls.jpg",
             "artist": "Kwame Osaze",
             "origin": "Ghana",
             "origin_code": "GHA",
@@ -1110,7 +1110,7 @@
         "fields": {
             "name": "Senegalese Woven Mat",
             "description": "Handwoven mat from Senegal showcasing intricate patterns and traditional craftsmanship.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450168/frames/Senegalese_Woven_Mat_dppsp0.webp",
             "artist": "Sanaa Diop",
             "origin": "Senegal",
             "origin_code": "SEN",
@@ -1127,7 +1127,7 @@
         "fields": {
             "name": "South African Wire Art",
             "description": "Intricate wire art from South Africa showcasing creative sculptures and forms.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450169/frames/South_African_Wire_Art_b27cgv.webp",
             "artist": "Thabo Molefe",
             "origin": "South Africa",
             "origin_code": "RSA",
@@ -1144,7 +1144,7 @@
         "fields": {
             "name": "Nigerian Pottery Vase",
             "description": "Handcrafted Nigerian pottery vase featuring traditional patterns and functional design.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450165/frames/Nigerian_Pottery_vniszl.webp",
             "artist": "Abebe Chukwuma",
             "origin": "Nigeria",
             "origin_code": "NGA",
@@ -1161,7 +1161,7 @@
         "fields": {
             "name": "Kenyan Bead Coasters",
             "description": "Set of handcrafted bead coasters from Kenya showcasing intricate beadwork and design.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450160/frames/Kenyan_Bead_Coasters_j5k8tb.jpg",
             "artist": "Zainab Kamara",
             "origin": "Sierra Leone",
             "origin_code": "SLE",
@@ -1178,7 +1178,7 @@
         "fields": {
             "name": "Tanzanian Basketry",
             "description": "Handwoven basketry from Tanzania featuring intricate patterns and functional design.",
-            "image": "path/to/cloudinary/image",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694450169/frames/Tanzanian_Basketry_fbachf.webp",
             "artist": "Lila Amara",
             "origin": "Tanzania",
             "origin_code": "TZA",
