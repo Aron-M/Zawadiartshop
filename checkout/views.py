@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
 from .forms import DeliveryAddressForm
+from cart.models import Cart, CartItem
 from .models import Order
+from products.models import Product
+from django.db.models import Sum
+
 
 def checkout_view(request):
     if request.method == 'POST':
@@ -17,12 +21,69 @@ def checkout_view(request):
             return redirect('checkout:confirmation') 
     else:
         form = DeliveryAddressForm()
+    
+    session_key = request.session.session_key
 
-    return render(request, 'checkout.html', {'form': form})
+    if session_key:
+        cart_items = CartItem.objects.filter(cart__session=session_key)
+
+        # Calculate the total for each item and add it to the cart_item objects
+        for cart_item in cart_items:
+            cart_item.total = cart_item.product.price * cart_item.quantity
+
+        cart_total = sum(cart_item.total for cart_item in cart_items)
+
+        # Function to calculate the total number of products
+        def calculate_total_products():
+            return cart_items.aggregate(total_products=Sum('quantity'))['total_products']
+
+        total_products = calculate_total_products()
+    else:
+        cart_items = []
+        cart_total = 0
+        total_products = 0
+    
+    context = {
+        'cart_items': cart_items,
+        'cart_total': cart_total,
+        'total_products': total_products,
+        'form': form,
+    }
+    
+    return render(request, 'checkout.html', context)
+
+
+def checkout_product_view(request):
+    session_key = request.session.session_key
+
+    if session_key:
+        cart_items = CartItem.objects.filter(cart__session=session_key)
+
+        # Calculate the total for each item and add it to the cart_item objects
+        for cart_item in cart_items:
+            cart_item.total = cart_item.product.price * cart_item.quantity
+
+        cart_total = sum(cart_item.total for cart_item in cart_items)
+
+        # Function to calculate the total number of products
+        def calculate_total_products():
+            return cart_items.aggregate(total_products=Sum('quantity'))['total_products']
+
+        total_products = calculate_total_products()
+    else:
+        cart_items = []
+        cart_total = 0
+        total_products = 0
+    
+    context = {
+        'cart_items': cart_items,
+        'cart_total': cart_total,
+        'total_products': total_products,
+    }
+
+    return render(request, 'checkout.html', context)
+
 
 def confirmation_view(request):
-    # You can fetch order details here to display on the confirmation page
-    # For example, you can retrieve the most recent order for the logged-in user
-    # and pass it to the template
     return render(request, 'checkout/checkout_confirmation.html')
 
