@@ -31,13 +31,13 @@ SECRET_KEY = 'django-insecure-n#k64yru%^c__hccb9=)bp20c7%tm(jchn5jxh*n)n4r3udrkk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu104.gitpod.io']
+ALLOWED_HOSTS = ['8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu105.gitpod.io']
 
 CORS_ALLOWED_ORIGINS = [
-    "8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu104.gitpod.io",
+    "8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu105.gitpod.io",
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu104.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu105.gitpod.io']
 
 # Application definition
 
