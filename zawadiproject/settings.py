@@ -149,12 +149,13 @@ USE_I18N = True
 USE_TZ = True
 
 # Cloudinary configuration
-cloudinary.config(
-    CLOUDINARY_URL='cloudinary://898753243278713:SJKNWCzW-0wR1-mIclV3kdAJ6Gg@dj3upv8lw',
-    cloud_name='dj3upv8lw',
-    api_key='898753243278713',
-    api_secret='SJKNWCzW-0wR1-mIclV3kdAJ6Gg'
-)
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dj3upv8lw',
+    'API_KEY': '898753243278713',
+    'API_SECRET': 'SJKNWCzW-0wR1-mIclV3kdAJ6Gg'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # Static files (CSS, JavaScript, Images)
