@@ -45,14 +45,14 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',  # If you need to customize Cloudinary behavior, place it here.
+    'cloudinary_storage',
     'home',
     'products',
     'cart',
     'accounts',
     'checkout',
-    'cloudinary',
 ]
 
 SITE_ID = 1
