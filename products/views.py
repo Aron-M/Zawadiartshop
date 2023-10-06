@@ -96,12 +96,8 @@ def product_search(request):
         'price': price
     }
 
-    # Render the searchmodal template to a string
-    searchmodal_html = render_to_string('/workspace/Zawadiartshop/templates/layouts/searchbar.html', context)
-
-    # Add the searchmodal HTML to the context
+    searchmodal_html = render_to_string('layouts/searchbar.html', context, request=request)
     context['searchmodal_html'] = searchmodal_html
-
     return render(request, 'product_search.html', context)
 
 
@@ -122,9 +118,7 @@ def products(request):
                'origin_code': origin_code,
                'price': price
             }
-    searchmodal_html = render_to_string('/workspace/Zawadiartshop/templates/layouts/searchbar.html', context)
-
-    # Add the searchmodal HTML to the context
+    searchmodal_html = render_to_string('layouts/searchbar.html', context, request=request)
     context['searchmodal_html'] = searchmodal_html
     return render(request, 'products.html', context)
 
@@ -146,9 +140,7 @@ def paintings(request):
         'origin_code': origin_code,
         'price': price
     }
-    searchmodal_html = render_to_string('/workspace/Zawadiartshop/templates/layouts/searchbar.html', context)
-
-    # Add the searchmodal HTML to the context
+    searchmodal_html = render_to_string('layouts/searchbar.html', context, request=request)
     context['searchmodal_html'] = searchmodal_html
     return render(request, 'paintings.html', context)
 
@@ -170,9 +162,7 @@ def sculptures(request):
         'origin_code': origin_code,
         'price': price
     }
-    searchmodal_html = render_to_string('/workspace/Zawadiartshop/templates/layouts/searchbar.html', context)
-
-    # Add the searchmodal HTML to the context
+    searchmodal_html = render_to_string('layouts/searchbar.html', context, request=request)
     context['searchmodal_html'] = searchmodal_html
     return render(request, 'sculptures.html', context)
 
