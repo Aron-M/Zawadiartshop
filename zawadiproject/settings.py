@@ -14,10 +14,6 @@ from pathlib import Path
 import cloudinary
 import os
 
-env_path = Path('.') / 'env.py'
-if env_path.exists():
-    import env
-
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -149,10 +145,9 @@ USE_TZ = True
 # Cloudinary configuration
 cloudinary.config(
     cloud_name='cloudinary://898753243278713:SJKNWCzW-0wR1-mIclV3kdAJ6Gg@dj3upv8lw',
-    api_key=os.getenv('CLOUDINARY_API_KEY'),
-    api_secret=os.getenv('CLOUDINARY_API_SECRET')
+    api_key='898753243278713',
+    api_secret='SJKNWCzW-0wR1-mIclV3kdAJ6Gg'
 )
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
