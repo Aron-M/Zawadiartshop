@@ -1,5 +1,5 @@
 asgiref==3.7.2
-backports.zoneinfo==0.2.1
+backports.zoneinfo;python_version<"3.9"
 bcrypt==4.0.1
 certifi==2023.5.7
 charset-normalizer==3.1.0
