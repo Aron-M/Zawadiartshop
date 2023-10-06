@@ -174,6 +174,13 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+# Enable Gzip compression for static files
+WHITENOISE_GZIP_COMPRESSION = True
+
+# Cache static files for a longer period (1 year)
+WHITENOISE_MAX_AGE = 31536000  # seconds (365 days)
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
