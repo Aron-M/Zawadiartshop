@@ -28,3 +28,4 @@ storage==0.0.4.3
 stripe==5.4.0
 typing_extensions==4.5.0
 urllib3==1.26.16
+whitenoise==6.5.0
