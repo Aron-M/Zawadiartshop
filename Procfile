@@ -1,1 +1,1 @@
-web: gunicorn retroproject.wsgi
+web: gunicorn zawadiproject.wsgi
