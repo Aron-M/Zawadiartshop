@@ -144,7 +144,8 @@ USE_TZ = True
 
 # Cloudinary configuration
 cloudinary.config(
-    cloud_url='cloudinary://898753243278713:SJKNWCzW-0wR1-mIclV3kdAJ6Gg@dj3upv8lw',
+    CLOUDINARY_URL='cloudinary://898753243278713:SJKNWCzW-0wR1-mIclV3kdAJ6Gg@dj3upv8lw',
+    cloud_name='dj3upv8lw',
     api_key='898753243278713',
     api_secret='SJKNWCzW-0wR1-mIclV3kdAJ6Gg'
 )
