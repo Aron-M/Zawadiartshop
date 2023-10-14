@@ -211,3 +211,24 @@ def crafts(request):
     return render(request, 'crafts.html', context)
 
 
+def sale(request):
+    sale = Product.objects.filter(status='Sale')
+    artists = Product.objects.values_list('artist', flat=True).distinct()
+    category = Product.objects.values_list('category', flat=True).distinct()
+    origin_image = Product.objects.values_list('origin_image', 'origin', 'origin_code').distinct()
+    origin = Product.objects.values_list('origin', flat=True).distinct()
+    origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
+    price = Product.objects.values_list('price', flat=True).distinct()
+    context = {
+        'products': sale,
+        'artists': artists,
+        'category': category,
+        'origin_image': origin_image,
+        'origin': origin,
+        'origin_code': origin_code,
+        'price': price,
+        
+    }
+    searchmodal_html = render_to_string('layouts/searchbar.html', context, request=request)
+    context['searchmodal_html'] = searchmodal_html
+    return render(request, 'sale.html', context)

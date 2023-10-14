@@ -1,5 +1,6 @@
 from django import forms
 
+
 class DeliveryAddressForm(forms.Form):
     full_name = forms.CharField(max_length=100, label='Full Name')
     address_line1 = forms.CharField(max_length=255, label='Address Line 1')

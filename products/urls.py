@@ -12,4 +12,5 @@ urlpatterns = [
     path('', views.searchmodal, name='home'),
     path('home/', views.searchmodal, name='home'),
     path('product_search/', views.product_search, name='product_search'),
+    path('sale', views.sale, name='sale'),
 ]

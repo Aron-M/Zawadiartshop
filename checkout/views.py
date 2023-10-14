@@ -27,13 +27,13 @@ def checkout_view(request):
     if session_key:
         cart_items = CartItem.objects.filter(cart__session=session_key)
 
-        # Calculate the total for each item and add it to the cart_item objects
+        
         for cart_item in cart_items:
             cart_item.total = cart_item.product.price * cart_item.quantity
 
         cart_total = sum(cart_item.total for cart_item in cart_items)
 
-        # Function to calculate the total number of products
+        
         def calculate_total_products():
             return cart_items.aggregate(total_products=Sum('quantity'))['total_products']
 
@@ -59,13 +59,13 @@ def checkout_product_view(request):
     if session_key:
         cart_items = CartItem.objects.filter(cart__session=session_key)
 
-        # Calculate the total for each item and add it to the cart_item objects
+        
         for cart_item in cart_items:
             cart_item.total = cart_item.product.price * cart_item.quantity
 
         cart_total = sum(cart_item.total for cart_item in cart_items)
 
-        # Function to calculate the total number of products
+        
         def calculate_total_products():
             return cart_items.aggregate(total_products=Sum('quantity'))['total_products']
 

@@ -165,8 +165,9 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/tanzania_pi6tn0.png",
             "style": "Landscape",
             "stock": 9,
-            "price": "270.00",
-            "category": "Paintings"
+            "price": "170.00",
+            "category": "Paintings",
+            "status": "Sale"
         }
     },
     {
@@ -217,7 +218,8 @@
             "style": "Impressionism",
             "stock": 5,
             "price": "210.00",
-            "category": "Paintings"
+            "category": "Paintings",
+            "status": "Sale"
         }
     },
     {
@@ -335,8 +337,9 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
             "style": "Abstract",
             "stock": 7,
-            "price": "390.00",
-            "category": "Sculptures"
+            "price": "190.00",
+            "category": "Sculptures",
+            "status": "Sale"
         }
     },
     {
@@ -607,8 +610,9 @@
             "origin_code": "SLE",
             "style": "Abstract",
             "stock": 6,
-            "price": "340.00",
-            "category": "Sculptures"
+            "price": "140.00",
+            "category": "Sculptures",
+            "status": "Sale"
         }
     },
     {
@@ -692,8 +696,9 @@
             "origin_code": "SEN",
             "style": "Luxury",
             "stock": 7,
-            "price": "230.00",
-            "category": "Frames"
+            "price": "130.00",
+            "category": "Frames",
+            "status": "Sale"
         }
     },
     {
@@ -709,7 +714,7 @@
             "origin_code": "RSA",
             "style": "Rustic",
             "stock": 8,
-            "price": "160.00",
+            "price": "330.00",
             "category": "Frames"
         }
     },
@@ -828,8 +833,9 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
             "style": "Textile",
             "stock": 12,
-            "price": "40.00",
-            "category": "Crafts"
+            "price": "12.00",
+            "category": "Crafts",
+            "status": "Sale"
         }
     },
     {
@@ -981,8 +987,9 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/south-africa_1_hyh59u.png",
             "style": "Sculptural",
             "stock": 10,
-            "price": "55.00",
-            "category": "Crafts"
+            "price": "25.00",
+            "category": "Crafts",
+            "status": "Sale"
         }
     },
     {
@@ -1050,7 +1057,8 @@
             "style": "Ethnic",
             "stock": 10,
             "price": "28.00",
-            "category": "Crafts"
+            "category": "Crafts",
+            "status": "Sale"
         }
     },
     {

@@ -14,6 +14,7 @@ class Product(models.Model):
     stock = models.PositiveIntegerField()
     price = models.DecimalField(max_digits=8, decimal_places=2)
     category = models.CharField(max_length=20)
+    status = models.CharField(max_length=10)
 
     def __str__(self):
         return self.name
