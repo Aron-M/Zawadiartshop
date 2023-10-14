@@ -15,7 +15,7 @@
             <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}" data-bs-toggle="modal"
                 data-bs-target="#myModal{{ product.pk }}">
             <div class="card-body">
-                <h5 class="card-title">{{ product.name }}</h5>
+                <h5 class="card-title">{{ product.name }} {% if product.status %} <span class="text-danger">"HOT SALE"</span>{% endif %}</h5>
                 <p class="card-text m-0">{{ product.description }}</p>
                 <div class="d-flex justify-content-start m-0">
                     <p class="card-text fw-bold mt-3 me-5 mr-5">{{ product.artist }}</p>
