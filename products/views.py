@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import Product
-from django.db.models import Q
 from django.template.loader import render_to_string
 
 

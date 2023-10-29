@@ -174,3 +174,78 @@ ShippingAddress:
 | Province | CharField |
 | Postal_code | CharField |
 | Country | CharField |
+
+<hr>
+
+## Logic
+
+<img src="docs/flowchart.png" alt="website logic" width="1000">
+
+# Website Structure
+
+- Most of website structure comes from Bootstrap itself, and rest is just overrides to make it look nicer.
+
+|  Screen size |  Breakpoint |
+|---|---|
+| extra small | >= 320px |
+| small | >= 576px |
+| medium | >= 768px |
+| Custom | 768 >= 900 |
+| Custom | >= 990 | 
+
+# Technology, Frameworks and Libraries used.
+
+## Languages
+
+- [HTML](https://en.wikipedia.org/wiki/HTML5) 
+
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+## Frameworks and Libraries used.
+
+- [Django](https://www.djangoproject.com/) Python-based web framework that follows the model–template–views architectural pattern.
+
+- [Gunicorn](https://en.wikipedia.org/wiki/Gunicorn) HTTP server interface.
+
+- [Psycopg](https://wiki.postgresql.org/wiki/Psycopg) Postgres database adaptor.
+
+- [Stripe](https://stripe.com/) Payments.
+
+- [Bootstrap](https://getbootstrap.com/) Bootstrap 5 was used in this project.
+
+- [FontAwesome](https://fontawesome.com/) Icons used in this project.
+
+- [Jquery](https://en.wikipedia.org/wiki/JQuery)
+
+- [Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html) for forms.
+
+## Tools
+
+- [Heroku](https://www.heroku.com) Deployment of website.
+
+- [Cloudinary](https://cloudinary.com/) Storing static files and images.
+
+- [Balsamiq](https://balsamiq.com/) Wireframes.
+
+- [Draw.io](draw.io) for flowcharts
+
+- [Flaticon](https://www.flaticon.com/) For flag and navbar icons
+
+# Features
+
+- Responsive on all devices.
+- Profile accounts.
+- Custom search bar and filtering
+- Saving details at checkout to user account.
+- Checkout with Stripe payments.
+- Products and Categories.
+- Newsletter
+- Emails on newsletter signup, checkout confirmation
+- Sale.
+
+# Navigation
+
