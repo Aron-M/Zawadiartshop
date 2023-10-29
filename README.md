@@ -1,4 +1,10 @@
 # WELCOME TO ZAWADI E-COMMERCE STORE. YOUR ONE-STOP ONLINE SHOP FOR PURCHASING BEAUTIFUL AFRICAN ART PIECES
+<br>
+<br>
+
+<img src="docs/navigation/homepage.png">
+
+<br>
 
 # 1. Motivation:
 
@@ -205,6 +211,8 @@ ShippingAddress:
 
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
+<br>
+
 ## Frameworks and Libraries used.
 
 - [Django](https://www.djangoproject.com/) Python-based web framework that follows the model–template–views architectural pattern.
@@ -223,6 +231,8 @@ ShippingAddress:
 
 - [Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html) for forms.
 
+<br>
+
 ## Tools
 
 - [Heroku](https://www.heroku.com) Deployment of website.
@@ -234,6 +244,8 @@ ShippingAddress:
 - [Draw.io](draw.io) for flowcharts
 
 - [Flaticon](https://www.flaticon.com/) For flag and navbar icons
+
+<br>
 
 # Features
 
@@ -247,5 +259,214 @@ ShippingAddress:
 - Emails on newsletter signup, checkout confirmation
 - Sale.
 
+<br>
+
 # Navigation
 
+## HOME PAGE
+
+<details>
+  <summary>Home Page</summary>
+
+  HOME PAGE | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  'Home Page' template will be the first thing the user sees when opening the page | ![](docs/navigation/homepage.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Home Page with Search Box</summary>
+
+  HOME PAGE SEARCH| PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Dynamic Searhc/Filtering box to navigate to specific products. Opens up when user clicks the search bar | ![](docs/navigation/homepage-with-searchmodal.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Search box</summary>
+
+  SEARCH BOX | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Visuals of the dynamic search box | ![](docs/navigation/searchbox.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Navigation Bar</summary>
+
+ NAVBAR | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Visuals of the Navbar when user lands on the page for the first time | ![](docs/navigation/navbar.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Navigation Bar - Post-Login</summary>
+
+ NAVBAR-POST-LOGIN | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Visuals of the Navbar when user has registered/logged in | ![](docs/navigation/navbar-post-login.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+## PRODUCTS
+
+<details>
+  <summary>Custom Search Page</summary>
+
+ ALL PRODUCTS | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Template view of 'Custom Search' page | ![](docs/navigation/custom-search-page.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+<details>
+  <summary>All Products Page</summary>
+
+ ALL PRODUCTS | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Template view of 'All Products' page | ![](docs/navigation/all-products.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Sculptures</summary>
+
+ SCULPTURES | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Template view of 'Sculptures' page | ![](docs/navigation/sculptures.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Frames</summary>
+
+ FRAMES | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Template view of 'Frames' page | ![](docs/navigation/frames.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Crafts</summary>
+
+ CRAFTS| PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Template view of 'Crafts' page | ![](docs/navigation/crafts.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Sale</summary>
+
+ SALE| PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Template view of 'Sale' page | ![](docs/navigation/sale.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+## CART
+
+<details>
+  <summary>Cart Page</summary>
+
+ CART | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Template view of 'Cart' page | ![](docs/navigation/cart.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+## CHECKOUT
+
+<details>
+  <summary>Checkout Page</summary>
+
+ CHECKOUT | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Template view of 'Checkout' page | ![](docs/navigation/checkout.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Payment Confirmation</summary>
+
+ PAYMENT CONFIRMATION | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Template view of 'Payments' page | ![](docs/navigation/checkout.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+## USER AUTHENTICATION
+
+<details>
+  <summary>Register</summary>
+
+ REGISTER | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Template view of 'Register' page | ![](docs/navigation/register.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Login</summary>
+
+ LOGIN | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Template view of 'Login' page | ![](docs/navigation/login.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Logout</summary>
+
+ REGISTER | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Template view of 'Register' page | ![](docs/navigation/register.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
+
+<details>
+  <summary>User Profile</summary>
+
+ PROFILE | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  Template view of 'Profile' page | ![](docs/navigation/profile.png) | ![](#)| ![](#)
+
+</details>
+
+<br>
