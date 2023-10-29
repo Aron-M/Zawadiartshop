@@ -68,7 +68,7 @@ def product_search(request):
     # If only an origin is selected, render its related products and add the origin to selected_origins
     if not selected_artists and selected_origins:
         filtered_products = Product.objects.filter(origin__in=selected_origins)
-        selected_artist_origins.update(selected_origins)
+        selected_artist_origins.update(selected_origins) 
 
     # Prepare origin image tuples
     filtered_origin_image_tuples = []
@@ -102,7 +102,6 @@ def product_search(request):
 
 
 def products(request):
-    # Retrieve all products from the database
     products = Product.objects.all()
     artists = Product.objects.values_list('artist', flat=True).distinct()
     category = Product.objects.values_list('category', flat=True).distinct()
