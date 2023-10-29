@@ -53,7 +53,7 @@ The website's design will be structured using Bootstrap, a popular frontend fram
 - Dark Gold
 - Dark Green
 
-Using backgrounds of African Savannah
+Using backgrounds of African Savannah with gold hue color scheme
 
 ### Font Choices 
 
