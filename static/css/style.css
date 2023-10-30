@@ -358,3 +358,7 @@ body.modal-open .content-to-fade {
 .navbar-alert {
     max-width: auto;
 }
+
+.formwidth {
+    width: 100% !important;
+}
