@@ -470,3 +470,95 @@ ShippingAddress:
 </details>
 
 <br>
+
+# TESTING
+
+## Manual Testing:
+
+<details>
+  <summary>Home Page Search Features</summary>
+
+ DESCRIPTION | HOME PAGE | HOME PAGE SEARCH BOX
+  :---:|:---:|:--:
+Search bar in the center of the homepage is clicked and provides a dropdown menu for various categories to be filtered by the user| ![](docs/navigation/homepage.png)| ![](docs/navigation/homepage-with-searchmodal.png)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Search Filtering & Results</summary>
+
+ DESCRIPTION | SEARCH BOX | SEARCH RESULTS
+  :---:|:---:|:--:
+Search bar in the center of the homepage can be filled with user's exact search/filtering specifications, and the 'Custom Search' page will render the relevant products accordingly, including a filter-summary for the user| ![](docs/navigation/searchbox.png)| ![](docs/navigation/custom-search-page.png)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Products Dropdown</summary>
+
+ DESCRIPTION | DROPDOWN | CATEGORY
+  :---:|:---:|:--:
+Products navlink should display a dropdown menu to provide options to select art from various categories, which will take you to the relevant praduct category page| ![](docs/navigation/products-dropdown.png)| ![](docs/navigation/sculptures.png)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Adding Product</summary>
+
+ DESCRIPTION | ADD PRODUCT | PROMPT
+  :---:|:---:|:--:
+User clicks on 'Add to cart' button inside the product-card. Modal appears to tell user they have successfully added said product, as well as an alert message popping up in the navbar telling user how many products are in their cart| ![](docs/navigation/add-product-popup.png)| ![](docs/navigation/cart-confirmation.png)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Cart Update</summary>
+
+ DESCRIPTION | UPDATE CART | SUCCESS
+  :---:|:---:|:--:
+Cart will display user's product selections. Update button should give user the option to increase an/or decrease the amount of one product| ![](docs/navigation/update-cart.png)| ![](docs/navigation/update-cart-success.png)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Cart Delete Product</summary>
+
+ DESCRIPTION | CART PRODUCT DELETE |DELETE SUCCESS
+  :---:|:---:|:--:
+Cart will display user's product selections. Delete button should give user the option to remove selected product, as well as prompt for a defensive modal to pop up asking whether the user is sure they want to delete| ![](docs/navigation/cart-remove-product.png)| ![](docs/navigation/cart-product-remove-success.png)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Registration</summary>
+
+ DESCRIPTION | REGISTER |SUCCESS
+  :---:|:---:|:--:
+Clicking on 'Register' navlink in navigation bar will prompt user to fill in credentials combined with instructions to follow. Once user has completed the registration, a welcome/success message will appear routed within the user's new profile page| ![](docs/navigation/register.png)| ![](docs/navigation/register-success.png)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Login Existing User</summary>
+
+ DESCRIPTION | LOGIN |SUCCESS
+  :---:|:---:|:--:
+Clicking on 'Login' navlink in navigation bar will prompt user to fill in credentials. Once user has completed the login, a welcome/success message will appear in the navbar welcoming the user back| ![](docs/navigation/login.png)| ![](docs/navigation/post-login.png)
+
+</details>
+
+<br>
