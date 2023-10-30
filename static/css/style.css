@@ -282,6 +282,7 @@ body.modal-open .content-to-fade {
 
 .card-body {
     padding: 1rem; /* Add padding to the card body */
+    max-width:40vw;
 
 }
 

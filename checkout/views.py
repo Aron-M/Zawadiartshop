@@ -45,12 +45,12 @@ def checkout_view(request):
         total_products = 0
     
     context = {
+        'stripe_public_key': 'pk_test_51NYBbGBUqkswIymkiNneN1yZ4ohRjxnMWsJCQVC3JymwTxXyEkxcNZ4gWQXcFNXOcKNF0Su4TKXft13HI97SSxBF008fmQ2ySj',
+        'client_secret': 'test client secret',
         'cart_items': cart_items,
         'cart_total': cart_total,
         'total_products': total_products,
         'form': form,
-        'stripe_public_key': 'pk_test_51NYBbGBUqkswIymkiNneN1yZ4ohRjxnMWsJCQVC3JymwTxXyEkxcNZ4gWQXcFNXOcKNF0Su4TKXft13HI97SSxBF008fmQ2ySj',
-        'client_secret': 'test client secret',
     }
     
     return render(request, 'checkout.html', context)
