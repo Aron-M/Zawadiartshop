@@ -33,12 +33,10 @@
     <!-- Bootstrap JS-->
     {% include 'components/script/bootstrapjs.html' %}
 
-    {% block corejs %}
+    {% block extra__js %}
     <!-- Add Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %}
-    
-    {% block extra_js %}
+   
     <script>
         $(document).ready(function () {
             // Function to toggle the selected class and border on click
