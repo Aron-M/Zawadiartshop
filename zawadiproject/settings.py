@@ -53,6 +53,9 @@ INSTALLED_APPS = [
     'cart',
     'accounts',
     'checkout',
+
+    # Other
+    'crispy_forms',
 ]
 
 SITE_ID = 1
@@ -76,6 +79,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'zawadiproject.urls'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -90,6 +95,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'cart.context_processors.cart_info',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
