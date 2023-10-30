@@ -32,8 +32,12 @@
     {% include 'components/script/navbarjs.html' %}
     <!-- Bootstrap JS-->
     {% include 'components/script/bootstrapjs.html' %}
-    <!-- Add the Bootstrap JavaScript (and jQuery) -->
 
+    {% block corejs %}
+    <!-- Add Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
+    {% endblock %}
+    
     {% block extra_js %}
     <script>
         $(document).ready(function () {

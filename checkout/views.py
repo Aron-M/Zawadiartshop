@@ -4,6 +4,8 @@ from cart.models import Cart, CartItem
 from .models import Order
 from products.models import Product
 from django.db.models import Sum
+from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
 
 
 def checkout_view(request):
@@ -48,6 +50,8 @@ def checkout_view(request):
         'cart_total': cart_total,
         'total_products': total_products,
         'form': form,
+        'stripe_public_key': 'pk_test_51NYBbGBUqkswIymkiNneN1yZ4ohRjxnMWsJCQVC3JymwTxXyEkxcNZ4gWQXcFNXOcKNF0Su4TKXft13HI97SSxBF008fmQ2ySj',
+        'client_secret': 'test client secret',
     }
     
     return render(request, 'checkout.html', context)
