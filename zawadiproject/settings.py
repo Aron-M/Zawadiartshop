@@ -17,6 +17,9 @@ import dj_database_url
 from django.contrib.messages import constants as messages
 
 
+if os.path.isfile('env.py'):
+    import env
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -24,10 +27,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-n#k64yru%^c__hccb9=)bp20c7%tm(jchn5jxh*n)n4r3udrkk'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = ['zawadi-artshop-f62f0dab390f.herokuapp.com', '8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu105.gitpod.io']
 
