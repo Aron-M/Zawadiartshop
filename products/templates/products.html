@@ -32,7 +32,7 @@
                 <form method="post" action="{% url 'cart:add_to_cart' product.id %}" target="cart-iframe">
                     {% csrf_token %}
                     <input type="hidden" name="quantity" value="1">
-                    <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
+                    <button type="submit" class="btn btn-dark" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop{{ product.pk }}">Add to Cart</button>
                 </form>
                 <iframe name="cart-iframe" id="cart-iframe" style="display:none;"></iframe>

@@ -95,13 +95,17 @@
                     </li>
                     {% endif %}
                 </ul>
+                <div class="alert-box-fixed">
                 <div class="alert alert-success alert-dismissible fade show d-none navbar-alert p-1 small" id="persistent-alert" role="alert">
-                    {% if total_products == 0 %}
-                    Hi, {{ user.username }}! Welcome and happy shopping!
-                    {% else %}
-                    Hi, {{ user.username }}! You have {{ total_products }} product(s) in your cart.
-                    {% endif %}
-                </div>                
+                    <span id="greeting">
+                        {% if total_products == 0 %}
+                        Hi, {{ user.username }}! Welcome and happy shopping!
+                        {% else %}
+                        You have <span id="product-count"> {{ total_products }} </span> products in your cart.
+                        {% endif %}
+                    </span>
+                </div> 
+            </div>       
             </div>
         </div>
     </div>

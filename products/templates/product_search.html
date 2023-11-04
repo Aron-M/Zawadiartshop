@@ -90,7 +90,7 @@
                 <form method="post" action="{% url 'cart:add_to_cart' product.id %}" target="cart-iframe">
                     {% csrf_token %}
                     <input type="hidden" name="quantity" value="1">
-                    <button type="submit" id="add-to-cart-button{{ product.pk }}" class="btn btn-primary add-to-cart-button" 
+                    <button type="submit" id="add-to-cart-button{{ product.pk }}" class="btn btn-dark add-to-cart-button" 
                     data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ product.pk }}" 
                     data-product-id="{{ product.pk }}">Add to Cart</button>
                 </form>

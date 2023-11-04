@@ -25,22 +25,22 @@
             }
         }
 
-        // Attach click event listener to document to close the dropdown
+        
         document.addEventListener("click", closeDropdown);
 
-        // Attach click event listeners to dropdown items to handle checkboxes
+        
         const dropdownItems = dropdownMenu.querySelectorAll(".custom-dropdown-item");
         dropdownItems.forEach(function(item) {
             item.addEventListener("click", function(event) {
                 if (event.target.classList.contains("form-check-input")) {
-                    // Toggle the checkbox if the checkbox itself is clicked
+                    
                     event.target.checked = !event.target.checked;
                 } else {
-                    // Toggle the checkbox if the artist name is clicked
+                    
                     const checkbox = item.querySelector(".form-check-input");
                     checkbox.checked = !checkbox.checked;
                 }
-                event.stopPropagation(); // Prevent the click event from propagating
+                event.stopPropagation();
             });
         });
     });
@@ -48,22 +48,21 @@
     document.addEventListener("DOMContentLoaded", function() {
     var alert = document.getElementById("persistent-alert");
 
-    // Display the alert
+    
     alert.classList.remove("d-none");
 
-    // After 10 seconds, fade out the alert
     setTimeout(function() {
-        fadeOut(alert, 500); // You can specify the fade-out duration in milliseconds (e.g., 500ms)
-    }, 5000); // 10000 milliseconds = 10 seconds
+        fadeOut(alert, 500);
+    }, 3500);
 
     function fadeOut(element, duration) {
         var opacity = 1;
-        var interval = 50; // Time interval for each step
-        var step = (interval / duration); // Calculate the step value
+        var interval = 50;
+        var step = (interval / duration); 
         var timer = setInterval(function() {
             if (opacity <= 0) {
                 clearInterval(timer);
-                element.style.display = "none"; // Hide the element when faded out
+                element.style.display = "none";
             } else {
                 opacity -= step;
                 element.style.opacity = opacity;
@@ -71,4 +70,37 @@
         }, interval);
     }
 });
+
+// Function to refresh the page
+function refreshPage() {
+    location.reload();
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var closeButtons = document.querySelectorAll('.btn-primary');
+    
+    closeButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            refreshPage();
+        });
+    });
+});
+
+function updateAlertContent() {
+    var totalProducts = 10;
+
+    var greeting = document.getElementById("greeting");
+    var productCount = document.getElementById("product-count");
+
+    if (totalProducts === 0) {
+        greeting.textContent = `Hi, ${user.username}! Welcome and happy shopping!`;
+        productCount.textContent = "0";
+    } else {
+        greeting.textContent = `Hi, ${user.username}! You have ${totalProducts} product(s) in your cart.`;
+        productCount.textContent = totalProducts;
+    }
+}
+
+// Call the update function when the page loads
+window.addEventListener("load", updateAlertContent);
 </script>

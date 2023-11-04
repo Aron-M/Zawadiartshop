@@ -21,9 +21,14 @@ body {
     right: 0;
     z-index: 99999;
     width:initial;
+    height: 18.5vh;
     margin: 0 !important;
     padding:0.2rem !important;
   }
+
+.alert-box-fixed {
+    height:6vh;
+}
 
 .navcontainer {
     margin-top: 0 !important;
@@ -366,4 +371,8 @@ body.modal-open .content-to-fade {
 .link-icon {
     display: flex;
     justify-content: center;
+}
+
+.alert-dismissible {
+    width: max-content;
 }
