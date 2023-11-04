@@ -3,52 +3,43 @@
 
 {% block content %}
 <h1 class="d-flex flex-column justify-content-center align-items-center template-header text-white">ADMIN DASHBOARD</h1>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 mt-3">
-            <form method="get" action="{% url 'dashboard' %}">
-                <div class="input-group">
-                    <input type="text" name="id" class="form-control" placeholder="Enter Product ID">
-                    <button type="submit" class="btn btn-primary">Search</button>
-                </div>
-            </form>
-        </div>
+<div class="row">
+    <div class="col-md-12">
+        <form method="get" action="{% url 'dashboard' %}">
+            <div class="input-group">
+                <input type="text" name="id" class="form-control" placeholder="Enter Product ID">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
     </div>
-
+</div>
+<div class="container-lg mt-3">
     <div class="row mt-3">
-        <div class="col-md-12">
-            <div id="product-card">
+        <div class="col-md-6">
+            <div id="product-card w-100">
                 {% if not product %}
                 <div class="alert alert-danger">
                     PRODUCT NOT FOUND.
-                    Current total amount of products : {{ products.count }} 
-                <p>Choose this or any lower number product ID.</p>
+                    Current total amount of products: {{ products.count }}
+                    <p>Choose this or any lower number product ID.</p>
                 </div>
                 {% else %}
+                <div class="w-100">
                 {% include 'product_card.html' %}
+                </div>
                 {% endif %}
             </div>
         </div>
-    </div>
-    <div class="modal fade" id="productNotFoundModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Product Not Found</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>The selected product ID doesn't exist. Please choose a different product ID.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
+        <div class="col-md-6">
+            <div class="text-center">
+                <h3>Edit Product</h3>
+                <form method="post" action="{% url 'edit_product' product.id %}">
+                    {% csrf_token %}
+                    {{ edit_form.as_p }}
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
             </div>
         </div>
     </div>
-    
 </div>
 {% endblock %}

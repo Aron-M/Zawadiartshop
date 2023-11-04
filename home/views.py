@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from products.models import Product
-from .forms import ProductSearchForm
+from .forms import ProductSearchForm, ProductEditForm
 
 
 def dashboard(request):
@@ -29,3 +29,18 @@ def dashboard(request):
 def product_detail(request, id):
     product = get_object_or_404(Product, id=id)
     return render(request, 'product_card.html', {'product': product})
+
+
+def edit_product(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+
+    if request.method == 'POST':
+        form = ProductEditForm(request.POST, instance=product)
+        if form.is_valid():
+            form.save()
+            return redirect('dashboard')
+
+    else:
+        form = ProductEditForm(instance=product)
+
+    return render(request, 'edit_product.html', {'form': form})
