@@ -59,51 +59,57 @@
                     <!-- Basket icon link -->
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{% url 'cart:cart_view' %}">
-                            <i class="fas fa-shopping-basket"></i> Cart
+                            <i class="fas fa-shopping-basket link-icon"></i> Cart
                         </a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#logoutModal" data-bs-toggle="modal" data-target="#logoutModal">
-                            <i class="fas fa-sign-out-alt"></i> Logout
+                        <a class="nav-link text-white" href="{% url 'user_profile' %}">
+                            <i class="fa-solid fa-user link-icon"></i>Profile
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{% url 'user_profile' %}">
-                            <i class="fas fa-profile-alt"></i> Profile
+                        <a class="nav-link text-white" href="#logoutModal" data-bs-toggle="modal"
+                            data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt link-icon"></i> Logout
                         </a>
                     </li>
                     {% else %}
                     <!-- Login icon link -->
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{% url 'login' %}">
-                            <i class="fas fa-sign-in-alt"></i> Login
+                            <i class="fas fa-sign-in-alt link-icon"></i> Login
                         </a>
                     </li>
                     <!-- Sign Up icon link -->
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{% url 'signup' %}">
-                            <i class="fas fa-user-plus"></i> Sign Up
+                            <i class="fas fa-user-plus link-icon"></i> Sign Up
                         </a>
+                    </li>
+                    {% endif %}
+                    {% if request.user.is_superuser %}
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'dashboard' %}">
+                            <i class="fa-solid fa-screwdriver-wrench link-icon"></i>Dashboard</a>
                     </li>
                     {% endif %}
                 </ul>
                 <div class="alert alert-success alert-dismissible fade show d-none navbar-alert p-1 small" id="persistent-alert" role="alert">
                     {% if total_products == 0 %}
-                        Hi, {{ user.username }}! Welcome and happy shopping!
+                    Hi, {{ user.username }}! Welcome and happy shopping!
                     {% else %}
-                        Hi, {{ user.username }}! You have {{ total_products }} product(s) in your cart.
+                    Hi, {{ user.username }}! You have {{ total_products }} product(s) in your cart.
                     {% endif %}
-                </div>
-                
-                
+                </div>                
             </div>
         </div>
     </div>
     </div>
 </nav>
 <!-- Logout Modal -->
-<div class="modal fade authentication" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+<div class="modal fade authentication" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">

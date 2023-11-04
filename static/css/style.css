@@ -362,3 +362,8 @@ body.modal-open .content-to-fade {
 .formwidth {
     width: 100% !important;
 }
+
+.link-icon {
+    display: flex;
+    justify-content: center;
+}

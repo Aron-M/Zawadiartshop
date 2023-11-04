@@ -44,4 +44,31 @@
             });
         });
     });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    var alert = document.getElementById("persistent-alert");
+
+    // Display the alert
+    alert.classList.remove("d-none");
+
+    // After 10 seconds, fade out the alert
+    setTimeout(function() {
+        fadeOut(alert, 500); // You can specify the fade-out duration in milliseconds (e.g., 500ms)
+    }, 5000); // 10000 milliseconds = 10 seconds
+
+    function fadeOut(element, duration) {
+        var opacity = 1;
+        var interval = 50; // Time interval for each step
+        var step = (interval / duration); // Calculate the step value
+        var timer = setInterval(function() {
+            if (opacity <= 0) {
+                clearInterval(timer);
+                element.style.display = "none"; // Hide the element when faded out
+            } else {
+                opacity -= step;
+                element.style.opacity = opacity;
+            }
+        }, interval);
+    }
+});
 </script>
