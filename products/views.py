@@ -125,6 +125,7 @@ def products(request):
 
 def paintings(request):
     product_data = load_product_data_from_json()
+    paintings_data = [product for product in product_data if product['fields']['category'] == 'Paintings']
     paintings = Product.objects.filter(category='Paintings')
     artists = Product.objects.values_list('artist', flat=True).distinct()
     category = Product.objects.values_list('category', flat=True).distinct()
@@ -133,7 +134,7 @@ def paintings(request):
     origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
     price = Product.objects.values_list('price', flat=True).distinct()
     context = {
-        'products': paintings,
+        'products': paintings_data,
         'artists': artists,
         'category': category,
         'origin_image': origin_image,

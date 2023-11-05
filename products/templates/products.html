@@ -11,7 +11,9 @@
 </div>
 
 <div>
+    {% for product in products %}
     {% include 'product_card.html' %}
+    {% endfor %}
 </div>
 
 {% endblock %}

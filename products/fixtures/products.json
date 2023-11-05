@@ -139,17 +139,18 @@
         "model": "products.product",
         "pk": 9,
         "fields": {
-            "name": "Spirit of Unity",
-            "description": "An expressive painting symbolizing unity among African nations and cultures.",
-            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396977/An_expressive_painting_symbolizing_unity_among_African_nations_and_cultures._kiwhrs.webp",
+            "name": "Spirit of Unityetyndsfnsrfnstrrf",
+            "description": "An expressive painting symbolizing unity among African nations and cultures.fbxyjcghfgbufnufukf",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396977/An_expressive_painting_symbolizing_unity_among_African_nations_and_cultures._kiwhrs",
             "artist": "Musa Sankara",
             "origin": "Senegal",
             "origin_code": "SEN",
-            "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
+            "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag",
             "style": "Expressionism",
             "stock": 5,
             "price": 190.0,
-            "category": "Paintings"
+            "category": "Paintings",
+            "status": "1"
         }
     },
     {
