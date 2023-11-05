@@ -12,7 +12,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif.png",
             "style": "Impressionism",
             "stock": 10,
-            "price": "250.00",
+            "price": 250.00,
             "category": "Paintings"
         }
     },
@@ -29,7 +29,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523654/flag%20icons/kenya_cgsacm.png",
             "style": "Realism",
             "stock": 8,
-            "price": "300.00",
+            "price": 300.00,
             "category": "Paintings"
         }
     },
@@ -46,7 +46,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
             "style": "Surrealism",
             "stock": 5,
-            "price": "180.00",
+            "price": 180.00,
             "category": "Paintings"
         }
     },
@@ -63,7 +63,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
             "style": "Expressionism",
             "stock": 12,
-            "price": "400.00",
+            "price": 400.00,
             "category": "Paintings"
         }
     },
@@ -80,7 +80,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif.png",
             "style": "Abstract",
             "stock": 7,
-            "price": "250.00",
+            "price": 250.00,
             "category": "Paintings"
         }
     },
@@ -97,7 +97,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
             "style": "Impressionism",
             "stock": 10,
-            "price": "280.00",
+            "price": 280.00,
             "category": "Paintings"
         }
     },
@@ -114,7 +114,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523654/flag%20icons/kenya_cgsacm.png",
             "style": "Modern",
             "stock": 6,
-            "price": "220.00",
+            "price": 220.00,
             "category": "Paintings"
         }
     },
@@ -131,7 +131,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
             "style": "Realism",
             "stock": 8,
-            "price": "320.00",
+            "price": 320.00,
             "category": "Paintings"
         }
     },
@@ -148,7 +148,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
             "style": "Expressionism",
             "stock": 5,
-            "price": "190.00",
+            "price": 190.00,
             "category": "Paintings"
         }
     },
@@ -165,7 +165,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/tanzania_pi6tn0.png",
             "style": "Landscape",
             "stock": 9,
-            "price": "170.00",
+            "price": 170.00,
             "category": "Paintings",
             "status": "Sale"
         }
@@ -183,7 +183,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif.png",
             "style": "Abstract",
             "stock": 7,
-            "price": "250.00",
+            "price": 250.00,
             "category": "Paintings"
         }
     },
@@ -200,7 +200,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
             "style": "Portraiture",
             "stock": 6,
-            "price": "180.00",
+            "price": 180.00,
             "category": "Paintings"
         }
     },
@@ -217,7 +217,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523491/flag%20icons/sierra-leone_tkvubf.png",
             "style": "Impressionism",
             "stock": 5,
-            "price": "210.00",
+            "price": 210.00,
             "category": "Paintings",
             "status": "Sale"
         }
@@ -235,7 +235,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/south-africa_1_hyh59u.png",
             "style": "Contemporary",
             "stock": 8,
-            "price": "290.00",
+            "price": 290.00,
             "category": "Paintings"
         }
     },
@@ -252,7 +252,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif.png",
             "style": "Symbolism",
             "stock": 9,
-            "price": "280.00",
+            "price": 280.00,
             "category": "Paintings"
         }
     },
@@ -269,7 +269,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
             "style": "Realism",
             "stock": 8,
-            "price": "320.00",
+            "price": 320.00,
             "category": "Paintings"
         }
     },
@@ -286,7 +286,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif.png",
             "style": "Abstract",
             "stock": 5,
-            "price": "350.00",
+            "price": 350.00,
             "category": "Sculptures"
         }
     },
@@ -303,7 +303,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
             "style": "Realism",
             "stock": 4,
-            "price": "280.00",
+            "price": 280.00,
             "category": "Sculptures"
         }
     },
@@ -320,7 +320,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
             "style": "Sculptural Realism",
             "stock": 6,
-            "price": "320.00",
+            "price": 320.00,
             "category": "Sculptures"
         }
     },
@@ -337,7 +337,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
             "style": "Abstract",
             "stock": 7,
-            "price": "190.00",
+            "price": 190.00,
             "category": "Sculptures",
             "status": "Sale"
         }
@@ -355,7 +355,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523654/flag%20icons/kenya_cgsacm.png",
             "style": "Modern",
             "stock": 5,
-            "price": "420.00",
+            "price": 420.00,
             "category": "Sculptures"
         }
     },
@@ -372,7 +372,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523654/flag%20icons/kenya_cgsacm.png",
             "style": "Contemporary",
             "stock": 8,
-            "price": "380.00",
+            "price": 380.00,
             "category": "Sculptures"
         }
     },
@@ -389,7 +389,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
             "style": "Abstract Expressionism",
             "stock": 7,
-            "price": "350.00",
+            "price": 350.00,
             "category": "Sculptures"
         }
     },
@@ -406,7 +406,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/tanzania_pi6tn0.png",
             "style": "Symbolism",
             "stock": 6,
-            "price": "430.00",
+            "price": 430.00,
             "category": "Sculptures"
         }
     },
@@ -423,7 +423,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
             "style": "Carved",
             "stock": 9,
-            "price": "290.00",
+            "price": 290.00,
             "category": "Sculptures"
         }
     },
@@ -440,7 +440,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
             "style": "Cultural",
             "stock": 5,
-            "price": "310.00",
+            "price": 310.00,
             "category": "Sculptures"
         }
     },
@@ -457,7 +457,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif.png",
             "style": "Figurative",
             "stock": 7,
-            "price": "370.00",
+            "price": 370.00,
             "category": "Sculptures"
         }
     },
@@ -474,7 +474,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523491/flag%20icons/sierra-leone_tkvubf.png",
             "style": "Abstract",
             "stock": 6,
-            "price": "340.00",
+            "price": 340.00,
             "category": "Sculptures"
         }
     },
@@ -491,7 +491,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/south-africa_1_hyh59u.png",
             "style": "Modern",
             "stock": 5,
-            "price": "390.00",
+            "price": 390.00,
             "category": "Sculptures"
         }
     },
@@ -508,7 +508,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
             "style": "Realism",
             "stock": 6,
-            "price": "330.00",
+            "price": 330.00,
             "category": "Sculptures"
         }
     },
@@ -525,7 +525,7 @@
             "origin_code": "NGA",
             "style": "Abstract",
             "stock": 7,
-            "price": "350.00",
+            "price": 350.00,
             "category": "Sculptures"
         }
     },
@@ -542,7 +542,7 @@
             "origin_code": "KEN",
             "style": "Modern",
             "stock": 8,
-            "price": "410.00",
+            "price": 410.00,
             "category": "Sculptures"
         }
     },
@@ -551,7 +551,7 @@
         "pk": 33,
         "fields": {
             "name": "Sculpted Wisdom",
-            "description": "An artistic stone head sculpture of wise tribe chief.",
+            "description": "An artistic stone head sculpture of a wise tribe chief.",
             "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692441749/sculptures/Stone_head_figure_of_wise_tribe_chief_yn2mza.jpg",
             "artist": "Ayana Kamau",
             "origin": "Kenya",
@@ -559,7 +559,7 @@
             "origin_code": "KEN",
             "style": "Contemporary",
             "stock": 6,
-            "price": "380.00",
+            "price": 380.00,
             "category": "Sculptures"
         }
     },
@@ -576,7 +576,7 @@
             "origin_code": "SEN",
             "style": "Abstract Expressionism",
             "stock": 5,
-            "price": "330.00",
+            "price": 330.00,
             "category": "Sculptures"
         }
     },
@@ -593,7 +593,7 @@
             "origin_code": "GHA",
             "style": "Figurative",
             "stock": 7,
-            "price": "370.00",
+            "price": 370.00,
             "category": "Sculptures"
         }
     },
@@ -610,7 +610,7 @@
             "origin_code": "SLE",
             "style": "Abstract",
             "stock": 6,
-            "price": "140.00",
+            "price": 140.00,
             "category": "Sculptures",
             "status": "Sale"
         }
@@ -628,7 +628,7 @@
             "origin_code": "RSA",
             "style": "Modern",
             "stock": 5,
-            "price": "390.00",
+            "price": 390.00,
             "category": "Sculptures"
         }
     },
@@ -645,7 +645,7 @@
             "origin_code": "GHA",
             "style": "Rustic",
             "stock": 5,
-            "price": "150.00",
+            "price": 150.00,
             "category": "Frames"
         }
     },
@@ -662,7 +662,7 @@
             "origin_code": "KEN",
             "style": "Contemporary",
             "stock": 6,
-            "price": "180.00",
+            "price": 180.00,
             "category": "Frames"
         }
     },
@@ -679,7 +679,7 @@
             "origin_code": "NGA",
             "style": "Wood-Carved",
             "stock": 4,
-            "price": "210.00",
+            "price": 210.00,
             "category": "Frames"
         }
     },
@@ -692,11 +692,11 @@
             "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694417751/frames/A_frame_with_marble_accents_that_adds_a_touch_of_luxury_to_your_art_jqax7x.jpg",
             "artist": "Sanaa Diop",
             "origin": "Senegal",
-            "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
             "origin_code": "SEN",
+            "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
             "style": "Luxury",
             "stock": 7,
-            "price": "130.00",
+            "price": 130.00,
             "category": "Frames",
             "status": "Sale"
         }
@@ -710,11 +710,11 @@
             "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694417752/frames/wooden_tree_infused_natural_frame_estojy.jpg",
             "artist": "Thabo Molefe",
             "origin": "South Africa",
-            "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/south-africa_1_hyh59u.png",
             "origin_code": "RSA",
+            "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/south-africa_1_hyh59u.png",
             "style": "Rustic",
             "stock": 8,
-            "price": "330.00",
+            "price": 330.00,
             "category": "Frames"
         }
     },
@@ -727,11 +727,11 @@
             "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694417751/frames/A_modern_frame_with_sleek_lines_and_edgy_design_for_contemporary_art_iresqq.webp",
             "artist": "Lila Amara",
             "origin": "Tanzania",
-            "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/tanzania_pi6tn0.png",
             "origin_code": "TZA",
+            "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/tanzania_pi6tn0.png",
             "style": "Contemporary",
             "stock": 5,
-            "price": "190.00",
+            "price": 190.00,
             "category": "Frames"
         }
     },
@@ -748,7 +748,7 @@
             "origin_code": "NGA",
             "style": "Wood-Carved",
             "stock": 6,
-            "price": "200.00",
+            "price": 200.00,
             "category": "Frames"
         }
     },
@@ -765,7 +765,7 @@
             "origin_code": "NGA",
             "style": "Minimalist",
             "stock": 7,
-            "price": "170.00",
+            "price": 170.00,
             "category": "Frames"
         }
     },
@@ -782,7 +782,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
             "style": "Luxury",
             "stock": 8,
-            "price": "220.00",
+            "price": 220.00,
             "category": "Frames"
         }
     },
@@ -799,7 +799,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif.png",
             "style": "Traditional",
             "stock": 10,
-            "price": "30.00",
+            "price": 30.00,
             "category": "Crafts"
         }
     },
@@ -816,7 +816,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523654/flag%20icons/kenya_cgsacm.png",
             "style": "Ethnic",
             "stock": 8,
-            "price": "25.00",
+            "price": 25.00,
             "category": "Crafts"
         }
     },
@@ -833,7 +833,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
             "style": "Textile",
             "stock": 12,
-            "price": "12.00",
+            "price": 12.00,
             "category": "Crafts",
             "status": "Sale"
         }
@@ -851,7 +851,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
             "style": "Functional",
             "stock": 15,
-            "price": "35.00",
+            "price": 35.00,
             "category": "Crafts"
         }
     },
@@ -868,7 +868,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif.png",
             "style": "Textile",
             "stock": 9,
-            "price": "45.00",
+            "price": 45.00,
             "category": "Crafts"
         }
     },
@@ -885,7 +885,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/tanzania_pi6tn0.png",
             "style": "Folk Art",
             "stock": 11,
-            "price": "55.00",
+            "price": 55.00,
             "category": "Crafts"
         }
     },
@@ -902,7 +902,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/south-africa_1_hyh59u.png",
             "style": "Ethnic",
             "stock": 10,
-            "price": "28.00",
+            "price": 28.00,
             "category": "Crafts"
         }
     },
@@ -919,7 +919,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
             "style": "Ceramic",
             "stock": 13,
-            "price": "50.00",
+            "price": 50.00,
             "category": "Crafts"
         }
     },
@@ -936,7 +936,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523654/flag%20icons/kenya_cgsacm.png",
             "style": "Wood-Carved",
             "stock": 12,
-            "price": "48.00",
+            "price": 48.00,
             "category": "Crafts"
         }
     },
@@ -953,7 +953,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
             "style": "Traditional",
             "stock": 14,
-            "price": "33.00",
+            "price": 33.00,
             "category": "Crafts"
         }
     },
@@ -970,7 +970,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
             "style": "Textile",
             "stock": 11,
-            "price": "38.00",
+            "price": 38.00,
             "category": "Crafts"
         }
     },
@@ -987,7 +987,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/south-africa_1_hyh59u.png",
             "style": "Sculptural",
             "stock": 10,
-            "price": "25.00",
+            "price": 25.00,
             "category": "Crafts",
             "status": "Sale"
         }
@@ -1005,7 +1005,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
             "style": "Textile",
             "stock": 9,
-            "price": "42.00",
+            "price": 42.00,
             "category": "Crafts"
         }
     },
@@ -1022,7 +1022,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523491/flag%20icons/sierra-leone_tkvubf.png",
             "style": "Sculptural",
             "stock": 13,
-            "price": "60.00",
+            "price": 60.00,
             "category": "Crafts"
         }
     },
@@ -1039,7 +1039,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/tanzania_pi6tn0.png",
             "style": "Textile",
             "stock": 11,
-            "price": "37.00",
+            "price": 37.00,
             "category": "Crafts"
         }
     },
@@ -1056,7 +1056,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/south-africa_1_hyh59u.png",
             "style": "Ethnic",
             "stock": 10,
-            "price": "28.00",
+            "price": 28.00,
             "category": "Crafts",
             "status": "Sale"
         }
@@ -1074,7 +1074,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
             "style": "Textile",
             "stock": 12,
-            "price": "44.00",
+            "price": 44.00,
             "category": "Crafts"
         }
     },
@@ -1091,7 +1091,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523654/flag%20icons/kenya_cgsacm.png",
             "style": "Wood-Carved",
             "stock": 11,
-            "price": "48.00",
+            "price": 48.00,
             "category": "Crafts"
         }
     },
@@ -1108,7 +1108,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif.png",
             "style": "Textile",
             "stock": 9,
-            "price": "42.00",
+            "price": 42.00,
             "category": "Crafts"
         }
     },
@@ -1125,7 +1125,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
             "style": "Functional",
             "stock": 13,
-            "price": "30.00",
+            "price": 30.00,
             "category": "Crafts"
         }
     },
@@ -1142,7 +1142,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/south-africa_1_hyh59u.png",
             "style": "Sculptural",
             "stock": 10,
-            "price": "58.00",
+            "price": 58.00,
             "category": "Crafts"
         }
     },
@@ -1159,7 +1159,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/nigeria_zxyhb4.png",
             "style": "Ceramic",
             "stock": 12,
-            "price": "48.00",
+            "price": 48.00,
             "category": "Crafts"
         }
     },
@@ -1176,7 +1176,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523491/flag%20icons/sierra-leone_tkvubf.png",
             "style": "Functional",
             "stock": 14,
-            "price": "25.00",
+            "price": 25.00,
             "category": "Crafts"
         }
     },
@@ -1193,7 +1193,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/tanzania_pi6tn0.png",
             "style": "Functional",
             "stock": 11,
-            "price": "35.00",
+            "price": 35.00,
             "category": "Crafts"
         }
     }
