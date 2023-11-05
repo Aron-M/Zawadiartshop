@@ -78,7 +78,7 @@ def edit_product(request, product_id):
             # Save the updated product data to the JSON file
             save_product_data(product_data)
 
-            return JsonResponse({'success': True})
+
         else:
             # Handle form errors and return a JSON response with errors
             errors = edit_form.errors

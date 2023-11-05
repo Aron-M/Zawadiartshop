@@ -156,7 +156,7 @@
         "model": "products.product",
         "pk": 10,
         "fields": {
-            "name": "Whisper",
+            "name": "Whisperynhtbgervfecd",
             "description": "A captivating painting capturing the mystique of the African savannah at dusk.",
             "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396976/A_captivating_painting_capturing_the_mystique_of_the_African_savannah_at_dusk._oaa8ep",
             "artist": "Lila Amara",
