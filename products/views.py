@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from .models import Product
 from django.template.loader import render_to_string
-
+from home.views import load_product_data
+from .utils import load_product_data_from_json
 
 def searchmodal(request):
     artists = Product.objects.values_list('artist', flat=True).distinct()
@@ -101,27 +102,29 @@ def product_search(request):
 
 
 def products(request):
-    products = Product.objects.all()
+    product_data = load_product_data_from_json()
     artists = Product.objects.values_list('artist', flat=True).distinct()
     category = Product.objects.values_list('category', flat=True).distinct()
     origin_image = Product.objects.values_list('origin_image', 'origin', 'origin_code').distinct()
     origin = Product.objects.values_list('origin', flat=True).distinct()
     origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
     price = Product.objects.values_list('price', flat=True).distinct()
-    context = {'products': products,
-               'artists': artists,
-               'category': category,
-               'origin_image': origin_image,
-               'origin': origin,
-               'origin_code': origin_code,
-               'price': price
-            }
+    context = {
+        'product_data': product_data,
+        'artists': artists,
+        'category': category,
+        'origin_image': origin_image,
+        'origin': origin,
+        'origin_code': origin_code,
+        'price': price
+    }
     searchmodal_html = render_to_string('layouts/searchbar.html', context, request=request)
     context['searchmodal_html'] = searchmodal_html
     return render(request, 'products.html', context)
 
 
 def paintings(request):
+    product_data = load_product_data_from_json()
     paintings = Product.objects.filter(category='Paintings')
     artists = Product.objects.values_list('artist', flat=True).distinct()
     category = Product.objects.values_list('category', flat=True).distinct()

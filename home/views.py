@@ -4,6 +4,8 @@ from .forms import ProductSearchForm, ProductEditForm
 import os
 import json
 from django.http import JsonResponse
+import decimal
+from decimal import Decimal
 
 JSON_FILE_PATH = '/workspace/Zawadiartshop/products/fixtures/products.json'
 
@@ -13,10 +15,15 @@ def load_product_data():
     if os.path.exists('/workspace/Zawadiartshop/products/fixtures/products.json'):
         with open('/workspace/Zawadiartshop/products/fixtures/products.json', 'r') as file:
             product_data = json.load(file)
+            for product in product_data:
+                # Convert the 'price' field to Decimal
+                product['fields']['price'] = Decimal(product['fields']['price'])
     return product_data
 
 # Define a function to save data to the JSON file
 def save_product_data(product_data):
+    for product in product_data:
+        product['fields']['price'] = float(product['fields']['price'])
     with open('/workspace/Zawadiartshop/products/fixtures/products.json', 'w') as file:
         print("Saving the following data to the JSON file:")
         print(product_data)
