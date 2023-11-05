@@ -376,3 +376,29 @@ body.modal-open .content-to-fade {
 .alert-dismissible {
     width: max-content;
 }
+
+/* Custom CSS to style the form */
+.form-group {
+    margin-bottom: 20px; /* Add space between form groups */
+}
+
+/* Style for the product image field */
+.form-group label[for^="id_image"] {
+    display: block; /* Make the label display as a block element */
+    color: white; /* Set label text color to white */
+    margin-bottom: 10px; /* Add space between label and input */
+}
+
+/* Ensure all form fields are full width */
+.form-group input[type="text"], .form-group textarea, .form-group select {
+    width: 100%;
+}
+
+/* Style the product image field */
+.form-group input[type="file"] {
+    display: block; /* Make the file input display as a block element */
+    padding: 10px; /* Add padding to the file input */
+    background-color: #fff; /* Set the background color to white for the image input */
+    border: 1px solid #ccc; /* Add a border around the image input */
+    width: 100%; /* Make the image input full width */
+}

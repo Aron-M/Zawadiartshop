@@ -7,7 +7,8 @@
     <div class="col-md-12">
         <form method="get" action="{% url 'dashboard' %}">
             <div class="input-group">
-                <input type="text" name="id" class="form-control" placeholder="Enter Product ID">
+                {{ search_form.id_tag }}
+                {{ search_form.id }}
                 <button type="submit" class="btn btn-primary">Search</button>
             </div>
         </form>
@@ -24,7 +25,7 @@
                     <p>Choose this or any lower number product ID.</p>
                 </div>
                 {% else %}
-                <div class="w-100">
+                <div class="w-75">
                 {% include 'product_card.html' %}
                 </div>
                 {% endif %}
@@ -32,12 +33,11 @@
         </div>
         <div class="col-md-6">
             <div class="text-center">
-                <h3>Edit Product</h3>
-                <form method="post" action="{% url 'edit_product' product.id %}">
-                    {% csrf_token %}
-                    {{ edit_form.as_p }}
-                    <button type="submit" class="btn btn-primary">Save Changes</button>
-                </form>
+                {% if not product %}
+                <div></div>
+                {% else %}
+                {% include 'edit_product.html' %}
+                {% endif %}
             </div>
         </div>
     </div>

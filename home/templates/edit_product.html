@@ -1,11 +1,37 @@
-<!-- edit_product.html -->
-{% extends 'base.html' %}
-
-{% block content %}
-    <h1>Edit Product</h1>
-    <form method="post">
+<div class="container">
+    <h3 class="text-success">Edit Product</h3>
+    <form method="POST" action="{% url 'edit_product' product.id %}" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_p }}
+        <div class="form-group">
+            <label for="{{ edit_form.name.id }}" class="text-white">Product Name</label>
+            {{ edit_form.name }}
+        </div>
+        <div class="form-group d-inline-block mh-5">
+            <label for="{{ edit_form.description.id }}" class="text-white">Description</label>
+            {{ edit_form.description }}
+        </div>
+        <div class="form-group">
+            <label for="{{ edit_form.artist.id }}" class="text-white">Artist</label>
+            {{ edit_form.artist }}
+        </div>
+        <div class="form-group">
+            <label for="{{ edit_form.style.id }}" class="text-white">Style</label>
+            {{ edit_form.style }}
+        </div>
+        <div class="form-group">
+            <label for="{{ edit_form.origin.id }}" class="text-white">Origin</label>
+            {{ edit_form.origin }}
+        </div>
+        <div class="form-group">
+            <label for="{{ edit_form.price.id }}" class="text-white">Price</label>
+            {{ edit_form.price }}
+        </div>
+        <!-- Add similar form groups for other fields -->
+
+        <div class="form-group">
+            <label class="text-white">Product Image</label>
+            {{ edit_form.image }}
+        </div>
         <button type="submit" class="btn btn-primary">Save Changes</button>
     </form>
-{% endblock %}
+</div>
