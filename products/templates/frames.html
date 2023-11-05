@@ -2,80 +2,15 @@
 {% load static %}
 
 {% block content %}
-<h1 class="d-flex flex-column justify-content-center align-items-center template-header text-white">FRAMES</h1>
+<h1 class="d-flex flex-column justify-content-center align-items-center template-header text-white">SCULPTURES</h1>
 <div class="d-flex flex-column align-items-center">
     <div class="w-25">
         <p>{{ searchmodal_html|safe }}</p>
     </div>
 </div>
-<div class="row">
+<div>
     {% for product in products %}
-    <div class="col-lg-3 col-md-6 mb-3">
-        <div class="card card-smaller user-select-none">
-            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}" data-bs-toggle="modal"
-                data-bs-target="#myModal{{ product.pk }}">
-            <div class="card-body">
-                <h5 class="card-title">{{ product.name }} {% if product.status %} <span class="text-danger">"HOT SALE"</span>{% endif %}</h5>
-                <p class="card-text m-0">{{ product.description }}</p>
-                <div class="d-flex justify-content-start m-0">
-                    <p class="card-text fw-bold mt-3 me-5 mr-5">{{ product.artist }}</p>
-                    <div class="d-flex align-items-center">
-                        <img src="{{ product.origin_image.url }}" alt="{{ product.origin }}"
-                            class="flag-icon mt-2 pl-3 pe-2">
-                        <p class="card-text mt-3">{{ product.origin }}</p>
-                    </div>
-                </div>
-                <p><span class="fw-bold">Style: </span>{{ product.style }}</p>
-                <p class="card-text">Price: ${{ product.price }}</p>
-                <form method="post" action="{% url 'cart:add_to_cart' product.id %}" target="cart-iframe">
-                    {% csrf_token %}
-                    <input type="hidden" name="quantity" value="1">
-                    <button type="submit" class="btn btn-dark" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop{{ product.pk }}">Add to Cart</button>
-                </form>
-                <iframe name="cart-iframe" id="cart-iframe" style="display:none;"></iframe>
-            </div>
-        </div>
-    </div>
-    <!-- Modals -->
-    <div class="modal fade" id="myModal{{ product.pk }}" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <p>"{{ product.name }}" by {{ product.artist }}</p>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include 'product_card.html' %}
     {% endfor %}
 </div>
-
-{% for product in products %}
-<div class="modal fade" id="staticBackdrop{{ product.pk }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Product Added</h5>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-thumbnail cart-img card-img-top" style= "width: 7rem; height: auto;" data-bs-toggle="modal" data-bs-target="#myModal{{ product.pk }}">
-                </div>
-                <div class="col-md-8">
-                    You have successfully added <label class="fw-bold">{{ product.name }}</label> by <label class="fw-bold">{{ product.artist }}</label> to your cart
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-{% endfor %}
 {% endblock %}

@@ -637,17 +637,18 @@
         "model": "products.product",
         "pk": 38,
         "fields": {
-            "name": "Classic Elegance Frame",
+            "name": "wezsxrtdctfvygbhunijminhubigyvuftcydrxsezasxr",
             "description": "A wooden, straight-edged frame that exudes classic elegance.",
-            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694417751/frames/A_wooden_straight-edged_frame_that_exudes_classic_elegance_x07ehd.avif",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694417751/frames/A_wooden_straight-edged_frame_that_exudes_classic_elegance_x07ehd",
             "artist": "Kwame Nkrumah",
             "origin": "Ghana",
-            "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif.png",
+            "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif",
             "origin_code": "GHA",
             "style": "Rustic",
             "stock": 5,
             "price": 150.0,
-            "category": "Frames"
+            "category": "Frames",
+            "status": "1"
         }
     },
     {

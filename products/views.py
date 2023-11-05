@@ -110,7 +110,7 @@ def products(request):
     origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
     price = Product.objects.values_list('price', flat=True).distinct()
     context = {
-        'product_data': product_data,
+        'products': product_data,
         'artists': artists,
         'category': category,
         'origin_image': origin_image,
@@ -148,6 +148,8 @@ def paintings(request):
 
 
 def sculptures(request):
+    product_data = load_product_data_from_json()
+    sculptures_data = [product for product in product_data if product['fields']['category'] == 'Sculptures']
     sculptures = Product.objects.filter(category='Sculptures')
     artists = Product.objects.values_list('artist', flat=True).distinct()
     category = Product.objects.values_list('category', flat=True).distinct()
@@ -156,7 +158,7 @@ def sculptures(request):
     origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
     price = Product.objects.values_list('price', flat=True).distinct()
     context = {
-        'products': sculptures,
+        'products': sculptures_data,
         'artists': artists,
         'category': category,
         'origin_image': origin_image,
@@ -170,6 +172,8 @@ def sculptures(request):
 
 
 def frames(request):
+    product_data = load_product_data_from_json()
+    frames_data = [product for product in product_data if product['fields']['category'] == 'Frames']
     frames = Product.objects.filter(category='Frames')
     artists = Product.objects.values_list('artist', flat=True).distinct()
     category = Product.objects.values_list('category', flat=True).distinct()
@@ -178,7 +182,7 @@ def frames(request):
     origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
     price = Product.objects.values_list('price', flat=True).distinct()
     context = {
-        'products': frames,
+        'products': frames_data,
         'artists': artists,
         'category': category,
         'origin_image': origin_image,
@@ -192,6 +196,8 @@ def frames(request):
 
 
 def crafts(request):
+    product_data = load_product_data_from_json()
+    crafts_data = [product for product in product_data if product['fields']['category'] == 'Crafts']
     crafts = Product.objects.filter(category='Crafts')
     artists = Product.objects.values_list('artist', flat=True).distinct()
     category = Product.objects.values_list('category', flat=True).distinct()
@@ -200,7 +206,7 @@ def crafts(request):
     origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
     price = Product.objects.values_list('price', flat=True).distinct()
     context = {
-        'products': crafts,
+        'products': crafts_data,
         'artists': artists,
         'category': category,
         'origin_image': origin_image,
@@ -214,6 +220,8 @@ def crafts(request):
 
 
 def sale(request):
+    product_data = load_product_data_from_json()
+    sale_data = [product for product in product_data if product['fields']['sale'] == 'Sale']
     sale = Product.objects.filter(status='Sale')
     artists = Product.objects.values_list('artist', flat=True).distinct()
     category = Product.objects.values_list('category', flat=True).distinct()
@@ -222,7 +230,7 @@ def sale(request):
     origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
     price = Product.objects.values_list('price', flat=True).distinct()
     context = {
-        'products': sale,
+        'products': sale_data,
         'artists': artists,
         'category': category,
         'origin_image': origin_image,
