@@ -23,8 +23,28 @@
             {{ edit_form.origin }}
         </div>
         <div class="form-group">
+            <label for="{{ edit_form.origin_image.id }}" class="text-white">Origin Image</label>
+            {{ edit_form.origin_image }}
+        </div>
+        <div class="form-group">
             <label for="{{ edit_form.price.id }}" class="text-white">Price</label>
             {{ edit_form.price }}
+        </div>
+        <div class="form-group">
+            <label for="{{ edit_form.origin_code.id }}" class="text-white">Origin Code</label>
+            {{ edit_form.origin_code }}
+        </div>
+        <div class="form-group">
+            <label for="{{ edit_form.stock.id }}" class="text-white">Stock</label>
+            {{ edit_form.stock }}
+        </div>
+        <div class="form-group">
+            <label for="{{ edit_form.category.id }}" class="text-white">Category</label>
+            {{ edit_form.category }}
+        </div>
+        <div class="form-group">
+            <label for="{{ edit_form.status.id }}" class="text-white">Status</label>
+            {{ edit_form.status }}
         </div>
         <!-- Add similar form groups for other fields -->
 
