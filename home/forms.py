@@ -10,4 +10,4 @@ class ProductSearchForm(forms.Form):
 class ProductEditForm(forms.ModelForm):
     class Meta:
         model = Product
-        fields = '__all__'
+        fields = ['name', 'description', 'artist', 'style', 'origin', 'price', 'image', 'origin_code', 'stock', 'category']

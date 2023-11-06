@@ -15,31 +15,20 @@
     </div>
 </div>
 <div class="container-lg mt-3">
-    <div class="row mt-3 d-flex justify-content-start">
+    <div class="row mt-3">
         <div class="col-md-6">
-            <div id="product-card" class="w-100">
-                <!-- Un-comment the below lines if needed -->
-                <!-- {% if not product %}
-                <div class="alert alert-danger">
-                    PRODUCT NOT FOUND.
-                    Current total amount of products: {{ products.count }}
-                    <p>Choose this or any lower number product ID.</p>
-                </div>
-                {% else %} -->
-                {% if product in products %}
-                <div class="w-100">
-                    {% include 'product_card.html' with product=product %}
-                </div>
-                {% endif %}
-                <!-- {% endif %} -->
+            {% if product in products %}
+            <div class="w-75">
+                {% include 'product_card.html' with product=product %}
             </div>
+            {% endif %}
         </div>
         <div class="col-md-6 w-50">
             <div class="text-center w-75">
                 {% if not product %}
                 <div></div>
                 {% else %}
-                {% include 'edit_product.html' %}
+                {% include 'edit_product_form.html' %}
                 {% endif %}
             </div>
         </div>
