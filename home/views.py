@@ -1,9 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from products.models import Product
+from django.urls import reverse
 from .forms import ProductSearchForm, ProductEditForm
 import os
 import json
 from django.http import JsonResponse
+from products.utils import load_product_data_from_json
 import decimal
 from decimal import Decimal
 
@@ -29,17 +31,24 @@ def save_product_data(product_data):
         print(product_data)
         json.dump(product_data, file, indent=4)
 
-def dashboard(request):
+def dashboard(request, product_id=None):
     search_form = ProductSearchForm()
     edit_form = None
     product = None
+    product_data = load_product_data_from_json()
     products = Product.objects.all()
+
+    # Check if a product_id is provided in the URL
+    if product_id:
+        product = get_object_or_404(Product, id=product_id)
+        edit_form = ProductEditForm(instance=product)
 
     if request.method == 'GET':
         search_form = ProductSearchForm(request.GET)
         if search_form.is_valid():
             id = search_form.cleaned_data['id']
             try:
+                # Check if the searched product exists and populate the edit form
                 product = Product.objects.get(id=id)
                 edit_form = ProductEditForm(instance=product)
             except Product.DoesNotExist:
@@ -54,36 +63,22 @@ def dashboard(request):
 
     return render(request, 'dashboard.html', context)
 
+
 def edit_product(request, product_id):
-    product_data = load_product_data()
     product = get_object_or_404(Product, id=product_id)
 
     if request.method == 'POST':
         edit_form = ProductEditForm(request.POST, instance=product)
         if edit_form.is_valid():
-            # Update the product data in your JSON data
-            for p in product_data:
-                if p['pk'] == product_id:
-                    cleaned_data = edit_form.cleaned_data
-
-                    # Handle image and origin_image fields separately
-                    if 'image' in cleaned_data:
-                        cleaned_data['image'] = cleaned_data['image'].url  # Assuming you want to store the image URL
-                    if 'origin_image' in cleaned_data:
-                        cleaned_data['origin_image'] = cleaned_data['origin_image'].url  # Assuming you want to store the origin image URL
-
-                    p['fields'].update(cleaned_data)
-                    break
-
-            # Save the updated product data to the JSON file
-            save_product_data(product_data)
-
-
-        else:
-            # Handle form errors and return a JSON response with errors
-            errors = edit_form.errors
-            return JsonResponse({'success': False, 'errors': errors})
+            # Save the updated product to the database
+            edit_form.save()
+            return redirect('dashboard', product_id=product_id)  # Redirect back to the dashboard_with_product
     else:
         edit_form = ProductEditForm(instance=product)
 
-    return render(request, 'dashboard.html', {'edit_form': edit_form, 'product': product})
+    context = {
+        'edit_form': edit_form,
+        'product': product,
+    }
+
+    return render(request, 'dashboard.html', context)

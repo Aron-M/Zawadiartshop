@@ -139,26 +139,25 @@
         "model": "products.product",
         "pk": 9,
         "fields": {
-            "name": "Spirit of Unityetyndsfnsrfnstrrf",
-            "description": "An expressive painting symbolizing unity among African nations and cultures.fbxyjcghfgbufnufukf",
-            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396977/An_expressive_painting_symbolizing_unity_among_African_nations_and_cultures._kiwhrs",
+            "name": "Spirit of Unity",
+            "description": "An expressive painting symbolizing unity among African nations and cultures.",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396977/An_expressive_painting_symbolizing_unity_among_African_nations_and_cultures._kiwhrs.webp",
             "artist": "Musa Sankara",
             "origin": "Senegal",
             "origin_code": "SEN",
-            "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag",
+            "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/senegal_kb0bag.png",
             "style": "Expressionism",
             "stock": 5,
             "price": 190.0,
-            "category": "Paintings",
-            "status": "1"
+            "category": "Paintings"
         }
     },
     {
         "model": "products.product",
         "pk": 10,
         "fields": {
-            "name": "Whisperynhtbgervfecd",
-            "description": "A captivating painting capturing the mystique of the African savannah at dusk.",
+            "name": "Whispersmnhgbfv",
+            "description": "A captivating painting",
             "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692396976/A_captivating_painting_capturing_the_mystique_of_the_African_savannah_at_dusk._oaa8ep",
             "artist": "Lila Amara",
             "origin": "Tanzania",
@@ -166,7 +165,7 @@
             "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/tanzania_pi6tn0",
             "style": "Landscape",
             "stock": 9,
-            "price": 1570.0,
+            "price": 170.0,
             "category": "Paintings",
             "status": "Sale"
         }
@@ -637,18 +636,17 @@
         "model": "products.product",
         "pk": 38,
         "fields": {
-            "name": "wezsxrtdctfvygbhunijminhubigyvuftcydrxsezasxr",
+            "name": "Classic Elegance Frame",
             "description": "A wooden, straight-edged frame that exudes classic elegance.",
-            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694417751/frames/A_wooden_straight-edged_frame_that_exudes_classic_elegance_x07ehd",
+            "image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1694417751/frames/A_wooden_straight-edged_frame_that_exudes_classic_elegance_x07ehd.avif",
             "artist": "Kwame Nkrumah",
             "origin": "Ghana",
-            "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif",
+            "origin_image": "https://res.cloudinary.com/dj3upv8lw/image/upload/v1692523461/flag%20icons/ghana_ty7sif.png",
             "origin_code": "GHA",
             "style": "Rustic",
             "stock": 5,
             "price": 150.0,
-            "category": "Frames",
-            "status": "1"
+            "category": "Frames"
         }
     },
     {
