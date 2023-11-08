@@ -32,13 +32,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ['zawadi-artshop-f62f0dab390f.herokuapp.com', '8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['zawadi-artshop-f62f0dab390f.herokuapp.com', '8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu106.gitpod.io']
 
 CORS_ALLOWED_ORIGINS = [
-    "8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu105.gitpod.io",
+    "8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu106.gitpod.io",
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu105.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-aronm-zawadiartshop-nz2e3u6d9m8.ws-eu106.gitpod.io']
 
 # Application definition
 
