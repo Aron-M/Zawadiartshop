@@ -1,0 +1,8 @@
+<form method="get" action="{% url 'edit_product_search' %}">
+    <div class="input-group">
+        {{ search_form.id_tag }}
+        {{ search_form.id }}
+        <button type="submit" class="btn btn-primary">Search</button>
+        <a class="btn btn-secondary mb-3 ms-3" href="{% url 'dashboard' %}" role="button">BACK</a>
+    </div>
+</form>

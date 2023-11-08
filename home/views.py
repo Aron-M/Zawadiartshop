@@ -1,9 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.http import HttpResponseRedirect
 from products.models import Product
-from django.urls import reverse
 from .forms import ProductSearchForm, ProductEditForm
-import os
 
 def dashboard(request):
     return render(request, 'dashboard.html')
@@ -21,7 +18,7 @@ def edit_product_search(request, product_id=None):
 
     if request.method == 'GET':
         search_form = ProductSearchForm(request.GET)
-        if search_form is valid:
+        if search_form.is_valid():  # Corrected line with parentheses
             id = search_form.cleaned_data['id']
             try:
                 # Check if the searched product exists and populate the edit form
@@ -58,25 +55,33 @@ def add_product(request):
 
 
 def edit_product(request, product_id):
-    new_product_created = request.GET.get('new_product_created', False) == 'True'
-
-
     product = get_object_or_404(Product, id=product_id)
 
     if request.method == 'POST':
         edit_form = ProductEditForm(request.POST, request.FILES, instance=product)
         if edit_form.is_valid():
             edited_product = edit_form.save()
-            return redirect('edit_product', product_id=new_product.id, new_product_created=new_product_created)
-
+            return redirect('edit_product', product_id=edited_product.id)
 
     else:
         edit_form = ProductEditForm(instance=product)
 
     context = {
         'edit_form': edit_form,
-        'product': product,  # Ensure the product variable is set
-        'new_product_created': new_product_created,  # Pass the variable to the template
+        'product': product,
     }
 
     return render(request, 'edit_product.html', context)
+
+def delete_product(request, product_id):
+    # Get the product to delete, or return a 404 response if it doesn't exist
+    product = get_object_or_404(Product, id=product_id)
+
+    if request.method == 'POST':
+        # If the request is a POST request, delete the product
+        product.delete()
+        return redirect('dashboard')  # Redirect to the dashboard or another appropriate page
+
+    # Render a confirmation template for the delete action
+    context = {'product': product}
+    return render(request, 'delete_product.html', context)
