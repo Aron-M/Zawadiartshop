@@ -15,8 +15,15 @@ CATEGORY_CHOICES = (
 )
 
 class ProductEditForm(forms.ModelForm):
-    category = forms.ChoiceField(choices=CATEGORY_CHOICES, widget=forms.Select(attrs={'class': 'form-control'}))
-
     class Meta:
         model = Product
         fields = ['name', 'description', 'artist', 'style', 'origin', 'price', 'image', 'origin_code', 'stock', 'category']
+
+    def __init__(self, *args, **kwargs):
+        instance = kwargs.get('instance', None)
+        super(ProductEditForm, self).__init__(*args, **kwargs)
+
+        if instance:
+            for field_name, field in self.fields.items():
+                if field_name != 'image':
+                    field.required = True
