@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponseRedirect
 from products.models import Product
 from django.urls import reverse
 from .forms import ProductSearchForm, ProductEditForm
@@ -47,11 +48,8 @@ def edit_product(request, product_id):
     if request.method == 'POST':
         edit_form = ProductEditForm(request.POST, request.FILES, instance=product)
         if edit_form.is_valid():
-            edited_product = edit_form.save(commit=False)  # Commit False to prevent immediate save
-            edited_product.id = product_id  # Set the ID to the original product's ID
-            edited_product.save()  # Save the changes
-
-            return redirect('edit_product, product_id=product_id')
+            edited_product = edit_form.save()
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))  # Redirect to the same page
 
     else:
         edit_form = ProductEditForm(instance=product)

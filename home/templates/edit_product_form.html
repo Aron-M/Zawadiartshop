@@ -1,5 +1,4 @@
 <div class="container">
-    <h3 class="text-success">Edit Product</h3>
     <form method="POST" action="{% url 'edit_product' product.id %}" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="form-group">
