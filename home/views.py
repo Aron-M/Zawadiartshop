@@ -3,32 +3,13 @@ from products.models import Product
 from django.urls import reverse
 from .forms import ProductSearchForm, ProductEditForm
 import os
-import decimal
-from decimal import Decimal
 
-JSON_FILE_PATH = '/workspace/Zawadiartshop/products/fixtures/products.json'
 
-# # Define a function to load data from the JSON file
-# def load_product_data():
-#     product_data = []
-#     if os.path.exists('/workspace/Zawadiartshop/products/fixtures/products.json'):
-#         with open('/workspace/Zawadiartshop/products/fixtures/products.json', 'r') as file:
-#             product_data = json.load(file)
-#             for product in product_data:
-#                 # Convert the 'price' field to Decimal
-#                 product['fields']['price'] = Decimal(product['fields']['price'])
-#     return product_data
+def dashboard(request):
+    return render(request, 'dashboard.html')
 
-# # Define a function to save data to the JSON file
-# def save_product_data(product_data):
-#     for product in product_data:
-#         product['fields']['price'] = float(product['fields']['price'])
-#     with open('/workspace/Zawadiartshop/products/fixtures/products.json', 'w') as file:
-#         print("Saving the following data to the JSON file:")
-#         print(product_data)
-#         json.dump(product_data, file, indent=4)
 
-def dashboard(request, product_id=None):
+def edit_product_search(request, product_id=None):
     search_form = ProductSearchForm()
     edit_form = None
     product = None
@@ -57,7 +38,7 @@ def dashboard(request, product_id=None):
         'products': products,
     }
 
-    return render(request, 'dashboard.html', context)
+    return render(request, 'edit_product.html', context)
 
 
 def edit_product(request, product_id):
@@ -70,7 +51,7 @@ def edit_product(request, product_id):
             edited_product.id = product_id  # Set the ID to the original product's ID
             edited_product.save()  # Save the changes
 
-            return redirect('dashboard', product_id=product_id)
+            return redirect('edit_product, product_id=product_id')
 
     else:
         edit_form = ProductEditForm(instance=product)
@@ -80,4 +61,4 @@ def edit_product(request, product_id):
         'product': product,
     }
 
-    return render(request, 'dashboard.html', context)
+    return render(request, 'edit_product.html', context)
