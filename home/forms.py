@@ -14,10 +14,24 @@ CATEGORY_CHOICES = (
     ('Crafts', 'Crafts'),
 )
 
+ORIGIN_CHOICES = (
+    ('Senegal', 'Senegal'),
+    ('Kenya', 'Kenya'),
+    ('Ghana', 'Ghana'),
+    ('Nigeria', 'Nigeria'),
+    ('Sierra Leone', 'Sierra Leone'),
+    ('Tanzania', 'Tanzania'),
+    ('South Africa', 'South Africa'),
+)
+
 class ProductEditForm(forms.ModelForm):
+    # Modify the category field to use a ChoiceField with choices
+    category = forms.ChoiceField(choices=CATEGORY_CHOICES)
+    origin = forms.ChoiceField(choices=ORIGIN_CHOICES)
+
     class Meta:
         model = Product
-        fields = ['name', 'description', 'artist', 'style', 'origin', 'price', 'image', 'origin_code', 'stock', 'category']
+        fields = ['name', 'description', 'artist', 'style', 'origin', 'origin_image', 'price', 'image', 'category']
 
     def __init__(self, *args, **kwargs):
         instance = kwargs.get('instance', None)

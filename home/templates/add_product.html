@@ -5,7 +5,8 @@
 <div class="container d-flex justify-content-center">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="d-flex flex-column justify-content-center align-items-center template-header text-white">ADD PRODUCT</h1>
+            <h1 class="d-flex flex-column justify-content-center align-items-center template-header text-white">ADD
+                PRODUCT</h1>
             <form method="POST" action="{% url 'add_product' %}" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-group">
@@ -17,7 +18,7 @@
                     {{ edit_form.description }}
                 </div>
                 <div class="form-group">
-                    <label for="{{ edit_form.artist.id }}" class "text-white">Artist</label>
+                    <label for="{{ edit_form.artist.id }}" class="text-white">Artist</label>
                     {{ edit_form.artist }}
                 </div>
                 <div class="form-group">
@@ -37,14 +38,6 @@
                     {{ edit_form.price }}
                 </div>
                 <div class="form-group">
-                    <label for="{{ edit_form.origin_code.id }}" class="text-white">Origin Code</label>
-                    {{ edit_form.origin_code }}
-                </div>
-                <div class="form-group">
-                    <label for="{{ edit_form.stock.id }}" class="text-white">Stock</label>
-                    {{ edit_form.stock }}
-                </div>
-                <div class="form-group">
                     <label for="{{ edit_form.category.id }}" class="text-white">Category</label>
                     {{ edit_form.category }}
                 </div>
@@ -52,7 +45,10 @@
                     <label class="text-white">Product Image</label>
                     {{ edit_form.image }}
                 </div>
-                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <div>
+                    <button type="submit" class="btn btn-success">ADD PRODUCT</button>
+                    <a class="btn btn-secondary ms-3" href="{% url 'dashboard' %}" role="button">BACK</a>
+                </div>
             </form>
         </div>
     </div>
