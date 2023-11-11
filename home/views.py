@@ -39,6 +39,7 @@ def delete_product_search(request, product_id=None):
     edit_form = None
     product = None
     products = Product.objects.all()
+    total_products = Product.objects.count()
 
     # Check if a product_id is provided in the URL
     if product_id:
@@ -59,6 +60,7 @@ def delete_product_search(request, product_id=None):
         'product': product,
         'products': products,
         'search_form': search_form,
+        'total_products': total_products,
     }
 
     return render(request, 'delete_product.html', context)
@@ -85,12 +87,12 @@ def edit_product(request, product_id):
     return render(request, 'edit_product.html', context)
 
 
-def add_product(request, product_id):
+def add_product(request):
     if request.method == 'POST':
         edit_form = ProductEditForm(request.POST, request.FILES)
         if edit_form.is_valid():
             new_product = edit_form.save()
-            return redirect('edit_product', new_product_id=new_product.id, product_id=new_product.id)
+            return redirect('new_product_added', new_product_id=new_product.id)
     
     edit_form = ProductEditForm()
     context = {
@@ -108,15 +110,10 @@ def delete_product(request, product_id):
 
     if request.method == 'POST':
         product.delete()
-
-        # Fetch the updated products list and total count after deleting a product
-        products = Product.objects.all()
-        total_products = products.count()
-
-        return redirect('dashboard')
+        # Redirect to a specific page after successful deletion
+        return redirect('dashboard')  # Replace 'dashboard' with the desired URL name
 
     context = {
         'product': product,
-        'product_id': product_id,
     }
     return render(request, 'delete_product.html', context)

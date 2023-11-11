@@ -8,6 +8,14 @@
             {% include 'delete_product_by_id.html' %}
         </div>
     </div>
+    {% if search_form.is_bound %}
+    {% if not product and search_form.id.value %}
+        <div class="d-flex justify-content-center">
+            <h3 class="text-white">There is no product with this ID.
+                It has either been removed or not yet created. Please choose a different ID</h3>
+        </div>
+    {% endif %}
+{% endif %}
     <div class="container-lg mt-3">
         <div class="row mt-3">
             <div class="col-md-6">
@@ -15,7 +23,6 @@
                     <div class="w-75">
                         {% include 'product_card.html' with product=product %}
                     </div>
-                {% endif %}
             </div>
             <div class="col-md-6 w-50">
                 <div class="text-center w-75">
@@ -48,6 +55,7 @@
                     {% endfor %}
                 </div>
             </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
