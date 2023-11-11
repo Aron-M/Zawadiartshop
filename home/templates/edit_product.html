@@ -7,22 +7,29 @@
     <div class="col-md-12 d-flex justify-content-center mt-5">
         {% include 'edit_product_by_id.html' %}
     </div>
+    {% if not product %}
+    <div class="d-flex justify-content-center">
+        <h3 class="text-white">There is no product with this ID.
+             It has either been removed or not yet created. Please choose a different ID</h3>
+    </div>
+    {% endif %}
 </div>
 <div class="container-lg mt-3">
     <div class="row mt-3">
         <div class="col-md-6">
             {% if product %}
-                <div class="w-75">
-                    {% include 'product_card.html' with product=product %}
-                </div>
+            <div class="w-75">
+                {% include 'product_card.html' with product=product %}
+            </div>
             {% endif %}
         </div>
         <div class="col-md-6 w-50">
             <div class="text-center w-75">
                 {% if not product %}
-                    <div></div>
+                <div>
+                </div>
                 {% else %}
-                    {% include 'edit_product_form.html' %}
+                {% include 'edit_product_form.html' %}
                 {% endif %}
             </div>
         </div>

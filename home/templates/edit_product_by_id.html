@@ -5,4 +5,8 @@
         <button type="submit" class="btn btn-primary">Search</button>
         <a class="btn btn-secondary mb-3 ms-3" href="{% url 'dashboard' %}" role="button">BACK</a>
     </div>
+    <div class="slect-product">
+        <p class="text-white">Choose a product by selecting it's ID</p>
+        <p class="text-white">Current total amount of products: {{ total_products }}</p>
+    </div>
 </form>
