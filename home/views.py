@@ -85,12 +85,12 @@ def edit_product(request, product_id):
     return render(request, 'edit_product.html', context)
 
 
-def add_product(request):
+def add_product(request, product_id):
     if request.method == 'POST':
         edit_form = ProductEditForm(request.POST, request.FILES)
         if edit_form.is_valid():
             new_product = edit_form.save()
-            return redirect('new_product_added', new_product.id)
+            return redirect('edit_product', new_product_id=new_product.id, product_id=new_product.id)
     
     edit_form = ProductEditForm()
     context = {
