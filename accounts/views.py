@@ -1,6 +1,8 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from .forms import RegistrationForm, CustomLoginForm
+from checkout.forms import DeliveryAddressForm
+from checkout.models import Order
 from django.contrib.auth.views import LogoutView
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
@@ -51,3 +53,18 @@ def welcome_back(request):
 
 class CustomLogoutView(LogoutView):
     next_page = reverse_lazy('products:home')
+
+
+@login_required
+def update_user_address(request):
+    if request.method == 'POST':
+        form = DeliveryAddressForm(request.POST)
+        if form.is_valid():
+            order = form.save(commit=False)
+            order.user = request.user
+            order.save()
+            return redirect('user_profile')
+    else:
+        form = DeliveryAddressForm()
+        print(form)  # Add this line for debugging
+    return render(request, 'registration/userprofile.html', {'form': form})

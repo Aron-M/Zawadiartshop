@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <div class="container mt-5">
@@ -6,13 +7,10 @@
         <div class="col-md-6">
             <div class="card p-4">
                 {% if user %}
-                    <h1 class="text-center mb-4">Welcome, {{ user.username }}!</h1>
-                {% else %}
-                    <p class="text-center">User not found.</p>
+                <h1 class="text-center mb-4">Welcome, {{ user.username }}!</h1>
+                <p class="text-center">User not found.</p>
                 {% endif %}
-                
-                <!-- Other content here -->
-                
+
                 <div class="text-center">
                     <p class="ms-3">Thank you for registering with us.</p>
                     <a href="{% url 'products:home' %}" class="btn btn-success mt-1 mb-2">Go to Homepage</a>
@@ -21,5 +19,11 @@
             </div>
         </div>
     </div>
+    <h2 class="mt-3 text-white">Update Your Info:</h2>
+    <form class="text-white" method="post" action="{% url 'update_address' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Save Address</button>
+    </form>
 </div>
 {% endblock %}
