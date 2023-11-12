@@ -53,7 +53,7 @@
                     <div class="form-group" id="origin-icons">
                         <label class="form-check-label mt-3" for="origin">Origin:</label>
                         <div class="form-check form-check-label form-check-inline ms-5">
-                            {% for origin_image_tuple in origin_image %}
+                            {% for origin_image_tuple in origin_image|slice:":7" %}
                             <label class="checkbox-label me-4 mt-2">
                                 <input type="checkbox" class="hidden-checkbox" name="origin" value="{{ origin_image_tuple.1 }}">
                                 <img src="{{ origin_image_tuple.0 }}" class="flag-icon" title="{{ origin_image_tuple.1 }}">

@@ -31,9 +31,9 @@ def product_search(request):
 
     artists = Product.objects.values_list('artist', flat=True).distinct()
     category = Product.objects.values_list('category', flat=True).distinct()
-    origin_image = Product.objects.values_list('origin_image', 'origin', 'origin_code').distinct()
-    origin = Product.objects.values_list('origin', flat=True).distinct()
-    origin_code = Product.objects.values_list('origin_code', flat=True).distinct()
+    origin_image = Product.objects.values_list('origin_image', 'origin', 'origin_code').distinct()[:6]
+    origin = Product.objects.values_list('origin', flat=True).distinct()[:6]
+    origin_code = Product.objects.values_list('origin_code', flat=True).distinct()[:6]
     price = Product.objects.values_list('price', flat=True).distinct()
 
     # Create a dictionary to hold the filter conditions
