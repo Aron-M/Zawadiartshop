@@ -1,3 +1,4 @@
+
 <div class="row cardrow">
     <div class=" mb-3">
         <div class="card card-smaller user-select-none">
@@ -28,9 +29,11 @@
         </div>
     </div>
     <!-- Modals -->
-    <div class="modal fade p-0 " id="myModal{{ product.pk }}" data-bs-backdrop="static" position: fixed tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-md ms-0 me-5 p-0">
+
+
+    <div class="modal modal-sm fade" id="myModal{{ product.pk }}" data-bs-backdrop="static"
+        aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        <div class="modal-dialog modal-dialog-centered modal-md p-0">
             <div class="modal-content">
                 <div class="modal-header">
                     <p>"{{ product.name }}" by {{ product.artist }}</p>
@@ -44,10 +47,10 @@
     </div>
 </div>
 
-{% for product in products %}
+
 <div class="modal fade" id="staticBackdrop{{ product.pk }}" data-bs-backdrop="static" data-bs-keyboard="false"
     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="staticBackdropLabel">Product Added</h5>
@@ -69,4 +72,7 @@
         </div>
     </div>
 </div>
-{% endfor %}
+
+
+
+
