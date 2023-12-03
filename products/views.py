@@ -63,10 +63,15 @@ def product_search(request):
     if selected_artists:
         selected_artist_origins = set(Product.objects.filter(artist__in=selected_artists).values_list('origin', flat=True))
 
+    # If only category and origin are selected, render products based on both
+    if not selected_artists and selected_categories and selected_origins:
+        filtered_products = Product.objects.filter(category__in=selected_categories, origin__in=selected_origins)
+        selected_artist_origins.update(selected_origins)
+
     # If only an origin is selected, render its related products and add the origin to selected_origins
-    if not selected_artists and selected_origins:
+    elif not selected_artists and selected_origins:
         filtered_products = Product.objects.filter(origin__in=selected_origins)
-        selected_artist_origins.update(selected_origins) 
+        selected_artist_origins.update(selected_origins)
 
     # Prepare origin image tuples
     filtered_origin_image_tuples = []
@@ -97,6 +102,7 @@ def product_search(request):
     searchmodal_html = render_to_string('layouts/searchbar.html', context, request=request)
     context['searchmodal_html'] = searchmodal_html
     return render(request, 'product_search.html', context)
+
 
 
 def products(request):
