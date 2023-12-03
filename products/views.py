@@ -36,7 +36,7 @@ def product_search(request):
     origin_code = Product.objects.values_list('origin_code', flat=True).distinct()[:6]
     price = Product.objects.values_list('price', flat=True).distinct()
 
-    # Create a dictionary to hold the filter conditions
+    
     filters = {}
 
     if selected_artists:
@@ -48,39 +48,39 @@ def product_search(request):
     if max_price:
         filters['price__lte'] = max_price
 
-    # Apply the filters to the queryset
+    
     filtered_products = Product.objects.filter(**filters)
 
-    # Prepare filter values for the summary
+    
     filtered_categories = selected_categories
     filtered_artists = selected_artists
     filtered_price = max_price
 
-    # Prepare a set to hold the origins of selected artists
+    
     selected_artist_origins = set()
 
-    # Filter products by selected artists and get their origins
+    
     if selected_artists:
         selected_artist_origins = set(Product.objects.filter(artist__in=selected_artists).values_list('origin', flat=True))
 
-    # If only category and origin are selected, render products based on both
+    
     if not selected_artists and selected_categories and selected_origins:
         filtered_products = Product.objects.filter(category__in=selected_categories, origin__in=selected_origins)
         selected_artist_origins.update(selected_origins)
 
-    # If only an origin is selected, render its related products and add the origin to selected_origins
+    
     elif not selected_artists and selected_origins:
         filtered_products = Product.objects.filter(origin__in=selected_origins)
         selected_artist_origins.update(selected_origins)
 
-    # Prepare origin image tuples
+    
     filtered_origin_image_tuples = []
     for origin in selected_artist_origins:
         product_with_origin = Product.objects.filter(origin=origin).first()
         if product_with_origin:
             filtered_origin_image_tuples.append((product_with_origin.origin_image.url, origin))
 
-    # Prepare origins not matching selected artists
+    
     origins_not_matching_artists = [origin for origin in selected_origins if origin not in selected_artist_origins]
 
     context = {
